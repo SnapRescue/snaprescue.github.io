@@ -5,7 +5,7 @@ const CONFIG = {
   // Public URL of your licence server (the dedicated container).
   LICENSE_API: "https://snaprescue-license.tail28b3e2.ts.net",
   // Direct download link to the Windows build (e.g. a GitHub Release asset).
-  DOWNLOAD_URL: "#", // TODO: paste the SnapRescue.exe release URL
+  DOWNLOAD_URL: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue.exe",
 };
 
 // ── Nav shadow on scroll ─────────────────────────────────────

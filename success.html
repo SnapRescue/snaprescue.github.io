@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank you — your SnapRescue licence</title>
+<title>Your SnapRescue licence</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
   <div class="card">
     <div class="check">✓</div>
     <h1>You're all set!</h1>
-    <p>Thank you for buying SnapRescue. Here's your licence key — we've also emailed it to you.</p>
+    <p>Thank you for buying SnapRescue. Here's your licence key. We've also emailed it to you.</p>
 
     <div class="keybox">
       <div class="label">Your licence key</div>
@@ -42,7 +42,7 @@
       <ol style="padding-left:18px;margin-top:8px">
         <li>Open SnapRescue and click <b>“🔓 Unlock”</b> at the top right.</li>
         <li>Paste the key above and hit <b>Activate</b>.</li>
-        <li>That's it — unlimited exports unlocked, forever.</li>
+        <li>That's it, unlimited exports unlocked forever.</li>
       </ol>
     </div>
 
@@ -59,7 +59,7 @@
   const copyBtn = document.getElementById("copy");
 
   async function fetchKey() {
-    if (!sessionId) { keyEl.textContent = "Missing session — check your email for the key."; return; }
+    if (!sessionId) { keyEl.textContent = "Missing session. Check your email for the key."; return; }
     try {
       const res = await fetch(`${LICENSE_API}/key?session_id=${encodeURIComponent(sessionId)}`);
       if (!res.ok) throw new Error("not ready");
@@ -67,7 +67,7 @@
       keyEl.textContent = data.key;
       copyBtn.style.display = "inline-flex";
     } catch (e) {
-      keyEl.textContent = "Your key is being generated — check your email in a moment.";
+      keyEl.textContent = "Your key is being generated. Check your email in a moment.";
     }
   }
   copyBtn?.addEventListener("click", () => {

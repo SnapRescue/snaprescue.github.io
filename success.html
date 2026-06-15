@@ -29,7 +29,7 @@
   <div class="card">
     <div class="check">✓</div>
     <h1>You're all set!</h1>
-    <p>Thank you for buying SnapRescue. Here's your licence key. We've also emailed it to you.</p>
+    <p>Thank you for buying SnapRescue. Here's your licence key. Copy it somewhere safe before you close this page.</p>
 
     <div class="keybox">
       <div class="label">Your licence key</div>
@@ -58,8 +58,8 @@
   const keyEl = document.getElementById("key");
   const copyBtn = document.getElementById("copy");
 
-  async function fetchKey() {
-    if (!sessionId) { keyEl.textContent = "Missing session. Check your email for the key."; return; }
+  async function fetchKey(attempt = 0) {
+    if (!sessionId) { keyEl.textContent = "Missing session. Contact hello@snaprescue.app with your receipt."; return; }
     try {
       const res = await fetch(`${LICENSE_API}/key?session_id=${encodeURIComponent(sessionId)}`);
       if (!res.ok) throw new Error("not ready");
@@ -67,7 +67,13 @@
       keyEl.textContent = data.key;
       copyBtn.style.display = "inline-flex";
     } catch (e) {
-      keyEl.textContent = "Your key is being generated. Check your email in a moment.";
+      // The licence can take a moment to register right after payment; retry a few times.
+      if (attempt < 5) {
+        keyEl.textContent = "Generating your key…";
+        setTimeout(() => fetchKey(attempt + 1), 2000);
+      } else {
+        keyEl.textContent = "Taking longer than usual. Contact hello@snaprescue.app with your receipt and we'll sort it.";
+      }
     }
   }
   copyBtn?.addEventListener("click", () => {

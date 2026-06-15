@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy · SnapRescue</title>
+<meta name="description" content="SnapRescue processes your Snapchat Memories entirely on your own computer. Your photos and videos are never uploaded. Here's exactly what does and doesn't leave your device.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .legal { max-width: 800px; margin: 0 auto; padding: 120px 24px 90px; }
+  .legal .back { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; color: var(--ink-soft); font-weight: 600; margin-bottom: 30px; }
+  .legal .back:hover { color: var(--sunset); }
+  .legal h1 { font-size: clamp(34px, 5vw, 46px); line-height: 1.05; margin-bottom: 10px; }
+  .legal .updated { color: var(--ink-faint); font-size: 15px; margin-bottom: 16px; }
+  .legal .lede { font-size: 19px; color: var(--ink-soft); margin-bottom: 14px; }
+  .tldr { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 14px; padding: 22px 26px; margin: 28px 0 40px; }
+  .tldr strong { font-family: "Fraunces", serif; font-size: 18px; }
+  .tldr ul { margin: 12px 0 0; padding-left: 20px; }
+  .tldr li { margin: 7px 0; color: var(--ink-soft); }
+  .legal h2 { font-size: 24px; margin: 38px 0 12px; padding-top: 8px; }
+  .legal p, .legal li { color: var(--ink-soft); font-size: 16.5px; line-height: 1.7; }
+  .legal ul.body { padding-left: 22px; margin: 10px 0; }
+  .legal ul.body li { margin: 8px 0; }
+  .legal a.inline { color: var(--sunset); font-weight: 600; }
+  .legal table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15.5px; }
+  .legal th, .legal td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .legal th { color: var(--ink-faint); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: .08em; }
+  .legal .foot-fine { margin-top: 50px; padding-top: 22px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><span class="mark">↺</span> SnapRescue</a>
+    <div class="nav-links">
+      <a href="index.html#how" class="hide-sm">How it works</a>
+      <a href="index.html#features" class="hide-sm">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#download" class="btn btn-primary nav-cta">Get it free</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal">
+  <a href="index.html" class="back">← Back to SnapRescue</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 15 June 2026</p>
+  <p class="lede">SnapRescue was built privacy-first. Your memories are yours, and the app is designed so they stay on your computer.</p>
+
+  <div class="tldr">
+    <strong>The short version</strong>
+    <ul>
+      <li>Your photos and videos are processed <b>entirely on your own device</b>. They are never uploaded to us or anyone else.</li>
+      <li>SnapRescue works without an account. We don't ask you to sign in or create a profile.</li>
+      <li>The only things that ever go online are an optional place-name lookup, a quick licence check when you unlock, and the email we send your licence key to after purchase.</li>
+      <li>We don't run ads, trackers, or analytics on the app.</li>
+    </ul>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>SnapRescue ("we", "us") is an independent desktop application that restores dates, locations and captions to the Memories you officially export from Snapchat. We are not affiliated with, endorsed by, or sponsored by Snap Inc. You can reach us any time at <a class="inline" href="mailto:snap.rescue0@gmail.com">snap.rescue0@gmail.com</a>.</p>
+
+  <h2>2. Your photos and videos never leave your device</h2>
+  <p>This is the most important point, so we'll be plain about it: when you run an export, SnapRescue reads your Snapchat ZIP files, restores the metadata, and writes the finished files into a folder you choose, all locally on your computer. Your media is never transmitted to our servers, never stored by us, and never seen by us. There is no cloud processing.</p>
+
+  <h2>3. What does go online (and why)</h2>
+  <p>SnapRescue is local-first, but a few features need the internet. Here is the complete list:</p>
+  <table>
+    <thead><tr><th>Feature</th><th>What is sent</th><th>Where it goes</th></tr></thead>
+    <tbody>
+      <tr><td>Place names (optional)</td><td>Only the GPS coordinates of a memory, to turn them into a readable place like "Byron Bay". No photo, no account, no name attached.</td><td>OpenStreetMap's free geocoding service. Off by default; only used if you turn on "Add place names".</td></tr>
+      <tr><td>Unlocking the full version</td><td>Your licence key, to confirm it's valid.</td><td>Our licence server. No photos are involved.</td></tr>
+      <tr><td>Buying a licence</td><td>Your email and payment details, entered on Stripe's secure checkout page.</td><td>Stripe (our payment processor) and our licence server, which records that a key was issued and emails it to you.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. Payment and your email</h2>
+  <p>Purchases are handled by <a class="inline" href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a>. We never see or store your full card details. When you buy, we receive your email address and a payment confirmation so we can generate your licence key and email it to you. We keep a minimal record of issued keys (the key, the associated email, and purchase/refund status) so we can support you, honour the 3-device limit, and process refunds. We do not sell, rent, or share this information, and we don't use your email for marketing.</p>
+
+  <h2>5. The licence key check</h2>
+  <p>When you activate or use the full version, the app makes a small request to our licence server to confirm your key is valid and active. This request contains your licence key only. It does not contain, and our server never receives, any of your photos, videos, or the contents of your export.</p>
+
+  <h2>6. No tracking, no analytics, no ads</h2>
+  <p>The SnapRescue app contains no advertising, no third-party trackers, and no usage analytics. This website uses no cookies and no analytics or advertising scripts. We don't build a profile of you.</p>
+
+  <h2>7. Data we keep, and for how long</h2>
+  <ul class="body">
+    <li><b>On your computer:</b> the app stores your licence key and a small local counter for the free tier, in your user config folder. You can remove these at any time by uninstalling.</li>
+    <li><b>On our server:</b> the issued-licence record described in section 4. We retain it for as long as the licence is valid so we can support and verify it. You can ask us to delete your record (see section 9); note this also deactivates the key.</li>
+    <li><b>Payment records:</b> held by Stripe under their own retention and legal obligations.</li>
+  </ul>
+
+  <h2>8. Children</h2>
+  <p>SnapRescue is a tool for people retrieving their own exported data and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+  <h2>9. Your rights</h2>
+  <p>You can ask us what we hold about you (in practice, your email and licence record), ask us to correct or delete it, or ask us to stop contacting you. Email <a class="inline" href="mailto:snap.rescue0@gmail.com">snap.rescue0@gmail.com</a> and we'll action it. Because your photos never reach us, there is nothing on our side to request regarding your media, it's only ever on your device.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If we change how SnapRescue handles data, we'll update this page and the "last updated" date above. Material changes will be reflected here before they take effect.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about privacy, your data, or anything else? Email <a class="inline" href="mailto:snap.rescue0@gmail.com">snap.rescue0@gmail.com</a> and a real person will reply, usually the same day.</p>
+
+  <p class="foot-fine">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. "Snapchat" is a trademark of Snap Inc. SnapRescue only processes data you have officially exported from your own account, entirely on your own device.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="index.html" class="logo"><span class="mark">↺</span> SnapRescue</a>
+      <div class="foot-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="mailto:snap.rescue0@gmail.com">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <p class="foot-fine" style="margin-top:8px">© 2026 SnapRescue. Made for everyone who refuses to lose their memories.</p>
+  </div>
+</footer>
+
+</body>
+</html>

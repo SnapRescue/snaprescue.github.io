@@ -151,7 +151,7 @@
       <div class="feat reveal"><span class="ico">🔒</span><h3>100% private</h3><p>Everything runs on your computer. Nothing uploads, no account, no servers seeing your photos.</p></div>
       <div class="feat reveal"><span class="ico">🎞️</span><h3>Photos &amp; videos</h3><p>Full metadata for both, with zero quality loss. Only the metadata changes, never the pixels.</p></div>
       <div class="feat reveal"><span class="ico">⏸️</span><h3>Pause &amp; resume</h3><p>Got 30,000 memories? Stop any time and pick up exactly where you left off. Nothing redone.</p></div>
-      <div class="feat reveal"><span class="ico">🏠</span><h3>Self-hosted friendly</h3><p>Optional Immich JSON sidecars, plus embedded EXIF that any library (Jellyfin, Photoprism and more) reads. Something no rival offers.</p></div>
+      <div class="feat reveal"><span class="ico">🏠</span><h3>Self-hosted friendly</h3><p>Embedded EXIF that Immich, Jellyfin, Photoprism and any library read on import, plus optional XMP sidecars for external-library setups. Something no rival offers.</p></div>
     </div>
   </div>
 </section>
@@ -174,7 +174,7 @@
           <tr><td>Readable place names</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>Merge caption/sticker overlays</td><td class="c yes">✓</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>Dated year-folder organization</td><td class="c no">flat</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-          <tr><td>Self-hosted library sidecars</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+          <tr><td>Immich &amp; self-hosted ready (XMP)</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>Resume large exports</td><td class="c no">failed only</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>100% local / private</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c us yes">✓</td></tr>
           <tr><td>Price</td><td class="c">$14.99</td><td class="c">paid</td><td class="c us yes">$9.99</td></tr>
@@ -239,6 +239,7 @@
       <div class="faq-item"><button class="faq-q" aria-expanded="false">What do I get for free?<span class="pm">+</span></button><div class="faq-a"><p>The full feature set on your first 50 files, so you can confirm it works perfectly on your own photos and videos before paying anything. Unlock once for $9.99 to process your entire library.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Does it handle videos too?<span class="pm">+</span></button><div class="faq-a"><p>Yes. Dates and GPS are written into videos as well as photos, and caption/sticker overlays are merged onto both. Quality is untouched; only metadata changes.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Where do the files end up?<span class="pm">+</span></button><div class="faq-a"><p>In a clean set of <code>2019/ 2020/ …</code> folders you choose, with every file's real date and location embedded, ready to drag into Google Photos, Apple Photos, Immich, Lightroom, or anywhere else.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I bring these into Immich (or another self-hosted library)?<span class="pm">+</span></button><div class="faq-a"><p>Just import the rescued photos and videos like any others. The date, GPS and caption are written <b>inside each file</b>, so Immich reads them straight away. No need to import anything else. If you run an <b>external library</b> (Immich scanning a folder without altering your originals), tick <b>“Also write XMP sidecar files”</b> in SnapRescue and a matching <code>.xmp</code> is placed next to each item. One thing to note: a sidecar is only ever read <b>alongside its photo or video</b>, never uploaded on its own.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Windows showed a blue “protected your PC” warning. Is it safe?<span class="pm">+</span></button><div class="faq-a"><p>Yes. That SmartScreen notice appears for any new app from an independent developer that hasn't yet built up download history with Microsoft. SnapRescue is safe and runs entirely on your computer. To open it: click <b>“More info”</b>, then <b>“Run anyway”</b>. The warning fades as more people download it.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Mac or phone?<span class="pm">+</span></button><div class="faq-a"><p>Windows is available now. Mac and iOS/Android versions are in the works. Buy once and you'll get them included.</p></div></div>
     </div>

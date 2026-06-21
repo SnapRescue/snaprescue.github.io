@@ -121,18 +121,18 @@
 <div class="reveal">
 <p class="kicker" data-i18n="problem_kicker">Le piège dont personne ne parle</p>
 <h2 data-i18n="problem_h2">L'export se télécharge bien.<br/>Puis votre galerie est <span class="serif-italic accent">en vrac.</span></h2>
-<p style="font-size:19px;color:var(--ink-soft);margin-top:18px">Snapchat hands you the raw photos and videos, but the dates and GPS live in a separate <code>memories_history.json</code> file that your photo app never reads. Import them and 2,000 memories from years of your life all stack up on today's date, with no map, no order, no story.</p>
-<p style="font-size:19px;color:var(--ink-soft);margin-top:16px">SnapRescue reunites every file with its real metadata before it ever touches your library.</p>
+<p data-i18n="home_pp1" style="font-size:19px;color:var(--ink-soft);margin-top:18px">Snapchat vous donne les photos et vidéos brutes, mais les dates et le GPS se trouvent dans un fichier <code>memories_history.json</code> séparé que votre galerie ne lit jamais. Importez-les et 2 000 souvenirs de plusieurs années de votre vie s'empilent tous à la date d'aujourd'hui, sans carte, sans ordre, sans histoire.</p>
+<p data-i18n="home_pp2" style="font-size:19px;color:var(--ink-soft);margin-top:16px">SnapRescue réunit chaque fichier avec ses vraies métadonnées avant qu'il touche votre galerie.</p>
 </div>
 <div class="file-demo reveal">
 <div style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">2019-summer-roadtrip.jpg</div>
-<div class="file-row"><span class="k">Capture date</span><span class="v missing">✗ shows “today”</span></div>
-<div class="file-row"><span class="k">Location</span><span class="v missing">✗ stripped out</span></div>
-<div class="file-row"><span class="k">Caption</span><span class="v missing">✗ separate overlay</span></div>
+<div class="file-row"><span class="k" data-i18n="fd_cd">Date de prise</span><span class="v missing" data-i18n="fd_cd_bad">✗ affiche « aujourd'hui »</span></div>
+<div class="file-row"><span class="k" data-i18n="fd_loc">Lieu</span><span class="v missing" data-i18n="fd_loc_bad">✗ supprimé</span></div>
+<div class="file-row"><span class="k" data-i18n="fd_cap">Légende</span><span class="v missing" data-i18n="fd_cap_bad">✗ surcouche séparée</span></div>
 <div class="arrow-down">↓ SnapRescue ↓</div>
-<div class="file-row"><span class="k">Capture date</span><span class="v fixed">✓ 14 Jul 2019, 7:32 pm</span></div>
-<div class="file-row"><span class="k">Location</span><span class="v fixed">✓ Byron Bay, AU (on the map)</span></div>
-<div class="file-row"><span class="k">Caption</span><span class="v fixed">✓ merged onto the photo</span></div>
+<div class="file-row"><span class="k" data-i18n="fd_cd">Date de prise</span><span class="v fixed">✓ 14 Jul 2019, 7:32 pm</span></div>
+<div class="file-row"><span class="k" data-i18n="fd_loc">Lieu</span><span class="v fixed" data-i18n="fd_loc_ok">✓ Byron Bay, AU (sur la carte)</span></div>
+<div class="file-row"><span class="k" data-i18n="fd_cap">Légende</span><span class="v fixed" data-i18n="fd_cap_ok">✓ fusionnée sur la photo</span></div>
 </div>
 </div>
 </section>
@@ -144,34 +144,16 @@
 <h2 data-i18n="how_h2">D'un ZIP en désordre à une belle archive.</h2>
 </div>
 <div class="steps">
-<div class="step reveal"><h3>Ask Snapchat</h3><p>In the app: Settings → My Data → Submit Request. They email you a download link. (We never touch your login.)</p></div>
-<div class="step reveal"><h3>Put it in one folder</h3><p>Snapchat may send <b>several ZIP files</b>. Save them all into one folder. No need to unzip them yourself.</p></div>
-<div class="step reveal"><h3>Point &amp; go</h3><p>Open SnapRescue and select that folder. It unzips and finds every memory plus its metadata automatically.</p></div>
-<div class="step reveal"><h3>Drag anywhere</h3><p>Get tidy <code>2019/ 2020/ …</code> folders ready for Google Photos, Apple Photos, Immich, or anywhere else.</p></div>
+<div class="step reveal"><h3 data-i18n="how_s1t">Demandez à Snapchat</h3><p data-i18n="how_s1d">Dans l'appli : Réglages → Mes données → Envoyer la demande. Ils vous envoient un lien de téléchargement. (Nous ne touchons jamais à votre compte.)</p></div>
+<div class="step reveal"><h3 data-i18n="how_s2t">Mettez tout dans un dossier</h3><p data-i18n="how_s2d">Snapchat peut envoyer <b>plusieurs fichiers ZIP</b>. Mettez-les tous dans un seul dossier. Pas besoin de les décompresser vous-même.</p></div>
+<div class="step reveal"><h3 data-i18n="how_s3t">Pointez et lancez</h3><p data-i18n="how_s3d">Ouvrez SnapRescue et sélectionnez ce dossier. Il décompresse et trouve chaque souvenir avec ses métadonnées, automatiquement.</p></div>
+<div class="step reveal"><h3 data-i18n="how_s4t">Glissez où vous voulez</h3><p data-i18n="how_s4d">Obtenez des dossiers nets <code>2019/ 2020/ …</code> prêts pour Google Photos, Apple Photos, Immich ou ailleurs.</p></div>
 </div>
 <div class="reveal" style="text-align:center;margin-top:36px">
 <a class="btn btn-ghost" data-i18n="guide_cta" href="guide.html">Voir le guide complet étape par étape, avec les durées →</a>
 </div>
-<!-- Detailed export guide -->
-<div class="reveal" id="guide" style="margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:34px 36px;max-width:880px;margin-left:auto;margin-right:auto">
-<h3 style="font-family:'Fraunces',serif;font-size:24px;margin-bottom:6px">How to get your Snapchat export</h3>
-<p style="color:var(--ink-soft);margin-bottom:22px">It takes two minutes to ask, and Snapchat usually emails you within a few hours (sometimes up to a day).</p>
-<ol style="list-style:none;counter-reset:g;padding:0">
-<li style="counter-increment:g;position:relative;padding-left:46px;margin-bottom:18px;color:var(--ink-soft);font-size:16px">
-<span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">1</span>
-          In Snapchat, tap your <b>profile</b> → the <b>gear ⚙️ (Settings)</b> → scroll to <b>My Data</b> → <b>Submit Request</b>. (You can also do it at <a href="https://accounts.snapchat.com" style="color:var(--sunset)">accounts.snapchat.com</a>.)</li>
-<li style="counter-increment:g;position:relative;padding-left:46px;margin-bottom:18px;color:var(--ink-soft);font-size:16px">
-<span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">2</span>
-          Make sure <b>“Include Memories and other files”</b> is ticked, then submit. Snapchat emails you a link when it's ready.</li>
-<li style="counter-increment:g;position:relative;padding-left:46px;margin-bottom:18px;color:var(--ink-soft);font-size:16px">
-<span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">3</span>
-          Download the file(s) to your computer. A big library often arrives as <b>several ZIP files</b> (data-1.zip, data-2.zip…). <b>Put them all in the same folder.</b> You don't need to unzip them.</li>
-<li style="counter-increment:g;position:relative;padding-left:46px;color:var(--ink-soft);font-size:16px">
-<span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">4</span>
-          Open SnapRescue, click <b>Choose folder</b>, and pick that folder (the one holding the ZIPs). That's it.</li>
-</ol>
-<p style="margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--ink-faint)">💡 Already unzipped them? That works too. Point SnapRescue at the folder that contains your media and the <code>memories_history.json</code> file.</p>
-</div>
+<!-- Detailed export guide (English only; localized pages link to the full translated guide.html above) -->
+
 </div>
 </section>
 <!-- FEATURES -->
@@ -184,18 +166,18 @@
 <div class="feat-grid">
 <div class="feat hero-feat reveal">
 <span class="ico">🕗</span>
-<h3>Truly correct local times</h3>
-<p>Snapchat stores every moment in UTC. Other tools paste that in raw, so an evening snap abroad shows up at breakfast. SnapRescue uses each photo's GPS to convert it to the real local time it was taken.</p>
-<div class="tz-demo"><span class="from">09:30</span><span class="ar">→</span><span class="to">7:30 pm</span><span style="font-size:14px;color:var(--ink-faint)">Bali, where it happened</span></div>
+<h3 data-i18n="feat1t">Heures locales vraiment correctes</h3>
+<p data-i18n="feat1d">Snapchat stocke chaque moment en UTC. D'autres outils le collent tel quel, donc un snap du soir à l'étranger apparaît au petit-déjeuner. SnapRescue utilise le GPS de chaque photo pour le convertir en heure locale réelle.</p>
+<div class="tz-demo"><span class="from">09:30</span><span class="ar">→</span><span class="to">7:30 pm</span><span data-i18n="feat1tz" style="font-size:14px;color:var(--ink-faint)">Bali, là où c'est arrivé</span></div>
 </div>
-<div class="feat reveal"><span class="ico">📍</span><h3>GPS + place names</h3><p>Coordinates embedded so map view works, plus a readable location like “Byron Bay” written in.</p></div>
-<div class="feat reveal"><span class="ico">🎨</span><h3>Overlays merged</h3><p>Captions, stickers and the date overlays composited back onto the photo or video as one clean file.</p></div>
-<div class="feat reveal"><span class="ico">📦</span><h3>Unzips it for you</h3><p>Snapchat sends your export as several ZIP files. Other tools make you extract every one and merge the folders by hand first. SnapRescue takes the ZIPs as they came and does that step for you.</p></div>
-<div class="feat reveal"><span class="ico">🗂️</span><h3>Dated folders</h3><p>Auto-organized into year folders with date-named files, an instant browsable archive.</p></div>
-<div class="feat reveal"><span class="ico">🔒</span><h3>100% private</h3><p>Everything runs on your computer. Nothing uploads, no account, no servers seeing your photos.</p></div>
-<div class="feat reveal"><span class="ico">🎞️</span><h3>Photos &amp; videos</h3><p>Full metadata for both, with zero quality loss. Only the metadata changes, never the pixels.</p></div>
-<div class="feat reveal"><span class="ico">⏸️</span><h3>Pause &amp; resume</h3><p>Got 30,000 memories? Stop any time and pick up exactly where you left off. Nothing redone.</p></div>
-<div class="feat reveal"><span class="ico">🏠</span><h3>Self-hosted friendly</h3><p>Embedded EXIF that Immich, Jellyfin, Photoprism and any library read on import, plus optional XMP sidecars for external-library setups. Something no rival offers.</p></div>
+<div class="feat reveal"><span class="ico">📍</span><h3 data-i18n="feat2t">GPS + noms de lieux</h3><p data-i18n="feat2d">Coordonnées intégrées pour que la carte fonctionne, plus un lieu lisible comme « Byron Bay » inscrit.</p></div>
+<div class="feat reveal"><span class="ico">🎨</span><h3 data-i18n="feat3t">Surcouches fusionnées</h3><p data-i18n="feat3d">Légendes, autocollants et incrustations de date recomposés sur la photo ou la vidéo en un seul fichier propre.</p></div>
+<div class="feat reveal"><span class="ico">📦</span><h3 data-i18n="feat4t">Décompression incluse</h3><p data-i18n="feat4d">Snapchat envoie votre export en plusieurs fichiers ZIP. D'autres outils vous obligent à tout extraire et fusionner les dossiers à la main. SnapRescue prend les ZIP tels quels et fait cette étape pour vous.</p></div>
+<div class="feat reveal"><span class="ico">🗂️</span><h3 data-i18n="feat5t">Dossiers datés</h3><p data-i18n="feat5d">Organisés automatiquement en dossiers par année avec des noms de fichiers datés, une archive parcourable immédiatement.</p></div>
+<div class="feat reveal"><span class="ico">🔒</span><h3 data-i18n="feat6t">100% privé</h3><p data-i18n="feat6d">Tout s'exécute sur votre ordinateur. Rien n'est envoyé, sans compte, aucun serveur ne voit vos photos.</p></div>
+<div class="feat reveal"><span class="ico">🎞️</span><h3 data-i18n="feat7t">Photos et vidéos</h3><p data-i18n="feat7d">Métadonnées complètes pour les deux, sans perte de qualité. Seules les métadonnées changent, jamais les pixels.</p></div>
+<div class="feat reveal"><span class="ico">⏸️</span><h3 data-i18n="feat8t">Pause et reprise</h3><p data-i18n="feat8d">30 000 souvenirs ? Arrêtez quand vous voulez et reprenez exactement où vous en étiez. Rien n'est refait.</p></div>
+<div class="feat reveal"><span class="ico">🏠</span><h3 data-i18n="feat9t">Compatible auto-hébergement</h3><p data-i18n="feat9d">EXIF intégré que Immich, Jellyfin, Photoprism et toute bibliothèque lisent à l'import, plus des fichiers annexes XMP en option pour les bibliothèques externes. Ce qu'aucun rival ne propose.</p></div>
 </div>
 </div>
 </section>
@@ -209,23 +191,23 @@
 <div class="tbl-scroll reveal">
 <table class="tbl">
 <thead>
-<tr><th>Feature</th><th class="c">ExportSnaps</th><th class="c">Memories Import</th><th class="c us">SnapRescue</th></tr>
+<tr><th data-i18n="cmp_feature">Fonction</th><th class="c">ExportSnaps</th><th class="c">Memories Import</th><th class="c us">SnapRescue</th></tr>
 </thead>
 <tbody>
-<tr><td>Restore dates &amp; GPS</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c us yes">✓</td></tr>
-<tr><td>Unzips your export for you</td><td class="c no">✗ extract by hand</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>Convert to true <em>local</em> time</td><td class="c no">offset only</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>Readable place names</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>Merge caption/sticker overlays</td><td class="c yes">✓</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>Dated year-folder organization</td><td class="c no">flat</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>Immich &amp; self-hosted ready (XMP)</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>Resume large exports</td><td class="c no">failed only</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
-<tr><td>100% local / private</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c us yes">✓</td></tr>
-<tr><td>Price</td><td class="c">$14.99</td><td class="c">paid</td><td class="c us yes">$9.99</td></tr>
+<tr><td data-i18n="cmp_r1">Restaurer dates et GPS</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r2">Décompresse votre export</td><td class="c no" data-i18n="cmp_byhand">✗ extraire à la main</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r3">Convertir en vraie heure <em>locale</em></td><td class="c no" data-i18n="cmp_offset">décalage seul</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r4">Noms de lieux lisibles</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r5">Fusionner légendes/autocollants</td><td class="c yes">✓</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r6">Organisation en dossiers par année</td><td class="c no" data-i18n="cmp_flat">à plat</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r7">Prêt pour Immich / auto-hébergé (XMP)</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r8">Reprendre les gros exports</td><td class="c no" data-i18n="cmp_failed">échecs seuls</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_r9">100% local / privé</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c us yes">✓</td></tr>
+<tr><td data-i18n="cmp_price">Prix</td><td class="c">$14.99</td><td class="c" data-i18n="cmp_paid">payant</td><td class="c us yes">$9.99</td></tr>
 </tbody>
 </table>
 </div>
-<p class="reveal" style="text-align:center;font-size:13px;color:var(--ink-faint);margin-top:18px;max-width:680px;margin-left:auto;margin-right:auto">Comparison based on each tool's publicly listed features and pricing as of June 2026. ExportSnaps and Memories Import are independent products; details may change, check their sites for the latest.</p>
+<p class="reveal" data-i18n="cmp_note" style="text-align:center;font-size:13px;color:var(--ink-faint);margin-top:18px;max-width:680px;margin-left:auto;margin-right:auto">Comparaison basée sur les fonctions et tarifs publiquement affichés en juin 2026. ExportSnaps et Memories Import sont des produits indépendants ; les détails peuvent changer, vérifiez sur leurs sites.</p>
 </div>
 </section>
 <!-- PRICING -->
@@ -242,13 +224,13 @@
 <div class="amt">$0</div>
 <div class="sub" data-i18n="free_sub">Voyez le résultat sur vos propres souvenirs.</div>
 <ul>
-<li><span class="ck">✓</span> Restore the first <b>50 files</b>, fully</li>
-<li><span class="ck">✓</span> Dates, GPS, places &amp; overlays</li>
-<li><span class="ck">✓</span> Dated folder organization</li>
-<li><span class="ck">✓</span> 100% private, no account</li>
+<li><span class="ck">✓</span> <span data-i18n="free_li1">Restaurez les <b>50 premiers fichiers</b>, entièrement</span></li>
+<li><span class="ck">✓</span> <span data-i18n="free_li2">Dates, GPS, lieux et surcouches</span></li>
+<li><span class="ck">✓</span> <span data-i18n="free_li3">Organisation en dossiers datés</span></li>
+<li><span class="ck">✓</span> <span data-i18n="free_li4">100% privé, sans compte</span></li>
 </ul>
-<a class="btn btn-ghost" href="#" id="download-btn">⬇ Download for Windows</a>
-<p style="font-size:12.5px;color:var(--ink-faint);margin-top:12px;line-height:1.5">First open: if Windows shows a blue warning, click <b>More info → Run anyway</b>. <a href="#faq" style="color:var(--sunset)">Why?</a></p>
+<a class="btn btn-ghost" data-i18n="hero_dl" href="#" id="download-btn">⬇ Télécharger pour Windows</a>
+<p data-i18n="free_note" style="font-size:12.5px;color:var(--ink-faint);margin-top:12px;line-height:1.5">Première ouverture : si Windows affiche un avertissement bleu, cliquez sur <b>Informations complémentaires → Exécuter quand même</b>. <a href="#faq" style="color:var(--sunset)">Pourquoi ?</a></p>
 </div>
 <div class="price featured reveal">
 <span class="badge" data-i18n="full_badge">Le plus choisi</span>
@@ -256,16 +238,16 @@
 <div class="amt">$9.99 <small data-i18n="full_once">USD · une fois</small></div>
 <div class="sub" data-i18n="full_sub">Exports illimités, à vie. Moins de 3 mois de Snapchat Plus.</div>
 <ul>
-<li><span class="ck">✓</span> <b>Unlimited</b> files &amp; re-runs</li>
-<li><span class="ck">✓</span> Everything in Free</li>
-<li><span class="ck">✓</span> Use on up to <b>3 devices</b></li>
-<li><span class="ck">✓</span> Free updates</li>
+<li><span class="ck">✓</span> <span data-i18n="full_li1">Fichiers et relances <b>illimités</b></span></li>
+<li><span class="ck">✓</span> <span data-i18n="full_li2">Tout ce qu'il y a dans Gratuit</span></li>
+<li><span class="ck">✓</span> <span data-i18n="full_li3">Utilisable sur jusqu'à <b>3 appareils</b></span></li>
+<li><span class="ck">✓</span> <span data-i18n="full_li4">Mises à jour gratuites</span></li>
 </ul>
 <a class="btn btn-primary" data-i18n="full_btn" href="#" id="buy-btn">Débloquer pour 9,99 $</a>
 <div class="mbg" data-i18n="mbg">↩️ Satisfait ou remboursé sous 30 jours, sans condition</div>
 </div>
 </div>
-<p class="guarantee">🔒 Secure checkout via Stripe · One-time payment, no subscription · Mac &amp; mobile coming soon</p>
+<p class="guarantee" data-i18n="guarantee">🔒 Paiement sécurisé via Stripe · Paiement unique, sans abonnement · Mac et mobile bientôt</p>
 </div>
 </section>
 <!-- FAQ -->
@@ -276,15 +258,15 @@
 <h2 data-i18n="faq_h2">Ce qu'on nous demande.</h2>
 </div>
 <div class="faq reveal">
-<div class="faq-item"><button aria-expanded="false" class="faq-q">How do I get my data out of Snapchat?<span class="pm">+</span></button><div class="faq-a"><p>In Snapchat: profile → Settings ⚙️ → <b>My Data</b> → <b>Submit Request</b> (tick “Include Memories”). Snapchat emails you a download link, usually within a few hours. A large library can arrive as <b>several ZIP files</b>, so just save them all into one folder and point SnapRescue at that folder. <a href="#guide" style="color:var(--sunset)">See the full step-by-step guide ↑</a></p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">Will this get my Snapchat account banned?<span class="pm">+</span></button><div class="faq-a"><p>No. SnapRescue never logs into Snapchat or touches your account. You request your data through Snapchat's own official “My Data” tool, and SnapRescue only processes the ZIP they email you, entirely on your computer.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">Are my photos uploaded anywhere?<span class="pm">+</span></button><div class="faq-a"><p>Never. All processing happens locally on your machine. Your memories don't leave your computer, and SnapRescue works without an account. The only thing that ever goes online is a tiny licence-key check when you unlock the full version.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">What do I get for free?<span class="pm">+</span></button><div class="faq-a"><p>The full feature set on your first 50 files, so you can confirm it works perfectly on your own photos and videos before paying anything. Unlock once for $9.99 to process your entire library.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">Does it handle videos too?<span class="pm">+</span></button><div class="faq-a"><p>Yes. Dates and GPS are written into videos as well as photos, and caption/sticker overlays are merged onto both. Quality is untouched; only metadata changes.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">Where do the files end up?<span class="pm">+</span></button><div class="faq-a"><p>In a clean set of <code>2019/ 2020/ …</code> folders you choose, with every file's real date and location embedded, ready to drag into Google Photos, Apple Photos, Immich, Lightroom, or anywhere else.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">How do I bring these into Immich (or another self-hosted library)?<span class="pm">+</span></button><div class="faq-a"><p>Just import the rescued photos and videos like any others. The date, GPS and caption are written <b>inside each file</b>, so Immich reads them straight away. No need to import anything else. If you run an <b>external library</b> (Immich scanning a folder without altering your originals), tick <b>“Also write XMP sidecar files”</b> in SnapRescue and a matching <code>.xmp</code> is placed next to each item. One thing to note: a sidecar is only ever read <b>alongside its photo or video</b>, never uploaded on its own.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">Windows showed a blue “protected your PC” warning. Is it safe?<span class="pm">+</span></button><div class="faq-a"><p>Yes. That SmartScreen notice appears for any new app from an independent developer that hasn't yet built up download history with Microsoft. SnapRescue is safe and runs entirely on your computer. To open it: click <b>“More info”</b>, then <b>“Run anyway”</b>. The warning fades as more people download it.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q">Mac or phone?<span class="pm">+</span></button><div class="faq-a"><p>Windows is available now. Mac and iOS/Android versions are in the works. Buy once and you'll get them included.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q1">Comment récupérer mes données de Snapchat ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a1">Dans Snapchat : profil → Réglages ⚙️ → <b>Mes données</b> → <b>Envoyer la demande</b> (cochez « Inclure les souvenirs »). Snapchat vous envoie un lien de téléchargement, souvent en quelques heures. Une grande bibliothèque peut arriver en <b>plusieurs fichiers ZIP</b> ; mettez-les tous dans un dossier et pointez SnapRescue dessus.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q2">Est-ce que mon compte Snapchat risque d'être banni ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a2">Non. SnapRescue ne se connecte jamais à Snapchat et ne touche pas à votre compte. Vous demandez vos données via l'outil officiel « Mes données » de Snapchat, et SnapRescue traite seulement le ZIP qu'ils vous envoient, entièrement sur votre ordinateur.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q3">Mes photos sont-elles envoyées quelque part ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a3">Jamais. Tout le traitement se fait localement sur votre machine. Vos souvenirs ne quittent pas votre ordinateur, et SnapRescue fonctionne sans compte. La seule chose qui passe en ligne est une petite vérification de clé de licence quand vous débloquez la version complète.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q4">Qu'est-ce que j'obtiens gratuitement ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a4">Toutes les fonctions sur vos 50 premiers fichiers, pour confirmer que ça marche parfaitement sur vos propres photos et vidéos avant de payer. Débloquez une fois pour 9,99 $ pour traiter toute votre bibliothèque.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q5">Gère-t-il aussi les vidéos ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a5">Oui. Les dates et le GPS sont inscrits dans les vidéos comme dans les photos, et les surcouches légendes/autocollants sont fusionnées sur les deux. La qualité reste intacte ; seules les métadonnées changent.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q6">Où finissent les fichiers ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a6">Dans un ensemble net de dossiers <code>2019/ 2020/ …</code> que vous choisissez, avec la vraie date et le lieu intégrés dans chaque fichier, prêts à glisser dans Google Photos, Apple Photos, Immich, Lightroom ou ailleurs.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q7">Comment les importer dans Immich (ou une autre bibliothèque auto-hébergée) ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a7">Importez les photos et vidéos sauvées comme les autres. La date, le GPS et la légende sont écrits <b>dans chaque fichier</b>, donc Immich les lit directement. Si vous utilisez une <b>bibliothèque externe</b> (Immich qui scanne un dossier sans modifier vos originaux), cochez <b>« Écrire aussi des fichiers annexes XMP »</b> dans SnapRescue et un <code>.xmp</code> est placé à côté de chaque élément. À noter : un fichier annexe n'est lu qu'<b>à côté de sa photo ou vidéo</b>, jamais envoyé seul.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q8">Windows a affiché un avertissement bleu « protégé votre PC ». Est-ce sûr ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a8">Oui. Cet avis SmartScreen apparaît pour toute nouvelle application d'un développeur indépendant qui n'a pas encore d'historique de téléchargements chez Microsoft. SnapRescue est sûr et fonctionne entièrement sur votre ordinateur. Pour l'ouvrir : cliquez sur <b>« Informations complémentaires »</b>, puis <b>« Exécuter quand même »</b>. L'avertissement disparaît à mesure que plus de gens téléchargent.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q9">Mac ou téléphone ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows est disponible maintenant. Les versions Mac et iOS/Android sont en préparation. Achetez une fois et vous les aurez incluses.</p></div></div>
 </div>
 </div>
 </section>

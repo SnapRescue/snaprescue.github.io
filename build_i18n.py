@@ -83,6 +83,10 @@ def main():
             with open(src, encoding="utf-8") as f:
                 soup = BeautifulSoup(f.read(), "html.parser")
             soup.html["lang"] = lang
+            # Drop blocks that only make sense in English (e.g. the inline
+            # detailed export guide, which the localized guide.html replaces).
+            for el in soup.select(".i18n-drop"):
+                el.decompose()
             translate(soup, dic)
             rewrite_paths(soup)
             set_dropdown(soup, lang)

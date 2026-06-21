@@ -8,6 +8,10 @@
 <meta property="og:title" data-i18n-attr="meta_title|content" content="SnapRescue: Save your Snapchat Memories before they're gone">
 <meta property="og:description" data-i18n-attr="meta_desc|content" content="Restore dates, GPS & captions to your Snapchat export and organize it for any photo library. One-time $9.99.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://snaprescue.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="en" href="https://snaprescue.github.io/index.html">
 <link rel="alternate" hreflang="fr" href="https://snaprescue.github.io/fr/index.html">
 <link rel="alternate" hreflang="de" href="https://snaprescue.github.io/de/index.html">
@@ -367,5 +371,123 @@
 </div>
 
 <script src="main.js?v=20260621d"></script>
+<script type="application/ld+json" class="i18n-drop">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://snaprescue.github.io/#org",
+      "name": "SnapRescue",
+      "url": "https://snaprescue.github.io/",
+      "logo": "https://snaprescue.github.io/assets/icon-1024.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://snaprescue.github.io/#website",
+      "url": "https://snaprescue.github.io/",
+      "name": "SnapRescue",
+      "publisher": {
+        "@id": "https://snaprescue.github.io/#org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "SnapRescue",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows, macOS",
+      "description": "Restore the real dates, GPS and captions to your Snapchat Memories export and organize everything into dated folders. Runs 100% on your computer.",
+      "url": "https://snaprescue.github.io/",
+      "downloadUrl": "https://snaprescue.github.io/#download",
+      "softwareVersion": "1.3",
+      "publisher": {
+        "@id": "https://snaprescue.github.io/#org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "9.99",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get my data out of Snapchat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Snapchat: profile, Settings, My Data, Submit Request (tick Include Memories). Snapchat emails you a download link, usually within a few hours. A large library can arrive as several ZIP files, so save them all into one folder and point SnapRescue at that folder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this get my Snapchat account banned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapRescue never logs into Snapchat or touches your account. You request your data through Snapchat's own official My Data tool, and SnapRescue only processes the ZIP they email you, entirely on your computer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my photos uploaded anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Never. All processing happens locally on your machine. Your memories don't leave your computer, and SnapRescue works without an account. The only thing that ever goes online is a tiny licence-key check when you unlock the full version."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I get for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The full feature set on your first 50 files, so you can confirm it works perfectly on your own photos and videos before paying anything. Unlock once for $9.99 to process your entire library."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it handle videos too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Dates and GPS are written into videos as well as photos, and caption and sticker overlays are merged onto both. Quality is untouched; only metadata changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do the files end up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a clean set of year folders you choose, with every file's real date and location embedded, ready to drag into Google Photos, Apple Photos, Immich, Lightroom, or anywhere else."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I bring these into Immich or another self-hosted library?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Just import the rescued photos and videos like any others. The date, GPS and caption are written inside each file, so Immich reads them straight away. For an external library, tick Also write XMP sidecar files and a matching .xmp is placed next to each item."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Windows showed a blue protected your PC warning. Is it safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. That SmartScreen notice appears for any new app from an independent developer that has not yet built up download history with Microsoft. SnapRescue is safe and runs entirely on your computer. To open it, click More info, then Run anyway."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a Mac or phone version?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Windows and Mac (Apple Silicon) are available now. Intel Mac and iOS/Android versions are in the works. Buy once and you'll get them all included."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

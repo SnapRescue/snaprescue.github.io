@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --paper:#f6efe2; --ink:#211a13; --ink-soft:#5c5044; --ink-faint:#9a8c79;
+         --sunset:#e8623a; --sunset-deep:#c8431f; --gold:#f3b443; --danger:#d92d20; --line:#e0d2bb; --card:#fffaf1; }
+  *{margin:0;box-sizing:border-box}
+  body{width:1200px;height:630px;background:var(--paper);font-family:"Hanken Grotesk",sans-serif;
+       color:var(--ink);overflow:hidden;position:relative}
+  .glow{position:absolute;top:-30%;right:-12%;width:760px;height:760px;border-radius:50%;
+        background:radial-gradient(circle,rgba(243,180,67,.45),rgba(232,98,58,.18) 45%,transparent 68%);}
+  .wrap{position:relative;padding:64px 72px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:16px}
+  .mark{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;color:#fff;
+        background:radial-gradient(circle at 32% 30%,var(--gold),var(--sunset) 70%);box-shadow:0 8px 22px rgba(232,98,58,.4)}
+  .brand .nm{font-family:"Fraunces",serif;font-weight:600;font-size:38px;letter-spacing:-.02em}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:.04em;
+           text-transform:uppercase;color:var(--sunset-deep);background:rgba(232,98,58,.13);
+           padding:9px 18px;border-radius:100px;width:max-content;margin-bottom:26px}
+  .eyebrow .dot{width:11px;height:11px;border-radius:50%;background:var(--danger)}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:74px;line-height:1.02;letter-spacing:-.02em;max-width:18ch}
+  h1 .i{font-style:italic;color:var(--sunset);font-weight:500}
+  .sub{font-size:27px;color:var(--ink-soft);margin-top:24px;max-width:30ch;line-height:1.4}
+  .foot{display:flex;align-items:center;gap:26px;font-size:21px;color:var(--ink-soft);font-weight:600}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);
+        padding:11px 20px;border-radius:100px}
+  .chip b{color:var(--ink)}
+  .url{margin-left:auto;font-family:"Fraunces",serif;font-weight:600;font-size:23px;color:var(--ink-faint)}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <div class="brand">
+    <span class="mark"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span>
+    <span class="nm">SnapRescue</span>
+  </div>
+  <div>
+    <span class="eyebrow"><span class="dot"></span> Snapchat deletes Memories · Sept 1, 2026</span>
+    <h1>Get your memories out,<br><span class="i">with their dates intact.</span></h1>
+    <p class="sub">Restore the real dates, GPS and captions to your Snapchat export. Free for your first 50.</p>
+  </div>
+  <div class="foot">
+    <span class="chip">🔒 <b>100% on your computer</b></span>
+    <span class="chip">💲 <b>$9.99 once</b></span>
+    <span class="url">snaprescue.github.io</span>
+  </div>
+</div>
+</body>
+</html>

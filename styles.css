@@ -430,3 +430,10 @@ body.has-cd-bar nav { top: 40px; }
 .modal .modal-fine a { color: var(--sunset); }
 .modal-x { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 26px; line-height: 1; color: var(--ink-faint); cursor: pointer; }
 .modal-x:hover { color: var(--ink); }
+
+/* ── App showcase (real screenshot) ────────────────────────────── */
+.showcase { background: var(--paper); }
+.app-frame { max-width: 1000px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 40px 80px rgba(60,40,20,.22); background: #15110d; position: relative; }
+.app-frame img { width: 100%; display: block; }
+.app-frame::after { content: ""; position: absolute; inset: 0; border-radius: 16px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); pointer-events: none; }
+.showcase-cap { text-align: center; color: var(--ink-faint); font-size: 14px; margin-top: 18px; }

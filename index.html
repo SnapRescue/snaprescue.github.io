@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260621c">
+<link rel="stylesheet" href="styles.css?v=20260621d">
 </head>
 <body class="has-cd-bar">
 
@@ -64,7 +64,7 @@
       <h1 class="reveal" style="--i:1" data-i18n="hero_h1">Get your memories out,<br><span class="serif-italic accent">with their dates intact.</span></h1>
       <p class="lead reveal" style="--i:2" data-i18n="hero_lead">Snapchat's export splits your photos from their dates and locations, so everything lands in your library stamped <em>today</em>. SnapRescue puts the real capture time, GPS and captions back, and sorts it all into tidy, dated folders.</p>
       <div class="hero-cta reveal" style="--i:3">
-        <a href="#download" class="btn btn-primary btn-lg" data-i18n="hero_dl">⬇ Download for Windows</a>
+        <a href="#download" class="btn btn-primary btn-lg" data-i18n="hero_dl">⬇ Download</a>
         <a href="#how" class="btn btn-ghost btn-lg" data-i18n="hero_how">See how it works</a>
       </div>
       <div class="hero-note reveal" style="--i:4" data-i18n="hero_note">✓ Free for your first 50 files &nbsp;·&nbsp; ✓ 100% on your computer &nbsp;·&nbsp; ✓ No account</div>
@@ -118,7 +118,7 @@
     <div class="app-frame reveal">
       <img src="assets/app-review.png" alt="SnapRescue showing 2,483 memories found, with photo, video and with-location counts and a preview list" loading="lazy">
     </div>
-    <p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue on Windows. Mac and mobile coming soon.</p>
+    <p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue on Windows and Mac. Mobile coming soon.</p>
   </div>
 </section>
 
@@ -260,7 +260,7 @@
           <li><span class="ck">✓</span> <span data-i18n="free_li3">Dated folder organization</span></li>
           <li><span class="ck">✓</span> <span data-i18n="free_li4">100% private, no account</span></li>
         </ul>
-        <a href="#" class="btn btn-ghost" id="download-btn" data-i18n="hero_dl">⬇ Download for Windows</a>
+        <a href="#" class="btn btn-ghost" id="download-btn" data-i18n="hero_dl">⬇ Download</a>
         <p style="font-size:12.5px;color:var(--ink-faint);margin-top:12px;line-height:1.5" data-i18n="free_note">First open: if Windows shows a blue warning, click <b>More info → Run anyway</b>. <a href="#faq" style="color:var(--sunset)">Why?</a></p>
       </div>
       <div class="price featured reveal">
@@ -278,7 +278,7 @@
         <div class="mbg" data-i18n="mbg">↩️ 30-day money-back guarantee, no questions asked</div>
       </div>
     </div>
-    <p class="guarantee" data-i18n="guarantee">🔒 Secure checkout via Stripe · One-time payment, no subscription · Mac &amp; mobile coming soon</p>
+    <p class="guarantee" data-i18n="guarantee">🔒 Secure checkout via Stripe · One-time payment, no subscription · Windows &amp; Mac, mobile coming soon</p>
   </div>
 </section>
 
@@ -298,7 +298,7 @@
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q6">Where do the files end up?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a6">In a clean set of <code>2019/ 2020/ …</code> folders you choose, with every file's real date and location embedded, ready to drag into Google Photos, Apple Photos, Immich, Lightroom, or anywhere else.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q7">How do I bring these into Immich (or another self-hosted library)?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a7">Just import the rescued photos and videos like any others. The date, GPS and caption are written <b>inside each file</b>, so Immich reads them straight away. No need to import anything else. If you run an <b>external library</b> (Immich scanning a folder without altering your originals), tick <b>“Also write XMP sidecar files”</b> in SnapRescue and a matching <code>.xmp</code> is placed next to each item. One thing to note: a sidecar is only ever read <b>alongside its photo or video</b>, never uploaded on its own.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q8">Windows showed a blue “protected your PC” warning. Is it safe?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a8">Yes. That SmartScreen notice appears for any new app from an independent developer that hasn't yet built up download history with Microsoft. SnapRescue is safe and runs entirely on your computer. To open it: click <b>“More info”</b>, then <b>“Run anyway”</b>. The warning fades as more people download it.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q9">Mac or phone?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows is available now. Mac and iOS/Android versions are in the works. Buy once and you'll get them included.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q9">Mac or phone?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows and Mac (Apple Silicon) are available now. Intel Mac and iOS/Android versions are in the works. Buy once and you'll get them all included.</p></div></div>
     </div>
   </div>
 </section>
@@ -339,21 +339,34 @@
   <div class="modal">
     <button class="modal-x" id="dl-x" aria-label="Close">×</button>
     <h3 data-i18n="modal_title">Your download is starting</h3>
-    <p data-i18n="modal_body">SnapRescue is a new app, so Windows may show a blue <b>“Windows protected your PC”</b> notice. That is normal for any new app, and SnapRescue is completely safe and runs entirely on your computer.</p>
-    <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="modal_steps">To open it: click <b>More info</b>, then <b>Run anyway</b>.</span></div>
-    <div class="ss-mock" aria-hidden="true">
-      <span class="ss-x">✕</span>
-      <div class="ss-title">Windows protected your PC</div>
-      <div class="ss-body">Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</div>
-      <span class="ss-more">More info</span>
-      <div class="ss-btns"><span class="ss-run">Run anyway</span><span class="ss-dont">Don't run</span></div>
+    <!-- WINDOWS -->
+    <div id="dl-win">
+      <p data-i18n="modal_body">SnapRescue is a new app, so Windows may show a blue <b>“Windows protected your PC”</b> notice. That is normal for any new app, and SnapRescue is completely safe and runs entirely on your computer.</p>
+      <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="modal_steps">To open it: click <b>More info</b>, then <b>Run anyway</b>.</span></div>
+      <div class="ss-mock" aria-hidden="true">
+        <span class="ss-x">✕</span>
+        <div class="ss-title">Windows protected your PC</div>
+        <div class="ss-body">Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</div>
+        <span class="ss-more">More info</span>
+        <div class="ss-btns"><span class="ss-run">Run anyway</span><span class="ss-dont">Don't run</span></div>
+      </div>
+      <p class="ss-cap" data-i18n="ss_cap">This is the exact box you'll see. Click <b>More info</b> to reveal <b>Run anyway</b>.</p>
+      <a href="#" class="btn btn-primary" id="dl-go" data-i18n="win_dl">⬇ Download for Windows</a>
+      <button class="modal-switch" id="to-mac" data-i18n="dl_toggle_mac">On a Mac instead?</button>
     </div>
-    <p class="ss-cap" data-i18n="ss_cap">This is the exact box you'll see. Click <b>More info</b> to reveal <b>Run anyway</b>.</p>
-    <a href="#" class="btn btn-primary" id="dl-go" data-i18n="hero_dl">⬇ Download for Windows</a>
+    <!-- MAC (Apple Silicon) -->
+    <div id="dl-mac" hidden>
+      <p data-i18n="mac_body">SnapRescue is not in the App Store, so macOS may say it <b>“cannot be opened because Apple cannot check it for malicious software.”</b> That is normal for apps outside the store, and SnapRescue is completely safe and runs entirely on your computer.</p>
+      <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="mac_steps">To open it: <b>right-click</b> the app and choose <b>Open</b>, then <b>Open</b> again.</span></div>
+      <a href="#" class="btn btn-primary" id="dl-go-mac" data-i18n="mac_dl">⬇ Download for Mac (Apple Silicon)</a>
+      <a href="#" class="btn btn-ghost" id="dl-go-mac-intel" style="margin-top:10px" data-i18n="mac_dl_intel">⬇ Download for Intel Mac</a>
+      <p class="ss-cap" data-i18n="mac_arch">Not sure which? Apple menu → About This Mac. “Apple M1/M2/M3” is Apple Silicon; “Intel” is Intel.</p>
+      <button class="modal-switch" id="to-win" data-i18n="dl_toggle_win">On Windows instead?</button>
+    </div>
     <p class="modal-fine" data-i18n="modal_fine">Nothing is uploaded · No account · <a href="#faq" id="dl-why">Why does Windows warn me?</a></p>
   </div>
 </div>
 
-<script src="main.js?v=20260621c"></script>
+<script src="main.js?v=20260621d"></script>
 </body>
 </html>

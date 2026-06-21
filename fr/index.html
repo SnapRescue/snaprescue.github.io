@@ -21,7 +21,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20260621c" rel="stylesheet"/>
+<link href="../styles.css?v=20260621d" rel="stylesheet"/>
 </head>
 <body class="has-cd-bar">
 <!-- COUNTDOWN BAR -->
@@ -44,7 +44,7 @@
 <button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">Français</span> <span class="chev">▾</span></button>
 <div class="lang-menu" id="langMenu">
 <a class="lang-opt" data-lang="en" href="https://snaprescue.github.io/index.html">English</a>
-<a class="lang-opt on" data-lang="fr" href="https://snaprescue.github.io/fr/index.html">Français</a>
+<a class="on lang-opt" data-lang="fr" href="https://snaprescue.github.io/fr/index.html">Français</a>
 <a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/index.html">Deutsch</a>
 <a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/index.html">Español</a>
 <a class="lang-opt" data-lang="nl" href="https://snaprescue.github.io/nl/index.html">Nederlands</a>
@@ -62,7 +62,7 @@
 <h1 class="reveal" data-i18n="hero_h1" style="--i:1">Récupérez vos souvenirs,<br/><span class="serif-italic accent">avec leurs vraies dates.</span></h1>
 <p class="lead reveal" data-i18n="hero_lead" style="--i:2">L'export de Snapchat sépare vos photos de leurs dates et lieux, donc tout arrive dans votre galerie daté d'<em>aujourd'hui</em>. SnapRescue remet la vraie date, le GPS et les légendes, puis range le tout dans des dossiers datés.</p>
 <div class="hero-cta reveal" style="--i:3">
-<a class="btn btn-primary btn-lg" data-i18n="hero_dl" href="#download">⬇ Télécharger pour Windows</a>
+<a class="btn btn-primary btn-lg" data-i18n="hero_dl" href="#download">⬇ Télécharger</a>
 <a class="btn btn-ghost btn-lg" data-i18n="hero_how" href="#how">Voir comment ça marche</a>
 </div>
 <div class="hero-note reveal" data-i18n="hero_note" style="--i:4">✓ Gratuit pour vos 50 premiers fichiers  ·  ✓ 100% sur votre ordinateur  ·  ✓ Sans compte</div>
@@ -112,7 +112,7 @@
 <div class="app-frame reveal">
 <img alt="SnapRescue showing 2,483 memories found, with photo, video and with-location counts and a preview list" loading="lazy" src="../assets/app-review.png"/>
 </div>
-<p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue sur Windows. Mac et mobile bientôt.</p>
+<p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue sur Windows et Mac. Mobile bientôt.</p>
 </div>
 </section>
 <!-- PROBLEM -->
@@ -229,7 +229,7 @@
 <li><span class="ck">✓</span> <span data-i18n="free_li3">Organisation en dossiers datés</span></li>
 <li><span class="ck">✓</span> <span data-i18n="free_li4">100% privé, sans compte</span></li>
 </ul>
-<a class="btn btn-ghost" data-i18n="hero_dl" href="#" id="download-btn">⬇ Télécharger pour Windows</a>
+<a class="btn btn-ghost" data-i18n="hero_dl" href="#" id="download-btn">⬇ Télécharger</a>
 <p data-i18n="free_note" style="font-size:12.5px;color:var(--ink-faint);margin-top:12px;line-height:1.5">Première ouverture : si Windows affiche un avertissement bleu, cliquez sur <b>Informations complémentaires → Exécuter quand même</b>. <a href="#faq" style="color:var(--sunset)">Pourquoi ?</a></p>
 </div>
 <div class="price featured reveal">
@@ -247,7 +247,7 @@
 <div class="mbg" data-i18n="mbg">↩️ Satisfait ou remboursé sous 30 jours, sans condition</div>
 </div>
 </div>
-<p class="guarantee" data-i18n="guarantee">🔒 Paiement sécurisé via Stripe · Paiement unique, sans abonnement · Mac et mobile bientôt</p>
+<p class="guarantee" data-i18n="guarantee">🔒 Paiement sécurisé via Stripe · Paiement unique, sans abonnement · Windows et Mac, mobile bientôt</p>
 </div>
 </section>
 <!-- FAQ -->
@@ -266,7 +266,7 @@
 <div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q6">Où finissent les fichiers ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a6">Dans un ensemble net de dossiers <code>2019/ 2020/ …</code> que vous choisissez, avec la vraie date et le lieu intégrés dans chaque fichier, prêts à glisser dans Google Photos, Apple Photos, Immich, Lightroom ou ailleurs.</p></div></div>
 <div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q7">Comment les importer dans Immich (ou une autre bibliothèque auto-hébergée) ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a7">Importez les photos et vidéos sauvées comme les autres. La date, le GPS et la légende sont écrits <b>dans chaque fichier</b>, donc Immich les lit directement. Si vous utilisez une <b>bibliothèque externe</b> (Immich qui scanne un dossier sans modifier vos originaux), cochez <b>« Écrire aussi des fichiers annexes XMP »</b> dans SnapRescue et un <code>.xmp</code> est placé à côté de chaque élément. À noter : un fichier annexe n'est lu qu'<b>à côté de sa photo ou vidéo</b>, jamais envoyé seul.</p></div></div>
 <div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q8">Windows a affiché un avertissement bleu « protégé votre PC ». Est-ce sûr ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a8">Oui. Cet avis SmartScreen apparaît pour toute nouvelle application d'un développeur indépendant qui n'a pas encore d'historique de téléchargements chez Microsoft. SnapRescue est sûr et fonctionne entièrement sur votre ordinateur. Pour l'ouvrir : cliquez sur <b>« Informations complémentaires »</b>, puis <b>« Exécuter quand même »</b>. L'avertissement disparaît à mesure que plus de gens téléchargent.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q9">Mac ou téléphone ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows est disponible maintenant. Les versions Mac et iOS/Android sont en préparation. Achetez une fois et vous les aurez incluses.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-q"><span data-i18n="faq_q9">Mac ou téléphone ?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows et Mac (Apple Silicon) sont disponibles maintenant. Les versions Mac Intel et iOS/Android sont en préparation. Achetez une fois et vous les aurez toutes incluses.</p></div></div>
 </div>
 </div>
 </section>
@@ -304,6 +304,8 @@
 <div class="modal">
 <button aria-label="Close" class="modal-x" id="dl-x">×</button>
 <h3 data-i18n="modal_title">Votre téléchargement démarre</h3>
+<!-- WINDOWS -->
+<div id="dl-win">
 <p data-i18n="modal_body">SnapRescue est une nouvelle application, donc Windows peut afficher un message bleu <b>« Windows a protégé votre ordinateur »</b>. C'est normal pour toute nouvelle application, et SnapRescue est parfaitement sûr et fonctionne entièrement sur votre ordinateur.</p>
 <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="modal_steps">Pour l'ouvrir : cliquez sur <b>Informations complémentaires</b>, puis <b>Exécuter quand même</b>.</span></div>
 <div aria-hidden="true" class="ss-mock">
@@ -314,10 +316,21 @@
 <div class="ss-btns"><span class="ss-run">Run anyway</span><span class="ss-dont">Don't run</span></div>
 </div>
 <p class="ss-cap" data-i18n="ss_cap">Voici exactement la fenêtre que vous verrez. Cliquez sur <b>Informations complémentaires</b> pour afficher <b>Exécuter quand même</b>.</p>
-<a class="btn btn-primary" data-i18n="hero_dl" href="#" id="dl-go">⬇ Télécharger pour Windows</a>
+<a class="btn btn-primary" data-i18n="win_dl" href="#" id="dl-go">⬇ Télécharger pour Windows</a>
+<button class="modal-switch" data-i18n="dl_toggle_mac" id="to-mac">Plutôt sur un Mac ?</button>
+</div>
+<!-- MAC (Apple Silicon) -->
+<div hidden="" id="dl-mac">
+<p data-i18n="mac_body">SnapRescue n'est pas sur l'App Store, donc macOS peut dire qu'il « ne peut pas être ouvert car Apple ne peut pas vérifier l'absence de logiciels malveillants ». C'est normal pour les applications hors store, et SnapRescue est parfaitement sûr et fonctionne entièrement sur votre ordinateur.</p>
+<div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="mac_steps">Pour l'ouvrir : <b>clic droit</b> sur l'application et choisissez <b>Ouvrir</b>, puis <b>Ouvrir</b> à nouveau.</span></div>
+<a class="btn btn-primary" data-i18n="mac_dl" href="#" id="dl-go-mac">⬇ Télécharger pour Mac (Apple Silicon)</a>
+<a class="btn btn-ghost" data-i18n="mac_dl_intel" href="#" id="dl-go-mac-intel" style="margin-top:10px">⬇ Télécharger pour Mac Intel</a>
+<p class="ss-cap" data-i18n="mac_arch">Pas sûr ? Menu Pomme → À propos de ce Mac. « Apple M1/M2/M3 » = Apple Silicon ; « Intel » = Intel.</p>
+<button class="modal-switch" data-i18n="dl_toggle_win" id="to-win">Plutôt sur Windows ?</button>
+</div>
 <p class="modal-fine" data-i18n="modal_fine">Rien n'est envoyé · Sans compte · <a href="#faq" id="dl-why">Pourquoi cet avertissement Windows ?</a></p>
 </div>
 </div>
-<script src="../main.js?v=20260621c"></script>
+<script src="../main.js?v=20260621d"></script>
 </body>
 </html>

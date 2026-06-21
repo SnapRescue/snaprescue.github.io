@@ -6,6 +6,9 @@ const CONFIG = {
   LICENSE_API: "https://snaprescue-license.tail28b3e2.ts.net",
   // Direct download link to the Windows build (e.g. a GitHub Release asset).
   DOWNLOAD_URL: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-Setup.exe",
+  // macOS builds: Apple Silicon (arm64) and Intel (x86_64).
+  DOWNLOAD_URL_MAC: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-mac-arm64.dmg",
+  DOWNLOAD_URL_MAC_INTEL: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-mac-intel.dmg",
 };
 
 // ── Nav shadow on scroll ─────────────────────────────────────
@@ -57,8 +60,25 @@ document.querySelectorAll('a[href="#download"], #download-btn').forEach((a) => {
   });
 });
 
-const dlGo = document.getElementById("dl-go");
-if (dlGo && CONFIG.DOWNLOAD_URL && CONFIG.DOWNLOAD_URL !== "#") dlGo.setAttribute("href", CONFIG.DOWNLOAD_URL);
+// Point each download button at its asset.
+const setHref = (id, url) => { const el = document.getElementById(id); if (el && url && url !== "#") el.setAttribute("href", url); };
+setHref("dl-go", CONFIG.DOWNLOAD_URL);
+setHref("dl-go-mac", CONFIG.DOWNLOAD_URL_MAC);
+setHref("dl-go-mac-intel", CONFIG.DOWNLOAD_URL_MAC_INTEL);
+
+// Show the Windows or Mac block based on the visitor's OS; let them switch.
+const winBlock = document.getElementById("dl-win");
+const macBlock = document.getElementById("dl-mac");
+const isMac = /Mac/i.test(navigator.platform || "") || (/Mac OS X/i.test(navigator.userAgent || "") && !/iPhone|iPad/i.test(navigator.userAgent || ""));
+const showPlatform = (p) => {
+  if (!winBlock || !macBlock) return;
+  const mac = p === "mac";
+  macBlock.hidden = !mac; winBlock.hidden = mac;
+};
+showPlatform(isMac ? "mac" : "win");
+document.getElementById("to-mac")?.addEventListener("click", () => showPlatform("mac"));
+document.getElementById("to-win")?.addEventListener("click", () => showPlatform("win"));
+
 document.getElementById("dl-x")?.addEventListener("click", closeDlModal);
 document.getElementById("dl-why")?.addEventListener("click", closeDlModal);
 dlModal?.addEventListener("click", (e) => { if (e.target === dlModal) closeDlModal(); });

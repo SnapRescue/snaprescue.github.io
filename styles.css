@@ -486,3 +486,8 @@ body.has-cd-bar nav { top: 40px; }
 .lang-opt:hover { background: var(--paper-2); color: var(--ink); }
 .lang-opt.on { color: var(--sunset); font-weight: 700; }
 @media (max-width: 600px) { .lang-btn span.lbl { display: none; } }
+
+/* ── Modal platform switch link ────────────────────────────────── */
+.modal-switch { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 13px; font-family: inherit; margin-top: 14px; text-decoration: underline; text-underline-offset: 2px; }
+.modal-switch:hover { color: var(--sunset); }
+#dl-mac .ss-cap { margin-top: 14px; }

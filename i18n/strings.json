@@ -236,7 +236,7 @@
     "mac_dl_intel": "⬇ Télécharger pour Mac Intel",
     "mac_body": "SnapRescue n'est pas sur l'App Store, donc macOS peut dire qu'il « ne peut pas être ouvert car Apple ne peut pas vérifier l'absence de logiciels malveillants ». C'est normal pour les applications hors store, et SnapRescue est parfaitement sûr et fonctionne entièrement sur votre ordinateur.",
     "mac_steps": "Pour l'ouvrir : <b>clic droit</b> sur l'application et choisissez <b>Ouvrir</b>, puis <b>Ouvrir</b> à nouveau.",
-    "mac_arch": "Pas sûr ? Menu Pomme → À propos de ce Mac. « Apple M1/M2/M3 » = Apple Silicon ; « Intel » = Intel.",
+    "mac_arch": "Pour les Mac Apple Silicon (M1, M2, M3 et plus récents). Vérifiez le vôtre via Menu Pomme → À propos de ce Mac. La version Mac Intel arrive très bientôt.",
     "dl_toggle_mac": "Plutôt sur un Mac ?",
     "dl_toggle_win": "Plutôt sur Windows ?"
   },
@@ -477,7 +477,7 @@
     "mac_dl_intel": "⬇ Für Intel-Mac herunterladen",
     "mac_body": "SnapRescue ist nicht im App Store, daher sagt macOS eventuell, es „kann nicht geöffnet werden, da Apple es nicht auf Schadsoftware prüfen kann“. Das ist bei Apps außerhalb des Stores normal, und SnapRescue ist völlig sicher und läuft komplett auf Ihrem Computer.",
     "mac_steps": "So öffnen Sie es: <b>Rechtsklick</b> auf die App und <b>Öffnen</b> wählen, dann erneut <b>Öffnen</b>.",
-    "mac_arch": "Nicht sicher? Apple-Menü → Über diesen Mac. „Apple M1/M2/M3“ ist Apple Silicon; „Intel“ ist Intel.",
+    "mac_arch": "Für Apple-Silicon-Macs (M1, M2, M3 und neuer). Prüfen Sie Ihren unter Apple-Menü → Über diesen Mac. Intel-Mac-Unterstützung kommt sehr bald.",
     "dl_toggle_mac": "Lieber auf einem Mac?",
     "dl_toggle_win": "Lieber unter Windows?"
   },
@@ -718,7 +718,7 @@
     "mac_dl_intel": "⬇ Descargar para Mac Intel",
     "mac_body": "SnapRescue no está en la App Store, así que macOS puede decir que «no se puede abrir porque Apple no puede comprobar si contiene malware». Es normal en apps fuera de la tienda, y SnapRescue es totalmente seguro y funciona por completo en tu ordenador.",
     "mac_steps": "Para abrirlo: <b>haz clic derecho</b> en la app y elige <b>Abrir</b>, y luego <b>Abrir</b> otra vez.",
-    "mac_arch": "¿No sabes cuál? Menú Apple → Acerca de este Mac. «Apple M1/M2/M3» es Apple Silicon; «Intel» es Intel.",
+    "mac_arch": "Para Macs con Apple Silicon (M1, M2, M3 y más nuevos). Comprueba el tuyo en Menú Apple → Acerca de este Mac. La versión para Mac Intel llega muy pronto.",
     "dl_toggle_mac": "¿Mejor en un Mac?",
     "dl_toggle_win": "¿Mejor en Windows?"
   },
@@ -959,7 +959,7 @@
     "mac_dl_intel": "⬇ Downloaden voor Intel-Mac",
     "mac_body": "SnapRescue staat niet in de App Store, dus macOS zegt mogelijk dat het „niet kan worden geopend omdat Apple niet kan controleren op schadelijke software”. Dat is normaal voor apps buiten de store, en SnapRescue is volkomen veilig en draait volledig op je eigen computer.",
     "mac_steps": "Om het te openen: <b>klik met de rechtermuisknop</b> op de app en kies <b>Openen</b>, daarna nogmaals <b>Openen</b>.",
-    "mac_arch": "Niet zeker? Apple-menu → Over deze Mac. „Apple M1/M2/M3” is Apple Silicon; „Intel” is Intel.",
+    "mac_arch": "Voor Macs met Apple Silicon (M1, M2, M3 en nieuwer). Controleer die van jou via Apple-menu → Over deze Mac. Ondersteuning voor Intel-Mac komt heel binnenkort.",
     "dl_toggle_mac": "Liever op een Mac?",
     "dl_toggle_win": "Liever op Windows?"
   }

@@ -453,3 +453,24 @@ body.has-cd-bar nav { top: 40px; }
 .ss-mock .ss-run { background: #fff; outline: 2px solid var(--gold); box-shadow: 0 0 0 3px rgba(243,180,67,.45); }
 .ss-cap { font-size: 12px; color: var(--ink-faint); margin: -8px 0 16px; }
 .ss-cap b { color: var(--ink-soft); }
+
+/* ── Step-by-step guide timeline ───────────────────────────────── */
+.guide-timeline { max-width: 740px; margin: 0 auto; }
+.gstep { position: relative; padding: 0 0 26px 66px; }
+.gstep::before { content: ""; position: absolute; left: 21px; top: 8px; bottom: -8px; width: 2px; background: var(--line); }
+.gstep:last-child::before { display: none; }
+.gstep-dot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 18px; box-shadow: 0 6px 16px rgba(60,40,20,.18); z-index: 1; }
+.gstep-dot.c-req { background: linear-gradient(135deg,#5b8def,#3a6fd8); }
+.gstep-dot.c-wait { background: linear-gradient(135deg,#f3b443,#e8893a); }
+.gstep-dot.c-do { background: linear-gradient(135deg,#3fbf86,#2f9f6a); }
+.gstep-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 9px; }
+.gchip { font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 100px; background: var(--paper-2); color: var(--ink-soft); border: 1px solid var(--line); }
+.gchip.time { color: var(--ink-faint); }
+.gstep h3 { font-size: 22px; margin-bottom: 8px; }
+.gstep-body > p { color: var(--ink-soft); font-size: 16px; margin-bottom: 14px; }
+.gresult { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.gresult .gr-ico { color: var(--teal); font-size: 15px; flex: 0 0 auto; margin-top: 2px; }
+.gr-lbl { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 3px; }
+.gr-text { font-weight: 600; color: var(--ink); font-size: 15px; }
+.gwait-note { margin: 12px 0 0; color: var(--sunset-deep); font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+@media (max-width: 600px) { .gstep { padding-left: 56px; } .gstep-dot { width: 38px; height: 38px; } .gstep::before { left: 18px; } }

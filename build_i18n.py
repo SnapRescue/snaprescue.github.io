@@ -24,12 +24,11 @@ ENDONYM = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español"
 # Only pages that are instrumented (data-i18n + dropdown + hreflang) are
 # generated. deadline.html/guide.html are not localized yet, so their links
 # from the localized homepage point back to the English originals (below).
-PAGES = ["index.html"]
+PAGES = ["index.html", "deadline.html", "guide.html"]
 
 # root-relative things that must become ../ inside a /<lang>/ page
 PREFIX = ("styles.css", "main.js", "assets/", "blog/",
-          "privacy.html", "tos.html", "success.html", "robots.txt", "sitemap.xml",
-          "deadline.html", "guide.html")
+          "privacy.html", "tos.html", "success.html", "robots.txt", "sitemap.xml")
 
 
 def needs_prefix(v):

@@ -5,6 +5,14 @@
   <url><loc>https://snaprescue.github.io/de/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://snaprescue.github.io/es/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://snaprescue.github.io/nl/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snaprescue.github.io/fr/deadline.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snaprescue.github.io/de/deadline.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snaprescue.github.io/es/deadline.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snaprescue.github.io/nl/deadline.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snaprescue.github.io/fr/guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snaprescue.github.io/de/guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snaprescue.github.io/es/guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snaprescue.github.io/nl/guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://snaprescue.github.io/deadline.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://snaprescue.github.io/guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://snaprescue.github.io/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

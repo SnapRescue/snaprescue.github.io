@@ -3,11 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Snapchat Memories deadline: September 1, 2026 · SnapRescue</title>
-<meta name="description" content="Snapchat caps free Memories storage at 5GB and starts permanently deleting anything over the limit on September 1, 2026. Here is the timeline, what happens if you do nothing, and how to save everything for a one-time $9.99.">
-<meta property="og:title" content="Your Snapchat Memories have a September 1, 2026 deadline">
-<meta property="og:description" content="After September 1, 2026 Snapchat permanently deletes Memories over the free 5GB limit. Get yours out, with dates and locations intact, for a one-time $9.99.">
+<title data-i18n="dl_meta_title">The Snapchat Memories deadline: September 1, 2026 · SnapRescue</title>
+<meta name="description" data-i18n-attr="dl_meta_desc|content" content="Snapchat caps free Memories storage at 5GB and starts permanently deleting anything over the limit on September 1, 2026. Here is the timeline, what happens if you do nothing, and how to save everything for a one-time $9.99.">
+<meta property="og:title" data-i18n-attr="dl_meta_title|content" content="Your Snapchat Memories have a September 1, 2026 deadline">
+<meta property="og:description" data-i18n-attr="dl_meta_desc|content" content="After September 1, 2026 Snapchat permanently deletes Memories over the free 5GB limit. Get yours out, with dates and locations intact, for a one-time $9.99.">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="https://snaprescue.github.io/deadline.html">
+<link rel="alternate" hreflang="fr" href="https://snaprescue.github.io/fr/deadline.html">
+<link rel="alternate" hreflang="de" href="https://snaprescue.github.io/de/deadline.html">
+<link rel="alternate" hreflang="es" href="https://snaprescue.github.io/es/deadline.html">
+<link rel="alternate" hreflang="nl" href="https://snaprescue.github.io/nl/deadline.html">
+<link rel="alternate" hreflang="x-default" href="https://snaprescue.github.io/deadline.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -21,8 +27,8 @@
 <!-- COUNTDOWN BAR -->
 <div class="cd-bar">
   <span class="cd-dot"></span>
-  <span><span class="cd-label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
-  <a href="#pricing">Save mine →</a>
+  <span><span class="cd-label" data-i18n="cd_label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+  <a href="#pricing" data-i18n="dl_cd_save">Save mine →</a>
 </div>
 
 <!-- NAV -->
@@ -30,11 +36,21 @@
   <div class="wrap nav-in">
     <a href="index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
     <div class="nav-links">
-      <a href="index.html#how" class="hide-sm">How it works</a>
-      <a href="index.html#features" class="hide-sm">Features</a>
-      <a href="blog/" class="hide-sm">Blog</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="index.html#download" class="btn btn-primary nav-cta">Get it free</a>
+      <a href="index.html#how" class="hide-sm" data-i18n="nav_how">How it works</a>
+      <a href="index.html#features" class="hide-sm" data-i18n="nav_features">Features</a>
+      <a href="blog/" class="hide-sm" data-i18n="nav_blog">Blog</a>
+      <a href="index.html#pricing" data-i18n="nav_pricing">Pricing</a>
+      <div class="lang-pick">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></svg> <span class="lbl" id="langLabel">English</span> <span class="chev">▾</span></button>
+        <div class="lang-menu" id="langMenu">
+          <a class="lang-opt on" data-lang="en" href="https://snaprescue.github.io/deadline.html">English</a>
+          <a class="lang-opt" data-lang="fr" href="https://snaprescue.github.io/fr/deadline.html">Français</a>
+          <a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/deadline.html">Deutsch</a>
+          <a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/deadline.html">Español</a>
+          <a class="lang-opt" data-lang="nl" href="https://snaprescue.github.io/nl/deadline.html">Nederlands</a>
+        </div>
+      </div>
+      <a href="index.html#download" class="btn btn-primary nav-cta" data-i18n="nav_getfree">Get it free</a>
     </div>
   </div>
 </nav>
@@ -42,20 +58,20 @@
 <!-- HERO -->
 <header class="dl-hero">
   <div class="wrap">
-    <p class="kicker reveal">The September 1, 2026 deadline</p>
-    <h1 class="reveal">Snapchat is about to start<br><span class="serif-italic accent">deleting your Memories.</span></h1>
-    <p class="lead reveal">In September 2025 Snapchat capped free Memories storage at 5GB and gave everyone a 12-month grace period. When it ends on <b>September 1, 2026</b>, anything over the free limit can be <b>permanently deleted</b>. Here is exactly what is happening, and how to keep everything.</p>
+    <p class="kicker reveal" data-i18n="dl_kicker">The September 1, 2026 deadline</p>
+    <h1 class="reveal" data-i18n="dl_h1">Snapchat is about to start<br><span class="serif-italic accent">deleting your Memories.</span></h1>
+    <p class="lead reveal" data-i18n="dl_lead">In September 2025 Snapchat capped free Memories storage at 5GB and gave everyone a 12-month grace period. When it ends on <b>September 1, 2026</b>, anything over the free limit can be <b>permanently deleted</b>. Here is exactly what is happening, and how to keep everything.</p>
 
     <div class="cd-big reveal">
-      <div class="cd-cell"><div class="n" id="cd-d">--</div><div class="l">Days</div></div>
-      <div class="cd-cell"><div class="n" id="cd-h">--</div><div class="l">Hours</div></div>
-      <div class="cd-cell"><div class="n" id="cd-m">--</div><div class="l">Minutes</div></div>
-      <div class="cd-cell"><div class="n" id="cd-s">--</div><div class="l">Seconds</div></div>
+      <div class="cd-cell"><div class="n" id="cd-d">--</div><div class="l" data-i18n="dl_days">Days</div></div>
+      <div class="cd-cell"><div class="n" id="cd-h">--</div><div class="l" data-i18n="dl_hours">Hours</div></div>
+      <div class="cd-cell"><div class="n" id="cd-m">--</div><div class="l" data-i18n="dl_min">Minutes</div></div>
+      <div class="cd-cell"><div class="n" id="cd-s">--</div><div class="l" data-i18n="dl_sec">Seconds</div></div>
     </div>
-    <p class="deadline-stamp reveal">until your oldest Memories are at risk</p>
+    <p class="deadline-stamp reveal" data-i18n="dl_stamp">until your oldest Memories are at risk</p>
     <div class="hero-cta reveal" style="justify-content:center;margin-top:26px">
-      <a href="#pricing" class="btn btn-primary btn-lg">Save my Memories for $9.99</a>
-      <a href="index.html#how" class="btn btn-ghost btn-lg">See how it works</a>
+      <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="dl_savebtn">Save my Memories for $9.99</a>
+      <a href="index.html#how" class="btn btn-ghost btn-lg" data-i18n="hero_how">See how it works</a>
     </div>
   </div>
 </header>
@@ -64,29 +80,29 @@
 <section class="problem">
   <div class="wrap">
     <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;max-width:46rem">
-      <p class="kicker">How we got here</p>
-      <h2>The timeline, plainly.</h2>
+      <p class="kicker" data-i18n="dl_tlk">How we got here</p>
+      <h2 data-i18n="dl_tlh2">The timeline, plainly.</h2>
     </div>
     <div class="timeline reveal">
       <div class="tl-item">
-        <div class="tl-date">Sept 2025</div>
+        <div class="tl-date" data-i18n="dl_tl1d">Sept 2025</div>
         <div class="tl-body">
-          <h3>Snapchat caps free storage at 5GB</h3>
-          <p>Memories used to be unlimited and free. Snapchat announced a new 5GB free limit, with paid plans for anything beyond it, and started a 12-month grace period so nothing was deleted right away.</p>
+          <h3 data-i18n="dl_tl1h">Snapchat caps free storage at 5GB</h3>
+          <p data-i18n="dl_tl1p">Memories used to be unlimited and free. Snapchat announced a new 5GB free limit, with paid plans for anything beyond it, and started a 12-month grace period so nothing was deleted right away.</p>
         </div>
       </div>
       <div class="tl-item now">
-        <div class="tl-date">Right now<span class="tl-flag you-are-here">You are here</span></div>
+        <div class="tl-date" data-i18n="dl_tl2d">Right now<span class="tl-flag you-are-here">You are here</span></div>
         <div class="tl-body">
-          <h3>The grace period is ticking down</h3>
-          <p>Your Memories are still safe today, but the clock is running. This is the calm, unhurried window to export everything properly, before the last-minute rush when Snapchat's export queue gets slow.</p>
+          <h3 data-i18n="dl_tl2h">The grace period is ticking down</h3>
+          <p data-i18n="dl_tl2p">Your Memories are still safe today, but the clock is running. This is the calm, unhurried window to export everything properly, before the last-minute rush when Snapchat's export queue gets slow.</p>
         </div>
       </div>
       <div class="tl-item danger">
-        <div class="tl-date">Sept 1, 2026<span class="tl-flag gone">Deletion begins</span></div>
+        <div class="tl-date" data-i18n="dl_tl3d">Sept 1, 2026<span class="tl-flag gone">Deletion begins</span></div>
         <div class="tl-body">
-          <h3>Memories over 5GB can be permanently deleted</h3>
-          <p>Per Snapchat's own support guidance: your oldest Memories that fit inside the 5GB limit stay, but your most recent Memories above that limit are removed unless you have upgraded to a paid plan or saved them somewhere else. Deleted Memories are not recoverable.</p>
+          <h3 data-i18n="dl_tl3h">Memories over 5GB can be permanently deleted</h3>
+          <p data-i18n="dl_tl3p">Per Snapchat's own support guidance: your oldest Memories that fit inside the 5GB limit stay, but your most recent Memories above that limit are removed unless you have upgraded to a paid plan or saved them somewhere else. Deleted Memories are not recoverable.</p>
         </div>
       </div>
     </div>
@@ -97,17 +113,17 @@
 <section>
   <div class="wrap split">
     <div class="reveal">
-      <p class="kicker">If you do nothing</p>
-      <h2>The newest years go first.</h2>
-      <p style="font-size:19px;color:var(--ink-soft);margin-top:18px">It is counterintuitive: Snapchat keeps your <b>oldest</b> Memories that fit under 5GB and deletes from the <b>top</b>, your most recent snaps. So the trips, birthdays and everyday moments from the last couple of years are exactly what is most at risk.</p>
-      <p style="font-size:19px;color:var(--ink-soft);margin-top:16px">And even if you do nothing else and just hit Snapchat's own download button, you get a folder where every photo is stamped <em>today</em>, with no dates and no locations. That is the second problem SnapRescue solves.</p>
-      <a href="index.html#how" class="btn btn-ghost" style="margin-top:24px">How SnapRescue fixes that →</a>
+      <p class="kicker" data-i18n="dl_whk">If you do nothing</p>
+      <h2 data-i18n="dl_whh2">The newest years go first.</h2>
+      <p style="font-size:19px;color:var(--ink-soft);margin-top:18px" data-i18n="dl_whp1">It is counterintuitive: Snapchat keeps your <b>oldest</b> Memories that fit under 5GB and deletes from the <b>top</b>, your most recent snaps. So the trips, birthdays and everyday moments from the last couple of years are exactly what is most at risk.</p>
+      <p style="font-size:19px;color:var(--ink-soft);margin-top:16px" data-i18n="dl_whp2">And even if you do nothing else and just hit Snapchat's own download button, you get a folder where every photo is stamped <em>today</em>, with no dates and no locations. That is the second problem SnapRescue solves.</p>
+      <a href="index.html#how" class="btn btn-ghost" style="margin-top:24px" data-i18n="dl_whbtn">How SnapRescue fixes that →</a>
     </div>
     <div class="file-demo reveal">
-      <div style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">Your three options</div>
-      <div class="file-row"><span class="k">Do nothing</span><span class="v missing">✗ newest Memories deleted Sept 1</span></div>
-      <div class="file-row"><span class="k">Pay Snapchat monthly</span><span class="v missing">✗ $3.99+/mo, forever, to rent your own photos</span></div>
-      <div class="file-row"><span class="k">Export with SnapRescue</span><span class="v fixed">✓ keep everything, $9.99 once, yours for good</span></div>
+      <div style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px" data-i18n="dl_optt">Your three options</div>
+      <div class="file-row"><span class="k" data-i18n="dl_o1k">Do nothing</span><span class="v missing" data-i18n="dl_o1v">✗ newest Memories deleted Sept 1</span></div>
+      <div class="file-row"><span class="k" data-i18n="dl_o2k">Pay Snapchat monthly</span><span class="v missing" data-i18n="dl_o2v">✗ $3.99+/mo, forever, to rent your own photos</span></div>
+      <div class="file-row"><span class="k" data-i18n="dl_o3k">Export with SnapRescue</span><span class="v fixed" data-i18n="dl_o3v">✓ keep everything, $9.99 once, yours for good</span></div>
     </div>
   </div>
 </section>
@@ -116,33 +132,33 @@
 <section class="compare">
   <div class="wrap">
     <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;max-width:46rem">
-      <p class="kicker">Rent vs own</p>
-      <h2>Snapchat's monthly plans vs. owning them once.</h2>
+      <p class="kicker" data-i18n="dl_ck">Rent vs own</p>
+      <h2 data-i18n="dl_ch2">Snapchat's monthly plans vs. owning them once.</h2>
     </div>
     <div class="tbl-scroll reveal">
       <table class="tbl">
         <thead>
-          <tr><th>Option</th><th class="c">What you pay</th><th class="c">Over 3 years</th><th class="c">Who holds your photos</th></tr>
+          <tr><th data-i18n="dl_copt">Option</th><th class="c" data-i18n="dl_cpay">What you pay</th><th class="c" data-i18n="dl_c3y">Over 3 years</th><th class="c" data-i18n="dl_cwho">Who holds your photos</th></tr>
         </thead>
         <tbody>
-          <tr><td>Snapchat+ 100GB</td><td class="c">$1.99 / month</td><td class="c">$71.64</td><td class="c no">Snapchat's cloud</td></tr>
-          <tr><td>Snapchat+ 250GB</td><td class="c">$3.99 / month</td><td class="c">$143.64</td><td class="c no">Snapchat's cloud</td></tr>
-          <tr><td>Snapchat+ 5TB</td><td class="c">$15.99 / month</td><td class="c">$575.64</td><td class="c no">Snapchat's cloud</td></tr>
-          <tr><td class="us"><b>SnapRescue</b></td><td class="c us yes">$9.99 once</td><td class="c us yes">$9.99</td><td class="c us yes"><b>You do, on your own computer</b></td></tr>
+          <tr><td>Snapchat+ 100GB</td><td class="c">$1.99 / month</td><td class="c">$71.64</td><td class="c no" data-i18n="dl_ccloud">Snapchat's cloud</td></tr>
+          <tr><td>Snapchat+ 250GB</td><td class="c">$3.99 / month</td><td class="c">$143.64</td><td class="c no" data-i18n="dl_ccloud">Snapchat's cloud</td></tr>
+          <tr><td>Snapchat+ 5TB</td><td class="c">$15.99 / month</td><td class="c">$575.64</td><td class="c no" data-i18n="dl_ccloud">Snapchat's cloud</td></tr>
+          <tr><td class="us"><b>SnapRescue</b></td><td class="c us yes" data-i18n="dl_c999">$9.99 once</td><td class="c us yes">$9.99</td><td class="c us yes" data-i18n="dl_cyou"><b>You do, on your own computer</b></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="reveal" style="text-align:center;font-size:13px;color:var(--ink-faint);margin-top:18px;max-width:680px;margin-left:auto;margin-right:auto">Snapchat plan prices as publicly listed, June 2026, and may vary by region. The monthly plans keep your Memories in Snapchat's cloud and keep charging you. SnapRescue saves them to your own computer, once.</p>
+    <p class="reveal" style="text-align:center;font-size:13px;color:var(--ink-faint);margin-top:18px;max-width:680px;margin-left:auto;margin-right:auto" data-i18n="dl_cnote">Snapchat plan prices as publicly listed, June 2026, and may vary by region. The monthly plans keep your Memories in Snapchat's cloud and keep charging you. SnapRescue saves them to your own computer, once.</p>
   </div>
 </section>
 
 <!-- PRICING / CTA -->
 <section id="pricing">
   <div class="cta-band reveal">
-    <h2>Get your Memories out before September 1.</h2>
-    <p>Restore the real dates and locations, organize everything into tidy folders, and own it forever. Free for your first 50 files.</p>
-    <a href="index.html#download" class="btn btn-primary btn-lg" style="position:relative">⬇ Download SnapRescue free</a>
-    <p style="color:#d9ccb4;font-size:14.5px;margin-top:18px;position:relative">Then unlock unlimited for a one-time <b>$9.99 USD</b>. 30-day money-back guarantee.</p>
+    <h2 data-i18n="dl_ctah2">Get your Memories out before September 1.</h2>
+    <p data-i18n="dl_ctap">Restore the real dates and locations, organize everything into tidy folders, and own it forever. Free for your first 50 files.</p>
+    <a href="index.html#download" class="btn btn-primary btn-lg" style="position:relative" data-i18n="dl_ctabtn">⬇ Download SnapRescue free</a>
+    <p style="color:#d9ccb4;font-size:14.5px;margin-top:18px;position:relative" data-i18n="dl_ctasub">Then unlock unlimited for a one-time <b>$9.99 USD</b>. 30-day money-back guarantee.</p>
   </div>
 </section>
 
@@ -152,17 +168,17 @@
     <div class="foot-in">
       <a href="index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
       <div class="foot-links">
-        <a href="deadline.html">The deadline</a>
-        <a href="index.html#features">Features</a>
-        <a href="index.html#pricing">Pricing</a>
-        <a href="blog/">Blog</a>
-        <a href="mailto:snap.rescue0@gmail.com">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="tos.html">Terms</a>
+        <a href="deadline.html" data-i18n="nav_deadline">The deadline</a>
+        <a href="index.html#features" data-i18n="nav_features">Features</a>
+        <a href="index.html#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="blog/" data-i18n="nav_blog">Blog</a>
+        <a href="mailto:snap.rescue0@gmail.com" data-i18n="foot_support">Support</a>
+        <a href="privacy.html" data-i18n="foot_privacy">Privacy</a>
+        <a href="tos.html" data-i18n="foot_terms">Terms</a>
       </div>
     </div>
-    <p class="foot-fine">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc. Storage policy details are based on Snapchat's public announcements and support pages and may change; check Snapchat for the latest. SnapRescue only processes data you have officially exported from your own account, entirely on your own device.</p>
-    <p class="foot-fine" style="margin-top:8px">© 2026 SnapRescue. Made for everyone who refuses to lose their memories.</p>
+    <p class="foot-fine" data-i18n="dl_footfine1">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc. Storage policy details are based on Snapchat's public announcements and support pages and may change; check Snapchat for the latest. SnapRescue only processes data you have officially exported from your own account, entirely on your own device.</p>
+    <p class="foot-fine" style="margin-top:8px" data-i18n="foot_fine2">© 2026 SnapRescue. Made for everyone who refuses to lose their memories.</p>
   </div>
 </footer>
 

@@ -1,97 +1,86 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Import Snapchat Memories into Immich (Self-Hosted, with Dates and GPS)</title>
-<meta name="description" content="For self-hosters: how to bring Snapchat Memories into Immich with the real capture dates, GPS and captions embedded, plus optional XMP sidecars for external libraries.">
-<meta property="og:title" content="Import Snapchat Memories into Immich">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://snaprescue.github.io/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20260621d">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="ba5_title">How to Import Snapchat Memories into Immich (Self-Hosted, with Dates and GPS)</title>
+<meta content="For self-hosters: how to bring Snapchat Memories into Immich with the real capture dates, GPS and captions embedded, plus optional XMP sidecars for external libraries." data-i18n-attr="ba5_desc|content" name="description"/>
+<meta content="Import Snapchat Memories into Immich" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://snaprescue.github.io/assets/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../styles.css?v=20260621d" rel="stylesheet"/>
+<link href="https://snaprescue.github.io/blog/import-snapchat-into-immich.html" hreflang="en" rel="alternate"/><link href="https://snaprescue.github.io/fr/blog/import-snapchat-into-immich.html" hreflang="fr" rel="alternate"/><link href="https://snaprescue.github.io/de/blog/import-snapchat-into-immich.html" hreflang="de" rel="alternate"/><link href="https://snaprescue.github.io/es/blog/import-snapchat-into-immich.html" hreflang="es" rel="alternate"/><link href="https://snaprescue.github.io/nl/blog/import-snapchat-into-immich.html" hreflang="nl" rel="alternate"/><link href="https://snaprescue.github.io/blog/import-snapchat-into-immich.html" hreflang="x-default" rel="alternate"/></head>
 <body class="has-cd-bar">
-
 <div class="cd-bar">
-  <span class="cd-dot"></span>
-  <span><span class="cd-label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
-  <a href="../deadline.html">See the deadline →</a>
+<span class="cd-dot"></span>
+<span><span class="cd-label" data-i18n="cd_label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+<a data-i18n="cd_link" href="../deadline.html">See the deadline →</a>
 </div>
-
 <nav id="nav">
-  <div class="wrap nav-in">
-    <a href="../index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
-    <div class="nav-links">
-      <a href="../deadline.html" class="hide-sm">The deadline</a>
-      <a href="index.html" class="hide-sm">Blog</a>
-      <a href="../index.html#pricing">Pricing</a>
-      <a href="../index.html#download" class="btn btn-primary nav-cta">Get it free</a>
-    </div>
-  </div>
+<div class="wrap nav-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="nav-links">
+<a class="hide-sm" data-i18n="nav_deadline" href="../deadline.html">The deadline</a>
+<a class="hide-sm" data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Pricing</a>
+<div class="lang-pick"><button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">English</span> <span class="chev">▾</span></button><div class="lang-menu" id="langMenu"><a class="lang-opt on" data-lang="en" href="https://snaprescue.github.io/blog/import-snapchat-into-immich.html">English</a><a class="lang-opt" data-lang="fr" href="https://snaprescue.github.io/fr/blog/import-snapchat-into-immich.html">Français</a><a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/blog/import-snapchat-into-immich.html">Deutsch</a><a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/blog/import-snapchat-into-immich.html">Español</a><a class="lang-opt" data-lang="nl" href="https://snaprescue.github.io/nl/blog/import-snapchat-into-immich.html">Nederlands</a></div></div><a class="btn btn-primary nav-cta" data-i18n="nav_getfree" href="../index.html#download">Get it free</a>
+</div>
+</div>
 </nav>
-
 <article class="page-head">
-  <div class="wrap">
-    <div class="article-head reveal">
-      <p class="kicker">Self-hosted</p>
-      <h1>Import Snapchat Memories into Immich</h1>
-      <p class="article-meta">Updated June 2026 · about 4 min read</p>
-    </div>
-
-    <div class="prose reveal">
-      <p>If you run your own photo library, you already know the drill: the timeline is only as good as the metadata inside each file. Snapchat's export has none, so dropping it into Immich straight from the ZIP gives you a wall of photos all dated import day with no location. Here is how to do it right.</p>
-
-      <h2>The principle: embed first, import second</h2>
-      <p>Immich reads the capture date, GPS and other details from the EXIF and QuickTime metadata embedded in each photo and video. Snapchat strips that out (here is <a href="why-snapchat-export-has-no-dates.html">why</a>), so the job is to write it back in before Immich ever sees the files. SnapRescue does exactly that: it reads the hidden <code>memories_history</code> file, embeds the real capture date, GPS and merged captions into each file, and writes everything to dated folders.</p>
-
-      <h2>Option A: regular upload</h2>
-      <p>Run your export through SnapRescue, then add the rescued folders to Immich however you normally do, the mobile app, the web uploader, or the <code>immich-cli</code> for bulk uploads from a server. Because the date and GPS are embedded in each file, Immich files them on the correct day and shows them on the map automatically. Nothing else to configure.</p>
-
-      <div class="callout">
-        <p><strong>Bulk tip:</strong> for large libraries, <code>immich-cli upload --recursive</code> pointed at the rescued folders is the fastest path. The embedded metadata means you do not need any per-file date fixing afterward.</p>
-      </div>
-
-      <h2>Option B: external library with XMP sidecars</h2>
-      <p>If you use an Immich <strong>external library</strong>, where Immich scans a folder of originals without modifying them, turn on <strong>Also write XMP sidecar files</strong> in SnapRescue. It places a matching <code>.xmp</code> next to each photo and video holding the date, GPS and caption. Immich reads the sidecar alongside the original on scan, so you get correct metadata without altering the source files at all.</p>
-      <p>One thing to remember: an XMP sidecar is only ever read next to its photo or video. Keep each <code>.xmp</code> in the same folder as the file it belongs to, and do not upload sidecars on their own.</p>
-
-      <h2>Works the same for Photoprism, Jellyfin and others</h2>
-      <p>Anything that reads standard embedded EXIF and QuickTime metadata will pick these files up correctly, so the same rescued folders drop cleanly into Photoprism, Jellyfin, digiKam, or a plain dated folder structure on a NAS. The metadata travels inside the files, so it survives moves and re-imports.</p>
-
-      <div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
-        <a href="../index.html#download" class="btn btn-primary btn-lg">Download SnapRescue</a>
-        <a href="../index.html#features" class="btn btn-ghost btn-lg">See all features →</a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="article-head reveal">
+<p class="kicker" data-i18n="ba5_1">Self-hosted</p>
+<h1 data-i18n="ba5_2">Import Snapchat Memories into Immich</h1>
+<p class="article-meta">Updated June 2026 · about 4 min read</p>
+</div>
+<div class="prose reveal">
+<p data-i18n="ba5_3">If you run your own photo library, you already know the drill: the timeline is only as good as the metadata inside each file. Snapchat's export has none, so dropping it into Immich straight from the ZIP gives you a wall of photos all dated import day with no location. Here is how to do it right.</p>
+<h2 data-i18n="ba5_4">The principle: embed first, import second</h2>
+<p data-i18n="ba5_5">Immich reads the capture date, GPS and other details from the EXIF and QuickTime metadata embedded in each photo and video. Snapchat strips that out (here is <a href="why-snapchat-export-has-no-dates.html">why</a>), so the job is to write it back in before Immich ever sees the files. SnapRescue does exactly that: it reads the hidden <code>memories_history</code> file, embeds the real capture date, GPS and merged captions into each file, and writes everything to dated folders.</p>
+<h2 data-i18n="ba5_6">Option A: regular upload</h2>
+<p data-i18n="ba5_7">Run your export through SnapRescue, then add the rescued folders to Immich however you normally do, the mobile app, the web uploader, or the <code>immich-cli</code> for bulk uploads from a server. Because the date and GPS are embedded in each file, Immich files them on the correct day and shows them on the map automatically. Nothing else to configure.</p>
+<div class="callout">
+<p data-i18n="ba5_8"><strong>Bulk tip:</strong> for large libraries, <code>immich-cli upload --recursive</code> pointed at the rescued folders is the fastest path. The embedded metadata means you do not need any per-file date fixing afterward.</p>
+</div>
+<h2 data-i18n="ba5_9">Option B: external library with XMP sidecars</h2>
+<p data-i18n="ba5_10">If you use an Immich <strong>external library</strong>, where Immich scans a folder of originals without modifying them, turn on <strong>Also write XMP sidecar files</strong> in SnapRescue. It places a matching <code>.xmp</code> next to each photo and video holding the date, GPS and caption. Immich reads the sidecar alongside the original on scan, so you get correct metadata without altering the source files at all.</p>
+<p data-i18n="ba5_11">One thing to remember: an XMP sidecar is only ever read next to its photo or video. Keep each <code>.xmp</code> in the same folder as the file it belongs to, and do not upload sidecars on their own.</p>
+<h2 data-i18n="ba5_12">Works the same for Photoprism, Jellyfin and others</h2>
+<p data-i18n="ba5_13">Anything that reads standard embedded EXIF and QuickTime metadata will pick these files up correctly, so the same rescued folders drop cleanly into Photoprism, Jellyfin, digiKam, or a plain dated folder structure on a NAS. The metadata travels inside the files, so it survives moves and re-imports.</p>
+<div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+<a class="btn btn-primary btn-lg" data-i18n="ba5_14" href="../index.html#download">Download SnapRescue</a>
+<a class="btn btn-ghost btn-lg" data-i18n="ba5_15" href="../index.html#features">See all features →</a>
+</div>
+</div>
+</div>
 </article>
-
 <footer>
-  <div class="wrap">
-    <div class="foot-in">
-      <a href="../index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
-      <div class="foot-links">
-        <a href="../deadline.html">The deadline</a>
-        <a href="index.html">Blog</a>
-        <a href="../index.html#pricing">Pricing</a>
-        <a href="../privacy.html">Privacy</a>
-        <a href="../tos.html">Terms</a>
-      </div>
-    </div>
-    <p class="foot-fine">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc.</p>
-  </div>
+<div class="wrap">
+<div class="foot-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="foot-links">
+<a data-i18n="nav_deadline" href="../deadline.html">The deadline</a>
+<a data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Pricing</a>
+<a data-i18n="foot_privacy" href="../privacy.html">Privacy</a>
+<a data-i18n="foot_terms" href="../tos.html">Terms</a>
+</div>
+</div>
+<p class="foot-fine" data-i18n="foot_fine1">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc.</p>
+</div>
 </footer>
-
 <script src="../main.js?v=20260621d"></script>
-<script type="application/ld+json" class="i18n-drop">
+<script class="i18n-drop" type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",

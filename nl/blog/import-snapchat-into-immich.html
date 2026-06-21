@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="ba5_title">Hoe je Snapchat-herinneringen importeert in Immich (zelfgehost, met datums en GPS)</title>
+<meta content="Voor zelfhosters: hoe je Snapchat-herinneringen in Immich krijgt met de echte opnamedatums, GPS en ingebedde bijschriften, plus optionele XMP-bijbestanden voor externe bibliotheken." data-i18n-attr="ba5_desc|content" name="description"/>
+<meta content="Import Snapchat Memories into Immich" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://snaprescue.github.io/assets/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../../styles.css?v=20260621d" rel="stylesheet"/>
+<link href="https://snaprescue.github.io/blog/import-snapchat-into-immich.html" hreflang="en" rel="alternate"/><link href="https://snaprescue.github.io/fr/blog/import-snapchat-into-immich.html" hreflang="fr" rel="alternate"/><link href="https://snaprescue.github.io/de/blog/import-snapchat-into-immich.html" hreflang="de" rel="alternate"/><link href="https://snaprescue.github.io/es/blog/import-snapchat-into-immich.html" hreflang="es" rel="alternate"/><link href="https://snaprescue.github.io/nl/blog/import-snapchat-into-immich.html" hreflang="nl" rel="alternate"/><link href="https://snaprescue.github.io/blog/import-snapchat-into-immich.html" hreflang="x-default" rel="alternate"/></head>
+<body class="has-cd-bar">
+<div class="cd-bar">
+<span class="cd-dot"></span>
+<span><span class="cd-label" data-i18n="cd_label">Snapchat verwijdert herinneringen over </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+<a data-i18n="cd_link" href="../deadline.html">Bekijk de deadline →</a>
+</div>
+<nav id="nav">
+<div class="wrap nav-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="nav-links">
+<a class="hide-sm" data-i18n="nav_deadline" href="../deadline.html">De deadline</a>
+<a class="hide-sm" data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Prijs</a>
+<div class="lang-pick"><button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">Nederlands</span> <span class="chev">▾</span></button><div class="lang-menu" id="langMenu"><a class="lang-opt" data-lang="en" href="https://snaprescue.github.io/blog/import-snapchat-into-immich.html">English</a><a class="lang-opt" data-lang="fr" href="https://snaprescue.github.io/fr/blog/import-snapchat-into-immich.html">Français</a><a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/blog/import-snapchat-into-immich.html">Deutsch</a><a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/blog/import-snapchat-into-immich.html">Español</a><a class="lang-opt on" data-lang="nl" href="https://snaprescue.github.io/nl/blog/import-snapchat-into-immich.html">Nederlands</a></div></div><a class="btn btn-primary nav-cta" data-i18n="nav_getfree" href="../index.html#download">Gratis proberen</a>
+</div>
+</div>
+</nav>
+<article class="page-head">
+<div class="wrap">
+<div class="article-head reveal">
+<p class="kicker" data-i18n="ba5_1">Zelfgehost</p>
+<h1 data-i18n="ba5_2">Snapchat-herinneringen importeren in Immich</h1>
+<p class="article-meta">Updated June 2026 · about 4 min read</p>
+</div>
+<div class="prose reveal">
+<p data-i18n="ba5_3">Als je je eigen fotobibliotheek draait, ken je het liedje: de tijdlijn is maar zo goed als de metadata in elk bestand. De export van Snapchat heeft er geen, dus die direct vanuit de ZIP in Immich gooien geeft je een muur van foto's allemaal met de importdatum, zonder locatie. Hier lees je hoe je het goed doet.</p>
+<h2 data-i18n="ba5_4">Het principe: eerst inbedden, dan importeren</h2>
+<p data-i18n="ba5_5">Immich leest de opnamedatum, GPS en andere details uit de in elke foto en video ingebedde EXIF- en QuickTime-metadata. Snapchat haalt dat eruit (hier lees je <a href="why-snapchat-export-has-no-dates.html">waarom</a>), dus de taak is om het terug te schrijven voordat Immich de bestanden überhaupt ziet. SnapRescue doet precies dat: het leest het verborgen bestand <code>memories_history</code>, bedt de echte opnamedatum, GPS en samengevoegde bijschriften in elk bestand in, en schrijft alles naar mappen op datum.</p>
+<h2 data-i18n="ba5_6">Optie A: gewone upload</h2>
+<p data-i18n="ba5_7">Haal je export door SnapRescue en voeg de geredde mappen daarna aan Immich toe zoals je normaal doet: de mobiele app, de web-uploader, of <code>immich-cli</code> voor bulkuploads vanaf een server. Omdat de datum en GPS in elk bestand zijn ingebed, plaatst Immich ze op de juiste dag en toont ze automatisch op de kaart. Verder niets in te stellen.</p>
+<div class="callout">
+<p data-i18n="ba5_8"><strong>Tip voor bulk:</strong> voor grote bibliotheken is <code>immich-cli upload --recursive</code> gericht op de geredde mappen het snelst. De ingebedde metadata betekent dat je daarna geen datum per bestand hoeft te corrigeren.</p>
+</div>
+<h2 data-i18n="ba5_9">Optie B: externe bibliotheek met XMP-bijbestanden</h2>
+<p data-i18n="ba5_10">Als je een Immich-<strong>externe bibliotheek</strong> gebruikt, waarbij Immich een map met originelen scant zonder ze te wijzigen, zet dan <strong>Ook XMP-bijbestanden schrijven</strong> aan in SnapRescue. Het plaatst een bijbehorend <code>.xmp</code> naast elke foto en video met de datum, GPS en bijschrift. Immich leest het bijbestand bij het scannen naast het origineel, dus je krijgt juiste metadata zonder de bronbestanden ook maar te wijzigen.</p>
+<p data-i18n="ba5_11">Eén ding om te onthouden: een XMP-bijbestand wordt alleen naast zijn foto of video gelezen. Houd elke <code>.xmp</code> in dezelfde map als het bestand waar het bij hoort, en upload bijbestanden niet los.</p>
+<h2 data-i18n="ba5_12">Werkt hetzelfde voor Photoprism, Jellyfin en andere</h2>
+<p data-i18n="ba5_13">Alles wat standaard ingebedde EXIF- en QuickTime-metadata leest, pikt deze bestanden correct op, dus dezelfde geredde mappen passen naadloos in Photoprism, Jellyfin, digiKam, of een simpele mappenstructuur op datum op een NAS. De metadata reist mee in de bestanden, dus die overleeft verplaatsingen en herimporten.</p>
+<div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+<a class="btn btn-primary btn-lg" data-i18n="ba5_14" href="../index.html#download">SnapRescue downloaden</a>
+<a class="btn btn-ghost btn-lg" data-i18n="ba5_15" href="../index.html#features">Bekijk alle functies →</a>
+</div>
+</div>
+</div>
+</article>
+<footer>
+<div class="wrap">
+<div class="foot-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="foot-links">
+<a data-i18n="nav_deadline" href="../deadline.html">De deadline</a>
+<a data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Prijs</a>
+<a data-i18n="foot_privacy" href="../../privacy.html">Privacy</a>
+<a data-i18n="foot_terms" href="../../tos.html">Voorwaarden</a>
+</div>
+</div>
+<p class="foot-fine" data-i18n="foot_fine1">SnapRescue is een onafhankelijke tool en is niet verbonden met, goedgekeurd door of gesponsord door Snap Inc. „Snapchat” is een handelsmerk van Snap Inc. SnapRescue verwerkt alleen gegevens die je officieel uit je eigen account hebt geëxporteerd, volledig op je eigen apparaat.</p>
+</div>
+</footer>
+<script src="../../main.js?v=20260621d"></script>
+
+</body>
+</html>

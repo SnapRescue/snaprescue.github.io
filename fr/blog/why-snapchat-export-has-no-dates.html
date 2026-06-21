@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="ba2_title">Pourquoi votre export Snapchat n'a ni dates ni lieu (et comment le corriger)</title>
+<meta content="Vous avez téléchargé vos souvenirs Snapchat et chaque photo indique aujourd'hui ? Voici pourquoi les exports Snapchat perdent leurs dates et leur GPS, ce que contient le fichier memories_history, et comment restaurer les vraies métadonnées." data-i18n-attr="ba2_desc|content" name="description"/>
+<meta content="Why Your Snapchat Export Has No Dates or Location" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://snaprescue.github.io/assets/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../../styles.css?v=20260621d" rel="stylesheet"/>
+<link href="https://snaprescue.github.io/blog/why-snapchat-export-has-no-dates.html" hreflang="en" rel="alternate"/><link href="https://snaprescue.github.io/fr/blog/why-snapchat-export-has-no-dates.html" hreflang="fr" rel="alternate"/><link href="https://snaprescue.github.io/de/blog/why-snapchat-export-has-no-dates.html" hreflang="de" rel="alternate"/><link href="https://snaprescue.github.io/es/blog/why-snapchat-export-has-no-dates.html" hreflang="es" rel="alternate"/><link href="https://snaprescue.github.io/nl/blog/why-snapchat-export-has-no-dates.html" hreflang="nl" rel="alternate"/><link href="https://snaprescue.github.io/blog/why-snapchat-export-has-no-dates.html" hreflang="x-default" rel="alternate"/></head>
+<body class="has-cd-bar">
+<div class="cd-bar">
+<span class="cd-dot"></span>
+<span><span class="cd-label" data-i18n="cd_label">Snapchat commence à supprimer vos souvenirs dans </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+<a data-i18n="cd_link" href="../deadline.html">Voir la date limite →</a>
+</div>
+<nav id="nav">
+<div class="wrap nav-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="nav-links">
+<a class="hide-sm" data-i18n="nav_deadline" href="../deadline.html">La date limite</a>
+<a class="hide-sm" data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Tarif</a>
+<div class="lang-pick"><button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">Français</span> <span class="chev">▾</span></button><div class="lang-menu" id="langMenu"><a class="lang-opt" data-lang="en" href="https://snaprescue.github.io/blog/why-snapchat-export-has-no-dates.html">English</a><a class="lang-opt on" data-lang="fr" href="https://snaprescue.github.io/fr/blog/why-snapchat-export-has-no-dates.html">Français</a><a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/blog/why-snapchat-export-has-no-dates.html">Deutsch</a><a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/blog/why-snapchat-export-has-no-dates.html">Español</a><a class="lang-opt" data-lang="nl" href="https://snaprescue.github.io/nl/blog/why-snapchat-export-has-no-dates.html">Nederlands</a></div></div><a class="btn btn-primary nav-cta" data-i18n="nav_getfree" href="../index.html#download">Obtenir gratuitement</a>
+</div>
+</div>
+</nav>
+<article class="page-head">
+<div class="wrap">
+<div class="article-head reveal">
+<p class="kicker" data-i18n="ba2_1">Le problème</p>
+<h1 data-i18n="ba2_2">Pourquoi votre export Snapchat n'a ni dates ni lieu</h1>
+<p class="article-meta">Updated June 2026 · about 4 min read</p>
+</div>
+<div class="prose reveal">
+<p data-i18n="ba2_3">Vous avez tout bien fait. Vous avez demandé vos données à Snapchat, téléchargé le ZIP et ouvert vos photos. Et chacune indique qu'elle a été prise <strong>aujourd'hui</strong>, sans aucun lieu. Voici ce qui se passe, et pourquoi c'est réparable.</p>
+<h2 data-i18n="ba2_4">Les photos contiennent des métadonnées cachées appelées EXIF</h2>
+<p data-i18n="ba2_5">Chaque photo prise par votre téléphone stocke des informations invisibles avec l'image : la date et l'heure de la prise, les coordonnées GPS, les réglages de l'appareil. C'est ce qu'on appelle les <strong>métadonnées EXIF</strong>. C'est ce qui permet à Google Photos et Apple Photos de trier votre galerie par date et d'afficher vos clichés sur une carte. Les pixels sont l'image ; l'EXIF est l'histoire autour.</p>
+<h2 data-i18n="ba2_6">L'export de Snapchat laisse l'EXIF de côté</h2>
+<p data-i18n="ba2_7">Quand Snapchat vous donne vos souvenirs, les fichiers image et vidéo arrivent <strong>sans date EXIF ni GPS inscrits</strong>. Votre galerie se rabat donc sur la seule date qu'elle voit, le jour où vous avez téléchargé le fichier, et suppose que tout s'est passé ce jour-là. C'est pourquoi une décennie de souvenirs s'effondre sur une seule journée, sans carte.</p>
+<div class="callout">
+<p data-i18n="ba2_8"><strong>La bonne nouvelle :</strong> les vraies dates et lieux n'ont pas été jetés. Snapchat vous les remet dans un fichier séparé. Ils ne sont simplement pas encore attachés aux photos.</p>
+</div>
+<h2 data-i18n="ba2_9">Le fichier caché qui contient tout : memories_history</h2>
+<p data-i18n="ba2_10">Dans votre export se trouve un fichier nommé <code>memories_history.json</code> (certains exports incluent aussi une version <code>.html</code>). C'est la liste de chaque souvenir que vous avez enregistré, et pour chacun il note la date et l'heure de prise d'origine ainsi que le lieu GPS. Tout ce dont vous avez besoin y est. Le problème, c'est simplement que les données vivent dans un fichier et les photos dans un autre, et que rien ne les a recollées.</p>
+<h2 data-i18n="ba2_11">Deux autres choses que Snapchat sépare</h2>
+<ul>
+<li data-i18n="ba2_12"><strong>Légendes et autocollants.</strong> Si vous avez écrit du texte sur un snap ou ajouté un autocollant, cette surcouche arrive souvent dans un fichier séparé de la photo de base, donc votre copie téléchargée peut manquer la légende dont vous vous souvenez.</li>
+<li data-i18n="ba2_13"><strong>Fuseaux horaires.</strong> Snapchat enregistre les heures en UTC. Même les outils qui restaurent la date collent souvent l'heure UTC brute, donc un snap pris le soir à l'étranger peut apparaître au petit-déjeuner.</li>
+</ul>
+<h2 data-i18n="ba2_14">Comment corriger ça</h2>
+<p data-i18n="ba2_15">Le faire à la main reviendrait à ouvrir ce fichier de métadonnées, trouver l'entrée correspondante pour chaque photo et réinscrire la date et le GPS une par une. Pour quelques photos, c'est fastidieux. Pour quelques milliers, c'est des centaines d'heures.</p>
+<p data-i18n="ba2_16">SnapRescue le fait automatiquement. Pointez-le sur votre export et il lit <code>memories_history</code>, associe chaque fichier à son entrée, inscrit la vraie date de prise et le GPS dans chaque photo et vidéo, convertit l'heure en heure locale correcte grâce au lieu, refusionne les légendes et autocollants, et range tout dans des dossiers datés. Il fonctionne sur votre ordinateur, donc vos photos ne le quittent jamais, et c'est gratuit pour vos 50 premiers fichiers.</p>
+<div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+<a class="btn btn-primary btn-lg" data-i18n="ba2_17" href="../index.html#download">Essayer SnapRescue gratuitement</a>
+<a class="btn btn-ghost btn-lg" data-i18n="ba2_18" href="how-to-export-snapchat-memories.html">Comment exporter d'abord →</a>
+</div>
+</div>
+</div>
+</article>
+<footer>
+<div class="wrap">
+<div class="foot-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="foot-links">
+<a data-i18n="nav_deadline" href="../deadline.html">La date limite</a>
+<a data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Tarif</a>
+<a data-i18n="foot_privacy" href="../../privacy.html">Confidentialité</a>
+<a data-i18n="foot_terms" href="../../tos.html">Conditions</a>
+</div>
+</div>
+<p class="foot-fine" data-i18n="foot_fine1">SnapRescue est un outil indépendant, sans affiliation, approbation ni parrainage de Snap Inc. « Snapchat » est une marque de Snap Inc. SnapRescue ne traite que les données que vous avez officiellement exportées depuis votre propre compte, entièrement sur votre appareil.</p>
+</div>
+</footer>
+<script src="../../main.js?v=20260621d"></script>
+
+</body>
+</html>

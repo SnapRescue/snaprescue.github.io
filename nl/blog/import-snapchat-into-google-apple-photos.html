@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="ba4_title">Hoe je Snapchat-herinneringen importeert in Google Photos of Apple Photos (met de juiste datums)</title>
+<meta content="Zet je Snapchat-herinneringen op de tijdlijn van je telefoon op de juiste dag en op de juiste plek op de kaart, in plaats van alles op de datum van vandaag. Stap voor stap voor Google Photos en Apple Photos." data-i18n-attr="ba4_desc|content" name="description"/>
+<meta content="Import Snapchat Memories into Google or Apple Photos" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://snaprescue.github.io/assets/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../../styles.css?v=20260621d" rel="stylesheet"/>
+<link href="https://snaprescue.github.io/blog/import-snapchat-into-google-apple-photos.html" hreflang="en" rel="alternate"/><link href="https://snaprescue.github.io/fr/blog/import-snapchat-into-google-apple-photos.html" hreflang="fr" rel="alternate"/><link href="https://snaprescue.github.io/de/blog/import-snapchat-into-google-apple-photos.html" hreflang="de" rel="alternate"/><link href="https://snaprescue.github.io/es/blog/import-snapchat-into-google-apple-photos.html" hreflang="es" rel="alternate"/><link href="https://snaprescue.github.io/nl/blog/import-snapchat-into-google-apple-photos.html" hreflang="nl" rel="alternate"/><link href="https://snaprescue.github.io/blog/import-snapchat-into-google-apple-photos.html" hreflang="x-default" rel="alternate"/></head>
+<body class="has-cd-bar">
+<div class="cd-bar">
+<span class="cd-dot"></span>
+<span><span class="cd-label" data-i18n="cd_label">Snapchat verwijdert herinneringen over </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+<a data-i18n="cd_link" href="../deadline.html">Bekijk de deadline →</a>
+</div>
+<nav id="nav">
+<div class="wrap nav-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="nav-links">
+<a class="hide-sm" data-i18n="nav_deadline" href="../deadline.html">De deadline</a>
+<a class="hide-sm" data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Prijs</a>
+<div class="lang-pick"><button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">Nederlands</span> <span class="chev">▾</span></button><div class="lang-menu" id="langMenu"><a class="lang-opt" data-lang="en" href="https://snaprescue.github.io/blog/import-snapchat-into-google-apple-photos.html">English</a><a class="lang-opt" data-lang="fr" href="https://snaprescue.github.io/fr/blog/import-snapchat-into-google-apple-photos.html">Français</a><a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/blog/import-snapchat-into-google-apple-photos.html">Deutsch</a><a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/blog/import-snapchat-into-google-apple-photos.html">Español</a><a class="lang-opt on" data-lang="nl" href="https://snaprescue.github.io/nl/blog/import-snapchat-into-google-apple-photos.html">Nederlands</a></div></div><a class="btn btn-primary nav-cta" data-i18n="nav_getfree" href="../index.html#download">Gratis proberen</a>
+</div>
+</div>
+</nav>
+<article class="page-head">
+<div class="wrap">
+<div class="article-head reveal">
+<p class="kicker" data-i18n="ba4_1">Handleiding</p>
+<h1 data-i18n="ba4_2">Snapchat-herinneringen importeren in Google Photos of Apple Photos</h1>
+<p class="article-meta">Updated June 2026 · about 4 min read</p>
+</div>
+<div class="prose reveal">
+<p data-i18n="ba4_3">Het hele doel van je herinneringen redden is dat ze vanzelf op hun plek staan in je echte galerij, op de dag waarop ze gebeurden, op de plek waar ze gebeurden. Importeer je de ruwe Snapchat-export, dan krijg je het tegenovergestelde: een grote stapel foto's allemaal met de datum van vandaag, zonder kaart. Hier lees je hoe je het goed doet.</p>
+<h2 data-i18n="ba4_4">Eerst de metadata herstellen</h2>
+<p data-i18n="ba4_5">Zowel Google Photos als Apple Photos bepalen waar een foto hoort door de ingebedde datum en GPS te lezen. De export van Snapchat heeft geen van beide, dus de eerste stap is altijd om die metadata te herstellen voordat je iets importeert. Haal je export door SnapRescue, dat de echte opnamedatum en locatie in elk bestand schrijft en ze in mappen op datum ordent. (Als je nog niet hebt geëxporteerd, begin dan met <a href="how-to-export-snapchat-memories.html">hoe je je herinneringen exporteert</a>.)</p>
+<div class="callout">
+<p data-i18n="ba4_6"><strong>Waarom deze volgorde belangrijk is:</strong> zodra een foto met de verkeerde datum in Google of Apple Photos staat, is er duizenden met de hand corrigeren in de app ellendig. De metadata <em>vóór</em> het importeren goed zetten zorgt dat ze automatisch op de juiste plek belanden.</p>
+</div>
+<h2 data-i18n="ba4_7">Google Photos</h2>
+<ul>
+<li data-i18n="ba4_8"><strong>Vanaf een computer:</strong> ga naar <a href="https://photos.google.com" rel="nofollow noopener" target="_blank">photos.google.com</a>, klik op <strong>Uploaden</strong> en selecteer je geredde mappen. Google leest de ingebedde datum en GPS en plaatst elke foto op de juiste dag en kaartlocatie.</li>
+<li data-i18n="ba4_9"><strong>Met back-up:</strong> zet de geredde mappen in een map die Google's Back-up en synchronisatie (of Drive voor desktop) in de gaten houdt, en ze worden automatisch geüpload.</li>
+<li data-i18n="ba4_10">Omdat de datums in de bestanden zijn ingebed, hoef je niets bijzonders te doen. Ze verschijnen door je hele tijdlijn op de juiste dagen, niet allemaal op de uploaddag.</li>
+</ul>
+<h2 data-i18n="ba4_11">Apple Photos</h2>
+<ul>
+<li data-i18n="ba4_12"><strong>Op een Mac:</strong> open de Foto's-app en sleep je geredde mappen in het venster, of gebruik <strong>Archief, Importeren</strong>. Foto's leest de ingebedde opnamedatum en locatie en plaatst alles correct.</li>
+<li data-i18n="ba4_13"><strong>Op iPhone of iPad:</strong> de makkelijkste weg is importeren op een Mac, of de geredde mappen naar iCloud Drive kopiëren en ze vanuit de Bestanden-app aan Foto's toevoegen. Als je iCloud-foto's inschakelt, synchroniseren ze met de juiste datums naar al je apparaten.</li>
+</ul>
+<h2 data-i18n="ba4_14">Wat je uiteindelijk krijgt</h2>
+<p data-i18n="ba4_15">Je Snapchat-herinneringen versmolten met je gewone fototijdlijn, elk op de dag waarop hij echt is gemaakt, vastgezet op de juiste plek op de kaart, met de bijschriften samengevoegd. Geen stapel op de datum van vandaag, geen lege locaties. Precies alsof je ze vanaf het begin met de camera van je telefoon had gemaakt.</p>
+<div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+<a class="btn btn-primary btn-lg" data-i18n="ba4_16" href="../index.html#download">SnapRescue gratis krijgen</a>
+<a class="btn btn-ghost btn-lg" data-i18n="ba4_17" href="import-snapchat-into-immich.html">Liever zelfgehost? →</a>
+</div>
+</div>
+</div>
+</article>
+<footer>
+<div class="wrap">
+<div class="foot-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="foot-links">
+<a data-i18n="nav_deadline" href="../deadline.html">De deadline</a>
+<a data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Prijs</a>
+<a data-i18n="foot_privacy" href="../../privacy.html">Privacy</a>
+<a data-i18n="foot_terms" href="../../tos.html">Voorwaarden</a>
+</div>
+</div>
+<p class="foot-fine" data-i18n="foot_fine1">SnapRescue is een onafhankelijke tool en is niet verbonden met, goedgekeurd door of gesponsord door Snap Inc. „Snapchat” is een handelsmerk van Snap Inc. SnapRescue verwerkt alleen gegevens die je officieel uit je eigen account hebt geëxporteerd, volledig op je eigen apparaat.</p>
+</div>
+</footer>
+<script src="../../main.js?v=20260621d"></script>
+
+</body>
+</html>

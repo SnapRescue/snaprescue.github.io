@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Import Snapchat Memories into Immich (Self-Hosted, with Dates and GPS)</title>
+<meta name="description" content="For self-hosters: how to bring Snapchat Memories into Immich with the real capture dates, GPS and captions embedded, plus optional XMP sidecars for external libraries.">
+<meta property="og:title" content="Import Snapchat Memories into Immich">
+<meta property="og:type" content="article">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="has-cd-bar">
+
+<div class="cd-bar">
+  <span class="cd-dot"></span>
+  <span><span class="cd-label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+  <a href="../deadline.html">See the deadline →</a>
+</div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="../index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
+    <div class="nav-links">
+      <a href="../deadline.html" class="hide-sm">The deadline</a>
+      <a href="index.html" class="hide-sm">Blog</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#download" class="btn btn-primary nav-cta">Get it free</a>
+    </div>
+  </div>
+</nav>
+
+<article class="page-head">
+  <div class="wrap">
+    <div class="article-head reveal">
+      <p class="kicker">Self-hosted</p>
+      <h1>Import Snapchat Memories into Immich</h1>
+      <p class="article-meta">Updated June 2026 · about 4 min read</p>
+    </div>
+
+    <div class="prose reveal">
+      <p>If you run your own photo library, you already know the drill: the timeline is only as good as the metadata inside each file. Snapchat's export has none, so dropping it into Immich straight from the ZIP gives you a wall of photos all dated import day with no location. Here is how to do it right.</p>
+
+      <h2>The principle: embed first, import second</h2>
+      <p>Immich reads the capture date, GPS and other details from the EXIF and QuickTime metadata embedded in each photo and video. Snapchat strips that out (here is <a href="why-snapchat-export-has-no-dates.html">why</a>), so the job is to write it back in before Immich ever sees the files. SnapRescue does exactly that: it reads the hidden <code>memories_history</code> file, embeds the real capture date, GPS and merged captions into each file, and writes everything to dated folders.</p>
+
+      <h2>Option A: regular upload</h2>
+      <p>Run your export through SnapRescue, then add the rescued folders to Immich however you normally do, the mobile app, the web uploader, or the <code>immich-cli</code> for bulk uploads from a server. Because the date and GPS are embedded in each file, Immich files them on the correct day and shows them on the map automatically. Nothing else to configure.</p>
+
+      <div class="callout">
+        <p><strong>Bulk tip:</strong> for large libraries, <code>immich-cli upload --recursive</code> pointed at the rescued folders is the fastest path. The embedded metadata means you do not need any per-file date fixing afterward.</p>
+      </div>
+
+      <h2>Option B: external library with XMP sidecars</h2>
+      <p>If you use an Immich <strong>external library</strong>, where Immich scans a folder of originals without modifying them, turn on <strong>Also write XMP sidecar files</strong> in SnapRescue. It places a matching <code>.xmp</code> next to each photo and video holding the date, GPS and caption. Immich reads the sidecar alongside the original on scan, so you get correct metadata without altering the source files at all.</p>
+      <p>One thing to remember: an XMP sidecar is only ever read next to its photo or video. Keep each <code>.xmp</code> in the same folder as the file it belongs to, and do not upload sidecars on their own.</p>
+
+      <h2>Works the same for Photoprism, Jellyfin and others</h2>
+      <p>Anything that reads standard embedded EXIF and QuickTime metadata will pick these files up correctly, so the same rescued folders drop cleanly into Photoprism, Jellyfin, digiKam, or a plain dated folder structure on a NAS. The metadata travels inside the files, so it survives moves and re-imports.</p>
+
+      <div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+        <a href="../index.html#download" class="btn btn-primary btn-lg">Download SnapRescue</a>
+        <a href="../index.html#features" class="btn btn-ghost btn-lg">See all features →</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="../index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
+      <div class="foot-links">
+        <a href="../deadline.html">The deadline</a>
+        <a href="index.html">Blog</a>
+        <a href="../index.html#pricing">Pricing</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../tos.html">Terms</a>
+      </div>
+    </div>
+    <p class="foot-fine">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc.</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

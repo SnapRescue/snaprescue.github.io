@@ -16,16 +16,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-cd-bar">
+
+<!-- COUNTDOWN BAR -->
+<div class="cd-bar">
+  <span class="cd-dot"></span>
+  <span><span class="cd-label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+  <a href="deadline.html">See the deadline →</a>
+</div>
 
 <!-- NAV -->
 <nav id="nav">
   <div class="wrap nav-in">
     <a href="#" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
     <div class="nav-links">
-      <a href="#problem" class="hide-sm">The problem</a>
+      <a href="deadline.html" class="hide-sm">The deadline</a>
       <a href="#how" class="hide-sm">How it works</a>
       <a href="#features" class="hide-sm">Features</a>
+      <a href="blog/" class="hide-sm">Blog</a>
       <a href="#pricing">Pricing</a>
       <a href="#download" class="btn btn-primary nav-cta">Get it free</a>
     </div>
@@ -71,6 +79,17 @@
     </div>
   </div>
 </header>
+
+<!-- TRUST BAND -->
+<div class="trust-band">
+  <div class="trust-row">
+    <span class="trust-item"><span class="ti">🔒</span> 100% on your computer</span>
+    <span class="trust-item"><span class="ti">🚫</span> Nothing uploaded, no account</span>
+    <span class="trust-item"><span class="ti">👻</span> Not affiliated with Snap</span>
+    <span class="trust-item"><span class="ti">💳</span> Secure Stripe checkout</span>
+    <span class="trust-item"><span class="ti">↩️</span> 30-day money-back guarantee</span>
+  </div>
+</div>
 
 <!-- PROBLEM -->
 <section class="problem" id="problem">
@@ -147,6 +166,7 @@
       </div>
       <div class="feat reveal"><span class="ico">📍</span><h3>GPS + place names</h3><p>Coordinates embedded so map view works, plus a readable location like “Byron Bay” written in.</p></div>
       <div class="feat reveal"><span class="ico">🎨</span><h3>Overlays merged</h3><p>Captions, stickers and the date overlays composited back onto the photo or video as one clean file.</p></div>
+      <div class="feat reveal"><span class="ico">📦</span><h3>Unzips it for you</h3><p>Snapchat sends your export as several ZIP files. Other tools make you extract every one and merge the folders by hand first. SnapRescue takes the ZIPs as they came and does that step for you.</p></div>
       <div class="feat reveal"><span class="ico">🗂️</span><h3>Dated folders</h3><p>Auto-organized into year folders with date-named files, an instant browsable archive.</p></div>
       <div class="feat reveal"><span class="ico">🔒</span><h3>100% private</h3><p>Everything runs on your computer. Nothing uploads, no account, no servers seeing your photos.</p></div>
       <div class="feat reveal"><span class="ico">🎞️</span><h3>Photos &amp; videos</h3><p>Full metadata for both, with zero quality loss. Only the metadata changes, never the pixels.</p></div>
@@ -170,6 +190,7 @@
         </thead>
         <tbody>
           <tr><td>Restore dates &amp; GPS</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c us yes">✓</td></tr>
+          <tr><td>Unzips your export for you</td><td class="c no">✗ extract by hand</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>Convert to true <em>local</em> time</td><td class="c no">offset only</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>Readable place names</td><td class="c no">✗</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
           <tr><td>Merge caption/sticker overlays</td><td class="c yes">✓</td><td class="c no">✗</td><td class="c us yes">✓</td></tr>
@@ -210,7 +231,7 @@
       <div class="price featured reveal">
         <span class="badge">Most popular</span>
         <div class="tier">Full version</div>
-        <div class="amt">$9.99 <small>once</small></div>
+        <div class="amt">$9.99 <small>USD · once</small></div>
         <div class="sub">Unlimited exports, forever. Less than 3 months of Snapchat Plus.</div>
         <ul>
           <li><span class="ck">✓</span> <b>Unlimited</b> files &amp; re-runs</li>
@@ -219,9 +240,10 @@
           <li><span class="ck">✓</span> Free updates</li>
         </ul>
         <a href="#" class="btn btn-primary" id="buy-btn">Unlock for $9.99</a>
+        <div class="mbg">↩️ 30-day money-back guarantee, no questions asked</div>
       </div>
     </div>
-    <p class="guarantee">🔒 Secure checkout via Stripe · 30-day money-back guarantee · Mac &amp; mobile coming soon</p>
+    <p class="guarantee">🔒 Secure checkout via Stripe · One-time payment, no subscription · Mac &amp; mobile coming soon</p>
   </div>
 </section>
 
@@ -261,8 +283,10 @@
     <div class="foot-in">
       <a href="#" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
       <div class="foot-links">
+        <a href="deadline.html">The deadline</a>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
+        <a href="blog/">Blog</a>
         <a href="#faq">FAQ</a>
         <a href="mailto:snap.rescue0@gmail.com">Support</a>
         <a href="privacy.html">Privacy</a>
@@ -273,6 +297,18 @@
     <p class="foot-fine" style="margin-top:8px">© 2026 SnapRescue. Made for everyone who refuses to lose their memories.</p>
   </div>
 </footer>
+
+<!-- DOWNLOAD REASSURANCE MODAL -->
+<div class="modal-overlay" id="dl-modal" aria-hidden="true" role="dialog" aria-label="Download SnapRescue">
+  <div class="modal">
+    <button class="modal-x" id="dl-x" aria-label="Close">×</button>
+    <h3>Your download is starting</h3>
+    <p>SnapRescue is a new app, so Windows may show a blue <b>“Windows protected your PC”</b> notice. That is normal for any new app, and SnapRescue is completely safe and runs entirely on your computer.</p>
+    <div class="modal-steps"><span class="shield">🛡️</span> <span>To open it: click <b>More info</b>, then <b>Run anyway</b>.</span></div>
+    <a href="#" class="btn btn-primary" id="dl-go">⬇ Download for Windows</a>
+    <p class="modal-fine">Nothing is uploaded · No account · <a href="#faq" id="dl-why">Why does Windows warn me?</a></p>
+  </div>
+</div>
 
 <script src="main.js"></script>
 </body>

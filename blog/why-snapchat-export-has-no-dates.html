@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Your Snapchat Export Has No Dates or Location (and How to Fix It)</title>
+<meta name="description" content="Downloaded your Snapchat Memories and every photo says it was taken today? Here is why Snapchat exports lose their dates and GPS, what the memories_history file contains, and how to restore the real metadata.">
+<meta property="og:title" content="Why Your Snapchat Export Has No Dates or Location">
+<meta property="og:type" content="article">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="has-cd-bar">
+
+<div class="cd-bar">
+  <span class="cd-dot"></span>
+  <span><span class="cd-label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+  <a href="../deadline.html">See the deadline →</a>
+</div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="../index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
+    <div class="nav-links">
+      <a href="../deadline.html" class="hide-sm">The deadline</a>
+      <a href="index.html" class="hide-sm">Blog</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#download" class="btn btn-primary nav-cta">Get it free</a>
+    </div>
+  </div>
+</nav>
+
+<article class="page-head">
+  <div class="wrap">
+    <div class="article-head reveal">
+      <p class="kicker">The problem</p>
+      <h1>Why your Snapchat export has no dates or location</h1>
+      <p class="article-meta">Updated June 2026 · about 4 min read</p>
+    </div>
+
+    <div class="prose reveal">
+      <p>You did everything right. You requested your data from Snapchat, you downloaded the ZIP, and you opened your photos. And every single one says it was taken <strong>today</strong>, with no location at all. Here is what is going on, and why it is fixable.</p>
+
+      <h2>Photos carry hidden metadata called EXIF</h2>
+      <p>Every photo your phone takes stores invisible information alongside the image: the date and time it was captured, the GPS coordinates, the camera settings. This is called <strong>EXIF metadata</strong>. It is what lets Google Photos and Apple Photos sort your library by date and show your shots on a map. The pixels are the picture; the EXIF is the story around it.</p>
+
+      <h2>Snapchat's export leaves the EXIF out</h2>
+      <p>When Snapchat gives you your Memories, the image and video files themselves come with <strong>no EXIF date and no GPS written in</strong>. So your photo app falls back to the only date it can see, the day you downloaded the file, and assumes everything happened then. That is why a decade of Memories collapses onto a single day with no map.</p>
+
+      <div class="callout">
+        <p><strong>The good news:</strong> the real dates and locations were not thrown away. Snapchat hands them to you in a separate file. They are just not attached to the photos yet.</p>
+      </div>
+
+      <h2>The hidden file that has everything: memories_history</h2>
+      <p>Inside your export is a file named <code>memories_history.json</code> (some exports also include an <code>.html</code> version). It is a list of every Memory you ever saved, and for each one it records the original capture date and time and the GPS location. Everything you need is in there. The problem is purely that the data lives in one file and the photos live in another, and nothing has stitched them back together.</p>
+
+      <h2>Two more things Snapchat splits apart</h2>
+      <ul>
+        <li><strong>Captions and stickers.</strong> If you wrote text on a snap or added a sticker, that overlay often arrives as a separate file from the base photo, so your downloaded copy can be missing the caption you remember.</li>
+        <li><strong>Time zones.</strong> Snapchat records times in UTC. Even tools that do restore the date often paste in the raw UTC time, so an evening snap taken overseas can show up at breakfast.</li>
+      </ul>
+
+      <h2>How to fix it</h2>
+      <p>Fixing this by hand would mean opening that metadata file, finding the matching entry for every single photo, and writing the date and GPS back in one by one. For a few photos that is tedious. For a few thousand it is hundreds of hours.</p>
+      <p>SnapRescue does it automatically. Point it at your export and it reads <code>memories_history</code>, matches every file to its entry, writes the real capture date and GPS into each photo and video, converts the time to the correct local time using the location, merges captions and stickers back on, and sorts everything into dated folders. It runs on your own computer, so your photos never leave your machine, and it is free for your first 50 files.</p>
+
+      <div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+        <a href="../index.html#download" class="btn btn-primary btn-lg">Try SnapRescue free</a>
+        <a href="how-to-export-snapchat-memories.html" class="btn btn-ghost btn-lg">How to export first →</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="../index.html" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
+      <div class="foot-links">
+        <a href="../deadline.html">The deadline</a>
+        <a href="index.html">Blog</a>
+        <a href="../index.html#pricing">Pricing</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../tos.html">Terms</a>
+      </div>
+    </div>
+    <p class="foot-fine">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc.</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

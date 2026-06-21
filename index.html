@@ -3,26 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SnapRescue: Save your Snapchat Memories before they're gone</title>
-<meta name="description" content="Snapchat now charges for Memories storage and strips the dates & locations out of your export. SnapRescue restores them, fixes the timeline, and organizes everything into dated folders. 100% local. Free for your first 50 files.">
-<meta property="og:title" content="SnapRescue: Save your Snapchat Memories before they're gone">
-<meta property="og:description" content="Restore dates, GPS & captions to your Snapchat export and organize it for any photo library. One-time $9.99.">
+<title data-i18n="meta_title">SnapRescue: Save your Snapchat Memories before they're gone</title>
+<meta name="description" data-i18n-attr="meta_desc|content" content="Snapchat now charges for Memories storage and strips the dates & locations out of your export. SnapRescue restores them, fixes the timeline, and organizes everything into dated folders. 100% local. Free for your first 50 files.">
+<meta property="og:title" data-i18n-attr="meta_title|content" content="SnapRescue: Save your Snapchat Memories before they're gone">
+<meta property="og:description" data-i18n-attr="meta_desc|content" content="Restore dates, GPS & captions to your Snapchat export and organize it for any photo library. One-time $9.99.">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="https://snaprescue.github.io/index.html">
+<link rel="alternate" hreflang="fr" href="https://snaprescue.github.io/fr/index.html">
+<link rel="alternate" hreflang="de" href="https://snaprescue.github.io/de/index.html">
+<link rel="alternate" hreflang="es" href="https://snaprescue.github.io/es/index.html">
+<link rel="alternate" hreflang="nl" href="https://snaprescue.github.io/nl/index.html">
+<link rel="alternate" hreflang="x-default" href="https://snaprescue.github.io/index.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260621b">
+<link rel="stylesheet" href="styles.css?v=20260621c">
 </head>
 <body class="has-cd-bar">
 
 <!-- COUNTDOWN BAR -->
 <div class="cd-bar">
   <span class="cd-dot"></span>
-  <span><span class="cd-label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
-  <a href="deadline.html">See the deadline →</a>
+  <span><span class="cd-label" data-i18n="cd_label">Snapchat starts deleting Memories in </span><span class="cd-nums" id="cd-bar-nums">--</span></span>
+  <a href="deadline.html" data-i18n="cd_link">See the deadline →</a>
 </div>
 
 <!-- NAV -->
@@ -30,12 +36,22 @@
   <div class="wrap nav-in">
     <a href="#" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
     <div class="nav-links">
-      <a href="deadline.html" class="hide-sm">The deadline</a>
-      <a href="guide.html" class="hide-sm">Guide</a>
-      <a href="#features" class="hide-sm">Features</a>
-      <a href="blog/" class="hide-sm">Blog</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#download" class="btn btn-primary nav-cta">Get it free</a>
+      <a href="deadline.html" class="hide-sm" data-i18n="nav_deadline">The deadline</a>
+      <a href="guide.html" class="hide-sm" data-i18n="nav_guide">Guide</a>
+      <a href="#features" class="hide-sm" data-i18n="nav_features">Features</a>
+      <a href="blog/" class="hide-sm" data-i18n="nav_blog">Blog</a>
+      <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+      <div class="lang-pick">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></svg> <span class="lbl" id="langLabel">English</span> <span class="chev">▾</span></button>
+        <div class="lang-menu" id="langMenu">
+          <a class="lang-opt on" data-lang="en" href="https://snaprescue.github.io/index.html">English</a>
+          <a class="lang-opt" data-lang="fr" href="https://snaprescue.github.io/fr/index.html">Français</a>
+          <a class="lang-opt" data-lang="de" href="https://snaprescue.github.io/de/index.html">Deutsch</a>
+          <a class="lang-opt" data-lang="es" href="https://snaprescue.github.io/es/index.html">Español</a>
+          <a class="lang-opt" data-lang="nl" href="https://snaprescue.github.io/nl/index.html">Nederlands</a>
+        </div>
+      </div>
+      <a href="#download" class="btn btn-primary nav-cta" data-i18n="nav_getfree">Get it free</a>
     </div>
   </div>
 </nav>
@@ -44,14 +60,14 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow reveal" style="--i:0"><span class="dot"></span> Snapchat is charging for Memories now</span>
-      <h1 class="reveal" style="--i:1">Get your memories out,<br><span class="serif-italic accent">with their dates intact.</span></h1>
-      <p class="lead reveal" style="--i:2">Snapchat's export splits your photos from their dates and locations, so everything lands in your library stamped <em>today</em>. SnapRescue puts the real capture time, GPS and captions back, and sorts it all into tidy, dated folders.</p>
+      <span class="eyebrow reveal" style="--i:0"><span class="dot"></span> <span data-i18n="hero_eyebrow">Snapchat is charging for Memories now</span></span>
+      <h1 class="reveal" style="--i:1" data-i18n="hero_h1">Get your memories out,<br><span class="serif-italic accent">with their dates intact.</span></h1>
+      <p class="lead reveal" style="--i:2" data-i18n="hero_lead">Snapchat's export splits your photos from their dates and locations, so everything lands in your library stamped <em>today</em>. SnapRescue puts the real capture time, GPS and captions back, and sorts it all into tidy, dated folders.</p>
       <div class="hero-cta reveal" style="--i:3">
-        <a href="#download" class="btn btn-primary btn-lg">⬇ Download for Windows</a>
-        <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+        <a href="#download" class="btn btn-primary btn-lg" data-i18n="hero_dl">⬇ Download for Windows</a>
+        <a href="#how" class="btn btn-ghost btn-lg" data-i18n="hero_how">See how it works</a>
       </div>
-      <div class="hero-note reveal" style="--i:4">✓ Free for your first 50 files &nbsp;·&nbsp; ✓ 100% on your computer &nbsp;·&nbsp; ✓ No account</div>
+      <div class="hero-note reveal" style="--i:4" data-i18n="hero_note">✓ Free for your first 50 files &nbsp;·&nbsp; ✓ 100% on your computer &nbsp;·&nbsp; ✓ No account</div>
     </div>
 
     <div class="stack reveal" style="--i:3">
@@ -83,11 +99,11 @@
 <!-- TRUST BAND -->
 <div class="trust-band">
   <div class="trust-row">
-    <span class="trust-item"><span class="ti">🔒</span> 100% on your computer</span>
-    <span class="trust-item"><span class="ti">🚫</span> Nothing uploaded, no account</span>
-    <span class="trust-item"><span class="ti">👻</span> Not affiliated with Snap</span>
-    <span class="trust-item"><span class="ti">💳</span> Secure Stripe checkout</span>
-    <span class="trust-item"><span class="ti">↩️</span> 30-day money-back guarantee</span>
+    <span class="trust-item"><span class="ti">🔒</span> <span data-i18n="trust1">100% on your computer</span></span>
+    <span class="trust-item"><span class="ti">🚫</span> <span data-i18n="trust2">Nothing uploaded, no account</span></span>
+    <span class="trust-item"><span class="ti">👻</span> <span data-i18n="trust3">Not affiliated with Snap</span></span>
+    <span class="trust-item"><span class="ti">💳</span> <span data-i18n="trust4">Secure Stripe checkout</span></span>
+    <span class="trust-item"><span class="ti">↩️</span> <span data-i18n="trust5">30-day money-back guarantee</span></span>
   </div>
 </div>
 
@@ -95,14 +111,14 @@
 <section class="showcase">
   <div class="wrap">
     <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto;max-width:42rem">
-      <p class="kicker">The actual app</p>
-      <h2>Clean, guided, four simple steps.</h2>
-      <p>No clutter and no folders to merge by hand. Import your export, see exactly what was found, choose where it lands, then watch it get rescued.</p>
+      <p class="kicker" data-i18n="showcase_kicker">The actual app</p>
+      <h2 data-i18n="showcase_h2">Clean, guided, four simple steps.</h2>
+      <p data-i18n="showcase_p">No clutter and no folders to merge by hand. Import your export, see exactly what was found, choose where it lands, then watch it get rescued.</p>
     </div>
     <div class="app-frame reveal">
       <img src="assets/app-review.png" alt="SnapRescue showing 2,483 memories found, with photo, video and with-location counts and a preview list" loading="lazy">
     </div>
-    <p class="showcase-cap reveal">SnapRescue on Windows. Mac and mobile coming soon.</p>
+    <p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue on Windows. Mac and mobile coming soon.</p>
   </div>
 </section>
 
@@ -110,8 +126,8 @@
 <section class="problem" id="problem">
   <div class="wrap split">
     <div class="reveal">
-      <p class="kicker">The catch nobody warns you about</p>
-      <h2>Your export downloads fine.<br>Then your timeline is <span class="serif-italic accent">wrecked.</span></h2>
+      <p class="kicker" data-i18n="problem_kicker">The catch nobody warns you about</p>
+      <h2 data-i18n="problem_h2">Your export downloads fine.<br>Then your timeline is <span class="serif-italic accent">wrecked.</span></h2>
       <p style="font-size:19px;color:var(--ink-soft);margin-top:18px">Snapchat hands you the raw photos and videos, but the dates and GPS live in a separate <code>memories_history.json</code> file that your photo app never reads. Import them and 2,000 memories from years of your life all stack up on today's date, with no map, no order, no story.</p>
       <p style="font-size:19px;color:var(--ink-soft);margin-top:16px">SnapRescue reunites every file with its real metadata before it ever touches your library.</p>
     </div>
@@ -132,8 +148,8 @@
 <section id="how">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="kicker">Four steps, no tech skills</p>
-      <h2>From a messy ZIP to a beautiful archive.</h2>
+      <p class="kicker" data-i18n="how_kicker">Four steps, no tech skills</p>
+      <h2 data-i18n="how_h2">From a messy ZIP to a beautiful archive.</h2>
     </div>
     <div class="steps">
       <div class="step reveal"><h3>Ask Snapchat</h3><p>In the app: Settings → My Data → Submit Request. They email you a download link. (We never touch your login.)</p></div>
@@ -143,7 +159,7 @@
     </div>
 
     <div class="reveal" style="text-align:center;margin-top:36px">
-      <a href="guide.html" class="btn btn-ghost">See the complete step-by-step guide, with timings →</a>
+      <a href="guide.html" class="btn btn-ghost" data-i18n="guide_cta">See the complete step-by-step guide, with timings →</a>
     </div>
 
     <!-- Detailed export guide -->
@@ -173,8 +189,8 @@
 <section id="features">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="kicker">Why it's the good one</p>
-      <h2>Everything the others do, plus the bits they miss.</h2>
+      <p class="kicker" data-i18n="features_kicker">Why it's the good one</p>
+      <h2 data-i18n="features_h2">Everything the others do, plus the bits they miss.</h2>
     </div>
     <div class="feat-grid">
       <div class="feat hero-feat reveal">
@@ -199,8 +215,8 @@
 <section class="compare">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="kicker">Honest comparison</p>
-      <h2>How SnapRescue stacks up.</h2>
+      <p class="kicker" data-i18n="compare_kicker">Honest comparison</p>
+      <h2 data-i18n="compare_h2">How SnapRescue stacks up.</h2>
     </div>
     <div class="tbl-scroll reveal">
       <table class="tbl">
@@ -229,15 +245,15 @@
 <section id="pricing">
   <div class="wrap">
     <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
-      <p class="kicker">Simple, fair, one-time</p>
-      <h2>Try it free. Unlock once.</h2>
-      <p>No subscription, unlike a certain ghost. Snapchat Plus is $3.99 <em>every month, forever</em>. SnapRescue costs less than 3 months of that, then it's yours for good.</p>
+      <p class="kicker" data-i18n="pricing_kicker">Simple, fair, one-time</p>
+      <h2 data-i18n="pricing_h2">Try it free. Unlock once.</h2>
+      <p data-i18n="pricing_p">No subscription, unlike a certain ghost. Snapchat Plus is $3.99 <em>every month, forever</em>. SnapRescue costs less than 3 months of that, then it's yours for good.</p>
     </div>
     <div class="price-grid">
       <div class="price reveal" id="download">
-        <div class="tier">Free</div>
+        <div class="tier" data-i18n="free_tier">Free</div>
         <div class="amt">$0</div>
-        <div class="sub">See it work on your own memories.</div>
+        <div class="sub" data-i18n="free_sub">See it work on your own memories.</div>
         <ul>
           <li><span class="ck">✓</span> Restore the first <b>50 files</b>, fully</li>
           <li><span class="ck">✓</span> Dates, GPS, places &amp; overlays</li>
@@ -248,18 +264,18 @@
         <p style="font-size:12.5px;color:var(--ink-faint);margin-top:12px;line-height:1.5">First open: if Windows shows a blue warning, click <b>More info → Run anyway</b>. <a href="#faq" style="color:var(--sunset)">Why?</a></p>
       </div>
       <div class="price featured reveal">
-        <span class="badge">Most popular</span>
-        <div class="tier">Full version</div>
-        <div class="amt">$9.99 <small>USD · once</small></div>
-        <div class="sub">Unlimited exports, forever. Less than 3 months of Snapchat Plus.</div>
+        <span class="badge" data-i18n="full_badge">Most popular</span>
+        <div class="tier" data-i18n="full_tier">Full version</div>
+        <div class="amt">$9.99 <small data-i18n="full_once">USD · once</small></div>
+        <div class="sub" data-i18n="full_sub">Unlimited exports, forever. Less than 3 months of Snapchat Plus.</div>
         <ul>
           <li><span class="ck">✓</span> <b>Unlimited</b> files &amp; re-runs</li>
           <li><span class="ck">✓</span> Everything in Free</li>
           <li><span class="ck">✓</span> Use on up to <b>3 devices</b></li>
           <li><span class="ck">✓</span> Free updates</li>
         </ul>
-        <a href="#" class="btn btn-primary" id="buy-btn">Unlock for $9.99</a>
-        <div class="mbg">↩️ 30-day money-back guarantee, no questions asked</div>
+        <a href="#" class="btn btn-primary" id="buy-btn" data-i18n="full_btn">Unlock for $9.99</a>
+        <div class="mbg" data-i18n="mbg">↩️ 30-day money-back guarantee, no questions asked</div>
       </div>
     </div>
     <p class="guarantee">🔒 Secure checkout via Stripe · One-time payment, no subscription · Mac &amp; mobile coming soon</p>
@@ -270,8 +286,8 @@
 <section id="faq">
   <div class="wrap" style="max-width:840px">
     <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
-      <p class="kicker">Good questions</p>
-      <h2>Things people ask.</h2>
+      <p class="kicker" data-i18n="faq_kicker">Good questions</p>
+      <h2 data-i18n="faq_h2">Things people ask.</h2>
     </div>
     <div class="faq reveal">
       <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get my data out of Snapchat?<span class="pm">+</span></button><div class="faq-a"><p>In Snapchat: profile → Settings ⚙️ → <b>My Data</b> → <b>Submit Request</b> (tick “Include Memories”). Snapchat emails you a download link, usually within a few hours. A large library can arrive as <b>several ZIP files</b>, so just save them all into one folder and point SnapRescue at that folder. <a href="#guide" style="color:var(--sunset)">See the full step-by-step guide ↑</a></p></div></div>
@@ -290,9 +306,9 @@
 <!-- CTA -->
 <section style="padding-top:0">
   <div class="cta-band reveal">
-    <h2>Don't let years of your life expire in a ghost's cloud.</h2>
-    <p>Rescue your Memories today. Free for the first 50.</p>
-    <a href="#download" class="btn btn-primary btn-lg" style="position:relative">⬇ Download SnapRescue</a>
+    <h2 data-i18n="cta_h2">Don't let years of your life expire in a ghost's cloud.</h2>
+    <p data-i18n="cta_p">Rescue your Memories today. Free for the first 50.</p>
+    <a href="#download" class="btn btn-primary btn-lg" style="position:relative" data-i18n="cta_btn">⬇ Download SnapRescue</a>
   </div>
 </section>
 
@@ -302,19 +318,19 @@
     <div class="foot-in">
       <a href="#" class="logo"><span class="mark"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> SnapRescue</a>
       <div class="foot-links">
-        <a href="guide.html">Guide</a>
-        <a href="deadline.html">The deadline</a>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="blog/">Blog</a>
-        <a href="#faq">FAQ</a>
-        <a href="mailto:snap.rescue0@gmail.com">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="tos.html">Terms</a>
+        <a href="guide.html" data-i18n="nav_guide">Guide</a>
+        <a href="deadline.html" data-i18n="nav_deadline">The deadline</a>
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="blog/" data-i18n="nav_blog">Blog</a>
+        <a href="#faq" data-i18n="foot_faq">FAQ</a>
+        <a href="mailto:snap.rescue0@gmail.com" data-i18n="foot_support">Support</a>
+        <a href="privacy.html" data-i18n="foot_privacy">Privacy</a>
+        <a href="tos.html" data-i18n="foot_terms">Terms</a>
       </div>
     </div>
-    <p class="foot-fine">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc. SnapRescue only processes data you have officially exported from your own account, entirely on your own device.</p>
-    <p class="foot-fine" style="margin-top:8px">© 2026 SnapRescue. Made for everyone who refuses to lose their memories.</p>
+    <p class="foot-fine" data-i18n="foot_fine1">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc. SnapRescue only processes data you have officially exported from your own account, entirely on your own device.</p>
+    <p class="foot-fine" style="margin-top:8px" data-i18n="foot_fine2">© 2026 SnapRescue. Made for everyone who refuses to lose their memories.</p>
   </div>
 </footer>
 
@@ -322,9 +338,9 @@
 <div class="modal-overlay" id="dl-modal" aria-hidden="true" role="dialog" aria-label="Download SnapRescue">
   <div class="modal">
     <button class="modal-x" id="dl-x" aria-label="Close">×</button>
-    <h3>Your download is starting</h3>
-    <p>SnapRescue is a new app, so Windows may show a blue <b>“Windows protected your PC”</b> notice. That is normal for any new app, and SnapRescue is completely safe and runs entirely on your computer.</p>
-    <div class="modal-steps"><span class="shield">🛡️</span> <span>To open it: click <b>More info</b>, then <b>Run anyway</b>.</span></div>
+    <h3 data-i18n="modal_title">Your download is starting</h3>
+    <p data-i18n="modal_body">SnapRescue is a new app, so Windows may show a blue <b>“Windows protected your PC”</b> notice. That is normal for any new app, and SnapRescue is completely safe and runs entirely on your computer.</p>
+    <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="modal_steps">To open it: click <b>More info</b>, then <b>Run anyway</b>.</span></div>
     <div class="ss-mock" aria-hidden="true">
       <span class="ss-x">✕</span>
       <div class="ss-title">Windows protected your PC</div>
@@ -332,12 +348,12 @@
       <span class="ss-more">More info</span>
       <div class="ss-btns"><span class="ss-run">Run anyway</span><span class="ss-dont">Don't run</span></div>
     </div>
-    <p class="ss-cap">This is the exact box you'll see. Click <b>More info</b> to reveal <b>Run anyway</b>.</p>
-    <a href="#" class="btn btn-primary" id="dl-go">⬇ Download for Windows</a>
-    <p class="modal-fine">Nothing is uploaded · No account · <a href="#faq" id="dl-why">Why does Windows warn me?</a></p>
+    <p class="ss-cap" data-i18n="ss_cap">This is the exact box you'll see. Click <b>More info</b> to reveal <b>Run anyway</b>.</p>
+    <a href="#" class="btn btn-primary" id="dl-go" data-i18n="hero_dl">⬇ Download for Windows</a>
+    <p class="modal-fine" data-i18n="modal_fine">Nothing is uploaded · No account · <a href="#faq" id="dl-why">Why does Windows warn me?</a></p>
   </div>
 </div>
 
-<script src="main.js?v=20260621b"></script>
+<script src="main.js?v=20260621c"></script>
 </body>
 </html>

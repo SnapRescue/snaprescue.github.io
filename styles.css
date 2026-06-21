@@ -474,3 +474,15 @@ body.has-cd-bar nav { top: 40px; }
 .gr-text { font-weight: 600; color: var(--ink); font-size: 15px; }
 .gwait-note { margin: 12px 0 0; color: var(--sunset-deep); font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
 @media (max-width: 600px) { .gstep { padding-left: 56px; } .gstep-dot { width: 38px; height: 38px; } .gstep::before { left: 18px; } }
+
+/* ── Language picker (separate localized pages) ────────────────── */
+.lang-pick { position: relative; }
+.lang-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--ink-soft); font-weight: 600; background: none; border: none; cursor: pointer; padding: 6px 6px; font-family: inherit; }
+.lang-btn:hover { color: var(--ink); }
+.lang-btn .chev { font-size: 10px; opacity: .7; }
+.lang-menu { position: absolute; right: 0; top: calc(100% + 8px); background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 6px; min-width: 158px; display: none; z-index: 120; }
+.lang-pick:hover .lang-menu, .lang-pick:focus-within .lang-menu { display: block; }
+.lang-opt { display: block; padding: 8px 12px; border-radius: 8px; font-size: 14px; color: var(--ink-soft); white-space: nowrap; }
+.lang-opt:hover { background: var(--paper-2); color: var(--ink); }
+.lang-opt.on { color: var(--sunset); font-weight: 700; }
+@media (max-width: 600px) { .lang-btn span.lbl { display: none; } }

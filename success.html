@@ -50,7 +50,7 @@
     </div>
 
     <p class="muted">If Windows shows a blue warning the first time you open the app, click <b>More info → Run anyway</b>. It's safe, just new.</p>
-    <p class="muted">Keep this key safe. Works on up to 3 devices. Need help? <a href="mailto:snap.rescue0@gmail.com" style="color:var(--sunset)">snap.rescue0@gmail.com</a></p>
+    <p class="muted">Keep this key safe. Works on up to 3 devices. Need help? <a href="mailto:support@snaprescue.app" style="color:var(--sunset)">support@snaprescue.app</a></p>
     <p style="margin-top:18px"><a href="index.html" class="btn btn-primary">Back to SnapRescue</a></p>
   </div>
 </div>
@@ -63,7 +63,7 @@
   const copyBtn = document.getElementById("copy");
 
   async function fetchKey(attempt = 0) {
-    if (!sessionId) { keyEl.textContent = "Missing session. Contact snap.rescue0@gmail.com with your receipt."; return; }
+    if (!sessionId) { keyEl.textContent = "Missing session. Contact support@snaprescue.app with your receipt."; return; }
     try {
       const res = await fetch(`${LICENSE_API}/key?session_id=${encodeURIComponent(sessionId)}`);
       if (!res.ok) throw new Error("not ready");
@@ -76,7 +76,7 @@
         keyEl.textContent = "Generating your key…";
         setTimeout(() => fetchKey(attempt + 1), 2000);
       } else {
-        keyEl.textContent = "Taking longer than usual. Contact snap.rescue0@gmail.com with your receipt and we'll sort it.";
+        keyEl.textContent = "Taking longer than usual. Contact support@snaprescue.app with your receipt and we'll sort it.";
       }
     }
   }

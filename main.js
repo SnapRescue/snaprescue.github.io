@@ -9,6 +9,8 @@ const CONFIG = {
   // macOS builds: Apple Silicon (arm64) and Intel (x86_64).
   DOWNLOAD_URL_MAC: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-mac-arm64.dmg",
   DOWNLOAD_URL_MAC_INTEL: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-mac-intel.dmg",
+  // Android: sideloaded APK served from this site (not the Play Store).
+  DOWNLOAD_URL_ANDROID: "https://snaprescue.app/download/SnapRescue-android.apk",
 };
 
 // ── Nav shadow on scroll ─────────────────────────────────────
@@ -65,19 +67,65 @@ const setHref = (id, url) => { const el = document.getElementById(id); if (el &&
 setHref("dl-go", CONFIG.DOWNLOAD_URL);
 setHref("dl-go-mac", CONFIG.DOWNLOAD_URL_MAC);
 setHref("dl-go-mac-intel", CONFIG.DOWNLOAD_URL_MAC_INTEL);
+setHref("dl-go-android", CONFIG.DOWNLOAD_URL_ANDROID);
 
-// Show the Windows or Mac block based on the visitor's OS; let them switch.
-const winBlock = document.getElementById("dl-win");
-const macBlock = document.getElementById("dl-mac");
-const isMac = /Mac/i.test(navigator.platform || "") || (/Mac OS X/i.test(navigator.userAgent || "") && !/iPhone|iPad/i.test(navigator.userAgent || ""));
-const showPlatform = (p) => {
-  if (!winBlock || !macBlock) return;
-  const mac = p === "mac";
-  macBlock.hidden = !mac; winBlock.hidden = mac;
+// Show the block for the visitor's platform (Windows / Mac / Android / iPhone),
+// and let them switch with the pill row at the bottom of the modal.
+const PLATFORMS = ["win", "mac", "android", "ios"];
+const ua = navigator.userAgent || "";
+const detectPlatform = () => {
+  if (/Android/i.test(ua)) return "android";
+  if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+  if (/Mac/i.test(navigator.platform || "") || /Mac OS X/i.test(ua)) return "mac";
+  return "win";
 };
-showPlatform(isMac ? "mac" : "win");
-document.getElementById("to-mac")?.addEventListener("click", () => showPlatform("mac"));
-document.getElementById("to-win")?.addEventListener("click", () => showPlatform("win"));
+const showPlatform = (p) => {
+  if (!PLATFORMS.includes(p)) p = "win";
+  PLATFORMS.forEach((name) => {
+    const block = document.getElementById("dl-" + name);
+    if (block) block.hidden = name !== p;
+  });
+  document.querySelectorAll("#dl-switch button").forEach((b) => b.classList.toggle("on", b.dataset.plat === p));
+};
+showPlatform(detectPlatform());
+document.querySelectorAll("#dl-switch button").forEach((b) =>
+  b.addEventListener("click", () => showPlatform(b.dataset.plat)));
+
+// iPhone waitlist: capture an email for the launch + discount code.
+const iosForm = document.getElementById("ios-form");
+if (iosForm) {
+  iosForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const input = document.getElementById("ios-email");
+    const msg = document.getElementById("ios-msg");
+    const btn = document.getElementById("ios-submit");
+    const email = (input.value || "").trim();
+    msg.className = "ss-cap";
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      input.classList.add("err"); msg.textContent = "Please enter a valid email address."; msg.classList.add("err");
+      return;
+    }
+    input.classList.remove("err");
+    const original = btn.textContent;
+    btn.textContent = "Saving…"; btn.style.pointerEvents = "none";
+    try {
+      const res = await fetch(`${CONFIG.LICENSE_API}/waitlist`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, platform: "ios" }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        iosForm.hidden = true;
+        msg.textContent = "You're on the list. We'll email you at launch with your discount code.";
+        msg.classList.add("ok");
+      } else { throw new Error(data.error || "failed"); }
+    } catch (err) {
+      btn.textContent = original; btn.style.pointerEvents = "";
+      msg.textContent = "Something went wrong. Please try again in a moment."; msg.classList.add("err");
+    }
+  });
+}
 
 document.getElementById("dl-x")?.addEventListener("click", closeDlModal);
 document.getElementById("dl-why")?.addEventListener("click", closeDlModal);

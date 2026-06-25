@@ -491,3 +491,23 @@ body.has-cd-bar nav { top: 40px; }
 .modal-switch { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 13px; font-family: inherit; margin-top: 14px; text-decoration: underline; text-underline-offset: 2px; }
 .modal-switch:hover { color: var(--sunset); }
 #dl-mac .ss-cap { margin-top: 14px; }
+
+/* ── Download modal: 4-platform switcher + iPhone waitlist ─────────────── */
+.dl-switch-row { display: flex; gap: 6px; justify-content: center; margin: 18px 0 4px; flex-wrap: wrap; }
+.dl-switch-row button {
+  font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  color: var(--ink-soft); background: var(--paper-2); border: 1px solid var(--line);
+  padding: 7px 14px; border-radius: 999px; transition: all .15s;
+}
+.dl-switch-row button:hover { border-color: var(--sunset); color: var(--sunset); }
+.dl-switch-row button.on { background: var(--sunset); border-color: var(--sunset); color: #fff; }
+
+.ios-waitlist { display: flex; flex-direction: column; gap: 10px; margin: 4px 0 4px; }
+.ios-waitlist input[type="email"] {
+  font-family: inherit; font-size: 15px; padding: 13px 15px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink); width: 100%;
+}
+.ios-waitlist input[type="email"]:focus { outline: none; border-color: var(--sunset); box-shadow: 0 0 0 3px rgba(232,98,58,.15); }
+.ios-waitlist input.err { border-color: var(--danger); box-shadow: 0 0 0 3px rgba(217,45,32,.12); }
+#ios-msg.ok { color: var(--teal); }
+#ios-msg.err { color: var(--danger); }

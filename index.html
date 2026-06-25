@@ -369,19 +369,19 @@
     </div>
     <!-- ANDROID -->
     <div id="dl-android" hidden>
-      <p>SnapRescue for Android installs straight from here rather than the Play Store, so your phone asks you to allow the install and Play Protect may show a quick "unknown app" notice. That is normal for a direct download, and SnapRescue is completely safe and runs entirely on your phone.</p>
-      <div class="modal-steps"><span class="shield">🛡️</span> <span>To install: tap <b>Download</b>, open the file, turn on <b>Allow from this source</b>, then tap <b>Install anyway</b>.</span></div>
-      <a href="#" class="btn btn-primary" id="dl-go-android">⬇ Download for Android (.apk)</a>
-      <p class="ss-cap">Android 8.0 and newer. Your first 50 files are free, the same as the desktop app.</p>
+      <p data-i18n="and_body">SnapRescue for Android installs straight from here rather than the Play Store, so your phone asks you to allow the install and Play Protect may show a quick "unknown app" notice. That is normal for a direct download, and SnapRescue is completely safe and runs entirely on your phone.</p>
+      <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="and_steps">To install: tap <b>Download</b>, open the file, turn on <b>Allow from this source</b>, then tap <b>Install anyway</b>.</span></div>
+      <a href="#" class="btn btn-primary" id="dl-go-android" data-i18n="and_dl">⬇ Download for Android (.apk)</a>
+      <p class="ss-cap" data-i18n="and_cap">Android 8.0 and newer. Your first 50 files are free, the same as the desktop app.</p>
     </div>
     <!-- IPHONE -->
     <div id="dl-ios" hidden>
-      <p>The iPhone version of SnapRescue is in active development. Leave your email and we'll tell you the moment it's on the App Store, and send you an <b>early-supporter discount code</b> to say thanks for waiting.</p>
+      <p data-i18n="ios_body">The iPhone version of SnapRescue is in active development. Leave your email and we'll tell you the moment it's on the App Store, and send you an <b>early-supporter discount code</b> to say thanks for waiting.</p>
       <form id="ios-form" class="ios-waitlist" novalidate>
-        <input type="email" id="ios-email" placeholder="you@email.com" autocomplete="email" required>
-        <button type="submit" class="btn btn-primary" id="ios-submit">Notify me + get a discount →</button>
+        <input type="email" id="ios-email" placeholder="you@email.com" autocomplete="email" data-i18n-attr="ios_ph|placeholder" required>
+        <button type="submit" class="btn btn-primary" id="ios-submit" data-i18n="ios_dl">Notify me + get a discount →</button>
       </form>
-      <p class="ss-cap" id="ios-msg">One email when it's ready, nothing else. Your address is never shared.</p>
+      <p class="ss-cap" id="ios-msg" data-i18n="ios_cap">One email when it's ready, nothing else. Your address is never shared.</p>
     </div>
     <div class="dl-switch-row" id="dl-switch">
       <button type="button" data-plat="win">Windows</button>

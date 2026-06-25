@@ -13,6 +13,7 @@
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<link href="https://snaprescue.app/" rel="canonical"/>
 <link href="https://snaprescue.app/index.html" hreflang="en" rel="alternate"/>
 <link href="https://snaprescue.app/fr/index.html" hreflang="fr" rel="alternate"/>
 <link href="https://snaprescue.app/de/index.html" hreflang="de" rel="alternate"/>
@@ -20,12 +21,14 @@
 <link href="https://snaprescue.app/nl/index.html" hreflang="nl" rel="alternate"/>
 <link href="https://snaprescue.app/index.html" hreflang="x-default" rel="alternate"/>
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../assets/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="../assets/favicon.ico" rel="icon" sizes="32x32"/>
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20260621d" rel="stylesheet"/>
+<link href="../styles.css?v=20260625a" rel="stylesheet"/>
 </head>
 <body class="has-cd-bar">
 <!-- COUNTDOWN BAR -->
@@ -321,7 +324,6 @@
 </div>
 <p class="ss-cap" data-i18n="ss_cap">Dit is precies het venster dat je ziet. Klik op <b>Meer informatie</b> om <b>Toch uitvoeren</b> te tonen.</p>
 <a class="btn btn-primary" data-i18n="win_dl" href="#" id="dl-go">⬇ Downloaden voor Windows</a>
-<button class="modal-switch" data-i18n="dl_toggle_mac" id="to-mac">Liever op een Mac?</button>
 </div>
 <!-- MAC (Apple Silicon) -->
 <div hidden="" id="dl-mac">
@@ -329,12 +331,33 @@
 <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="mac_steps">Om het te openen: <b>klik met de rechtermuisknop</b> op de app en kies <b>Openen</b>, daarna nogmaals <b>Openen</b>.</span></div>
 <a class="btn btn-primary" data-i18n="mac_dl" href="#" id="dl-go-mac">⬇ Downloaden voor Mac (Apple Silicon)</a>
 <p class="ss-cap" data-i18n="mac_arch">Voor Macs met Apple Silicon (M1, M2, M3 en nieuwer). Controleer die van jou via Apple-menu → Over deze Mac. Ondersteuning voor Intel-Mac komt heel binnenkort.</p>
-<button class="modal-switch" data-i18n="dl_toggle_win" id="to-win">Liever op Windows?</button>
+</div>
+<!-- ANDROID -->
+<div hidden="" id="dl-android">
+<p data-i18n="and_body">SnapRescue voor Android installeer je rechtstreeks vanaf hier, niet via de Play Store. Je telefoon vraagt daarom om de installatie toe te staan en Play Protect toont mogelijk een korte melding over een ‘onbekende app’. Dat is normaal bij een directe download, en SnapRescue is volkomen veilig en draait volledig op je telefoon.</p>
+<div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="and_steps">Zo installeer je het: tik op <b>Downloaden</b>, open het bestand, zet <b>Toestaan vanaf deze bron</b> aan en tik dan op <b>Toch installeren</b>.</span></div>
+<a class="btn btn-primary" data-i18n="and_dl" href="#" id="dl-go-android">⬇ Downloaden voor Android (.apk)</a>
+<p class="ss-cap" data-i18n="and_cap">Android 8.0 en nieuwer. Je eerste 50 bestanden zijn gratis, net als in de desktop-app.</p>
+</div>
+<!-- IPHONE -->
+<div hidden="" id="dl-ios">
+<p data-i18n="ios_body">De iPhone-versie van SnapRescue is volop in ontwikkeling. Laat je e-mailadres achter, dan laten we het je weten zodra hij in de App Store staat, met een <b>kortingscode voor vroege gebruikers</b> als dank voor het wachten.</p>
+<form class="ios-waitlist" id="ios-form" novalidate="">
+<input autocomplete="email" data-i18n-attr="ios_ph|placeholder" id="ios-email" placeholder="jij@email.com" required="" type="email"/>
+<button class="btn btn-primary" data-i18n="ios_dl" id="ios-submit" type="submit">Houd me op de hoogte + korting →</button>
+</form>
+<p class="ss-cap" data-i18n="ios_cap" id="ios-msg">Eén e-mail zodra het zover is, meer niet. Je adres wordt nooit gedeeld.</p>
+</div>
+<div class="dl-switch-row" id="dl-switch">
+<button data-plat="win" type="button">Windows</button>
+<button data-plat="mac" type="button">Mac</button>
+<button data-plat="android" type="button">Android</button>
+<button data-plat="ios" type="button">iPhone</button>
 </div>
 <p class="modal-fine" data-i18n="modal_fine">Niets geüpload · Geen account · <a href="#faq" id="dl-why">Waarom waarschuwt Windows?</a></p>
 </div>
 </div>
-<script src="../main.js?v=20260621d"></script>
+<script src="../main.js?v=20260625a"></script>
 
 </body>
 </html>

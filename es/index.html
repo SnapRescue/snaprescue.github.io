@@ -13,6 +13,7 @@
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<link href="https://snaprescue.app/" rel="canonical"/>
 <link href="https://snaprescue.app/index.html" hreflang="en" rel="alternate"/>
 <link href="https://snaprescue.app/fr/index.html" hreflang="fr" rel="alternate"/>
 <link href="https://snaprescue.app/de/index.html" hreflang="de" rel="alternate"/>
@@ -20,12 +21,14 @@
 <link href="https://snaprescue.app/nl/index.html" hreflang="nl" rel="alternate"/>
 <link href="https://snaprescue.app/index.html" hreflang="x-default" rel="alternate"/>
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../assets/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="../assets/favicon.ico" rel="icon" sizes="32x32"/>
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20260621d" rel="stylesheet"/>
+<link href="../styles.css?v=20260625a" rel="stylesheet"/>
 </head>
 <body class="has-cd-bar">
 <!-- COUNTDOWN BAR -->
@@ -321,7 +324,6 @@
 </div>
 <p class="ss-cap" data-i18n="ss_cap">Esta es la ventana exacta que verás. Haz clic en <b>Más información</b> para que aparezca <b>Ejecutar de todas formas</b>.</p>
 <a class="btn btn-primary" data-i18n="win_dl" href="#" id="dl-go">⬇ Descargar para Windows</a>
-<button class="modal-switch" data-i18n="dl_toggle_mac" id="to-mac">¿Mejor en un Mac?</button>
 </div>
 <!-- MAC (Apple Silicon) -->
 <div hidden="" id="dl-mac">
@@ -329,12 +331,33 @@
 <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="mac_steps">Para abrirlo: <b>haz clic derecho</b> en la app y elige <b>Abrir</b>, y luego <b>Abrir</b> otra vez.</span></div>
 <a class="btn btn-primary" data-i18n="mac_dl" href="#" id="dl-go-mac">⬇ Descargar para Mac (Apple Silicon)</a>
 <p class="ss-cap" data-i18n="mac_arch">Para Macs con Apple Silicon (M1, M2, M3 y más nuevos). Comprueba el tuyo en Menú Apple → Acerca de este Mac. La versión para Mac Intel llega muy pronto.</p>
-<button class="modal-switch" data-i18n="dl_toggle_win" id="to-win">¿Mejor en Windows?</button>
+</div>
+<!-- ANDROID -->
+<div hidden="" id="dl-android">
+<p data-i18n="and_body">SnapRescue para Android se instala directamente desde aquí, no desde la Play Store, así que tu teléfono te pedirá permiso para instalarla y Play Protect puede mostrar un breve aviso de «aplicación desconocida». Es normal en una descarga directa, y SnapRescue es completamente seguro y funciona por completo en tu teléfono.</p>
+<div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="and_steps">Para instalarla: toca <b>Descargar</b>, abre el archivo, activa <b>Permitir desde esta fuente</b> y luego toca <b>Instalar de todos modos</b>.</span></div>
+<a class="btn btn-primary" data-i18n="and_dl" href="#" id="dl-go-android">⬇ Descargar para Android (.apk)</a>
+<p class="ss-cap" data-i18n="and_cap">Android 8.0 y posterior. Tus primeros 50 archivos son gratis, igual que en la aplicación de escritorio.</p>
+</div>
+<!-- IPHONE -->
+<div hidden="" id="dl-ios">
+<p data-i18n="ios_body">La versión para iPhone de SnapRescue está en desarrollo. Déjanos tu correo y te avisaremos en cuanto esté en la App Store, con un <b>código de descuento para primeros usuarios</b> como agradecimiento por esperar.</p>
+<form class="ios-waitlist" id="ios-form" novalidate="">
+<input autocomplete="email" data-i18n-attr="ios_ph|placeholder" id="ios-email" placeholder="tu@email.com" required="" type="email"/>
+<button class="btn btn-primary" data-i18n="ios_dl" id="ios-submit" type="submit">Avísame + consigue un descuento →</button>
+</form>
+<p class="ss-cap" data-i18n="ios_cap" id="ios-msg">Un solo correo cuando esté lista, nada más. Tu dirección nunca se comparte.</p>
+</div>
+<div class="dl-switch-row" id="dl-switch">
+<button data-plat="win" type="button">Windows</button>
+<button data-plat="mac" type="button">Mac</button>
+<button data-plat="android" type="button">Android</button>
+<button data-plat="ios" type="button">iPhone</button>
 </div>
 <p class="modal-fine" data-i18n="modal_fine">No se sube nada · Sin cuenta · <a href="#faq" id="dl-why">¿Por qué me avisa Windows?</a></p>
 </div>
 </div>
-<script src="../main.js?v=20260621d"></script>
+<script src="../main.js?v=20260625a"></script>
 
 </body>
 </html>

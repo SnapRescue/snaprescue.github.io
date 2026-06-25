@@ -368,7 +368,15 @@
     "ba5_12": "Fonctionne pareil pour Photoprism, Jellyfin et les autres",
     "ba5_13": "Tout ce qui lit les métadonnées EXIF et QuickTime standard intégrées récupérera ces fichiers correctement, donc les mêmes dossiers sauvés s'intègrent sans souci dans Photoprism, Jellyfin, digiKam, ou une simple arborescence de dossiers datés sur un NAS. Les métadonnées voyagent dans les fichiers, donc elles survivent aux déplacements et aux réimports.",
     "ba5_14": "Télécharger SnapRescue",
-    "ba5_15": "Voir toutes les fonctions →"
+    "ba5_15": "Voir toutes les fonctions →",
+    "and_body": "SnapRescue pour Android s'installe directement depuis ici, et non depuis le Play Store. Votre téléphone vous demandera donc d'autoriser l'installation et Play Protect peut afficher un bref avertissement « application inconnue ». C'est normal pour un téléchargement direct, et SnapRescue est parfaitement sûr et fonctionne entièrement sur votre téléphone.",
+    "and_steps": "Pour l'installer : appuyez sur <b>Télécharger</b>, ouvrez le fichier, activez <b>Autoriser cette source</b>, puis appuyez sur <b>Installer quand même</b>.",
+    "and_dl": "⬇ Télécharger pour Android (.apk)",
+    "and_cap": "Android 8.0 et version ultérieure. Vos 50 premiers fichiers sont gratuits, comme dans l'application de bureau.",
+    "ios_body": "La version iPhone de SnapRescue est en cours de développement. Laissez votre adresse e-mail et nous vous préviendrons dès qu'elle sera sur l'App Store, avec un <b>code de réduction réservé aux premiers utilisateurs</b> pour vous remercier de votre patience.",
+    "ios_ph": "vous@email.com",
+    "ios_dl": "Prévenez-moi + obtenir une réduction →",
+    "ios_cap": "Un seul e-mail, le jour du lancement. Votre adresse n'est jamais partagée."
   },
   "de": {
     "meta_title": "SnapRescue: Retten Sie Ihre Snapchat-Erinnerungen, bevor sie weg sind",
@@ -739,7 +747,15 @@
     "ba5_12": "Funktioniert genauso für Photoprism, Jellyfin und andere",
     "ba5_13": "Alles, was standardmäßige eingebettete EXIF- und QuickTime-Metadaten liest, erkennt diese Dateien korrekt, sodass dieselben geretteten Ordner sauber in Photoprism, Jellyfin, digiKam oder eine einfache datierte Ordnerstruktur auf einem NAS passen. Die Metadaten reisen in den Dateien mit, überstehen also Verschieben und erneuten Import.",
     "ba5_14": "SnapRescue herunterladen",
-    "ba5_15": "Alle Funktionen ansehen →"
+    "ba5_15": "Alle Funktionen ansehen →",
+    "and_body": "SnapRescue für Android wird direkt hier installiert, nicht über den Play Store. Dein Handy fragt deshalb nach der Erlaubnis zur Installation und Play Protect zeigt eventuell einen kurzen Hinweis auf eine „unbekannte App“. Das ist bei einem Direkt-Download normal, und SnapRescue ist völlig sicher und läuft komplett auf deinem Handy.",
+    "and_steps": "So installierst du es: Tippe auf <b>Herunterladen</b>, öffne die Datei, aktiviere <b>Aus dieser Quelle zulassen</b> und tippe dann auf <b>Trotzdem installieren</b>.",
+    "and_dl": "⬇ Für Android herunterladen (.apk)",
+    "and_cap": "Android 8.0 und neuer. Deine ersten 50 Dateien sind kostenlos, genau wie in der Desktop-App.",
+    "ios_body": "Die iPhone-Version von SnapRescue wird gerade entwickelt. Hinterlasse deine E-Mail-Adresse und wir sagen dir Bescheid, sobald sie im App Store ist, mit einem <b>Rabattcode für frühe Unterstützer</b> als Dankeschön fürs Warten.",
+    "ios_ph": "du@email.com",
+    "ios_dl": "Benachrichtigt mich + Rabatt sichern →",
+    "ios_cap": "Eine E-Mail zum Start, sonst nichts. Deine Adresse wird nie weitergegeben."
   },
   "es": {
     "meta_title": "SnapRescue: salva tus recuerdos de Snapchat antes de que desaparezcan",
@@ -1110,7 +1126,15 @@
     "ba5_12": "Funciona igual para Photoprism, Jellyfin y otros",
     "ba5_13": "Cualquier cosa que lea los metadatos EXIF y QuickTime estándar incrustados reconocerá estos archivos correctamente, así que las mismas carpetas rescatadas encajan sin problema en Photoprism, Jellyfin, digiKam, o una simple estructura de carpetas por fecha en un NAS. Los metadatos viajan dentro de los archivos, así que sobreviven a los movimientos y a las reimportaciones.",
     "ba5_14": "Descargar SnapRescue",
-    "ba5_15": "Ver todas las funciones →"
+    "ba5_15": "Ver todas las funciones →",
+    "and_body": "SnapRescue para Android se instala directamente desde aquí, no desde la Play Store, así que tu teléfono te pedirá permiso para instalarla y Play Protect puede mostrar un breve aviso de «aplicación desconocida». Es normal en una descarga directa, y SnapRescue es completamente seguro y funciona por completo en tu teléfono.",
+    "and_steps": "Para instalarla: toca <b>Descargar</b>, abre el archivo, activa <b>Permitir desde esta fuente</b> y luego toca <b>Instalar de todos modos</b>.",
+    "and_dl": "⬇ Descargar para Android (.apk)",
+    "and_cap": "Android 8.0 y posterior. Tus primeros 50 archivos son gratis, igual que en la aplicación de escritorio.",
+    "ios_body": "La versión para iPhone de SnapRescue está en desarrollo. Déjanos tu correo y te avisaremos en cuanto esté en la App Store, con un <b>código de descuento para primeros usuarios</b> como agradecimiento por esperar.",
+    "ios_ph": "tu@email.com",
+    "ios_dl": "Avísame + consigue un descuento →",
+    "ios_cap": "Un solo correo cuando esté lista, nada más. Tu dirección nunca se comparte."
   },
   "nl": {
     "meta_title": "SnapRescue: red je Snapchat-herinneringen voordat ze weg zijn",
@@ -1481,6 +1505,14 @@
     "ba5_12": "Werkt hetzelfde voor Photoprism, Jellyfin en andere",
     "ba5_13": "Alles wat standaard ingebedde EXIF- en QuickTime-metadata leest, pikt deze bestanden correct op, dus dezelfde geredde mappen passen naadloos in Photoprism, Jellyfin, digiKam, of een simpele mappenstructuur op datum op een NAS. De metadata reist mee in de bestanden, dus die overleeft verplaatsingen en herimporten.",
     "ba5_14": "SnapRescue downloaden",
-    "ba5_15": "Bekijk alle functies →"
+    "ba5_15": "Bekijk alle functies →",
+    "and_body": "SnapRescue voor Android installeer je rechtstreeks vanaf hier, niet via de Play Store. Je telefoon vraagt daarom om de installatie toe te staan en Play Protect toont mogelijk een korte melding over een ‘onbekende app’. Dat is normaal bij een directe download, en SnapRescue is volkomen veilig en draait volledig op je telefoon.",
+    "and_steps": "Zo installeer je het: tik op <b>Downloaden</b>, open het bestand, zet <b>Toestaan vanaf deze bron</b> aan en tik dan op <b>Toch installeren</b>.",
+    "and_dl": "⬇ Downloaden voor Android (.apk)",
+    "and_cap": "Android 8.0 en nieuwer. Je eerste 50 bestanden zijn gratis, net als in de desktop-app.",
+    "ios_body": "De iPhone-versie van SnapRescue is volop in ontwikkeling. Laat je e-mailadres achter, dan laten we het je weten zodra hij in de App Store staat, met een <b>kortingscode voor vroege gebruikers</b> als dank voor het wachten.",
+    "ios_ph": "jij@email.com",
+    "ios_dl": "Houd me op de hoogte + korting →",
+    "ios_cap": "Eén e-mail zodra het zover is, meer niet. Je adres wordt nooit gedeeld."
   }
 }

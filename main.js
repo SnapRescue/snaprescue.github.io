@@ -92,6 +92,15 @@ document.querySelectorAll("#dl-switch button").forEach((b) =>
   b.addEventListener("click", () => showPlatform(b.dataset.plat)));
 
 // iPhone waitlist: capture an email for the launch + discount code.
+// Messages are localized by the page's <html lang> (set by build_i18n.py).
+const IOS_MSG = {
+  en: { invalid: "Please enter a valid email address.", saving: "Saving…", ok: "You're on the list. We'll email you at launch with your discount code.", err: "Something went wrong. Please try again in a moment." },
+  fr: { invalid: "Veuillez saisir une adresse e-mail valide.", saving: "Enregistrement…", ok: "Vous êtes sur la liste. Nous vous écrirons au lancement avec votre code de réduction.", err: "Une erreur s'est produite. Veuillez réessayer dans un instant." },
+  de: { invalid: "Bitte gib eine gültige E-Mail-Adresse ein.", saving: "Wird gespeichert…", ok: "Du bist auf der Liste. Wir melden uns zum Start mit deinem Rabattcode.", err: "Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal." },
+  es: { invalid: "Introduce una dirección de correo válida.", saving: "Guardando…", ok: "Estás en la lista. Te escribiremos en el lanzamiento con tu código de descuento.", err: "Algo salió mal. Inténtalo de nuevo en un momento." },
+  nl: { invalid: "Voer een geldig e-mailadres in.", saving: "Opslaan…", ok: "Je staat op de lijst. We mailen je bij de lancering met je kortingscode.", err: "Er ging iets mis. Probeer het zo nog eens." },
+};
+const iosMsg = IOS_MSG[(document.documentElement.lang || "en").slice(0, 2)] || IOS_MSG.en;
 const iosForm = document.getElementById("ios-form");
 if (iosForm) {
   iosForm.addEventListener("submit", async (e) => {
@@ -102,12 +111,12 @@ if (iosForm) {
     const email = (input.value || "").trim();
     msg.className = "ss-cap";
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      input.classList.add("err"); msg.textContent = "Please enter a valid email address."; msg.classList.add("err");
+      input.classList.add("err"); msg.textContent = iosMsg.invalid; msg.classList.add("err");
       return;
     }
     input.classList.remove("err");
     const original = btn.textContent;
-    btn.textContent = "Saving…"; btn.style.pointerEvents = "none";
+    btn.textContent = iosMsg.saving; btn.style.pointerEvents = "none";
     try {
       const res = await fetch(`${CONFIG.LICENSE_API}/waitlist`, {
         method: "POST",
@@ -117,12 +126,12 @@ if (iosForm) {
       const data = await res.json();
       if (data.ok) {
         iosForm.hidden = true;
-        msg.textContent = "You're on the list. We'll email you at launch with your discount code.";
+        msg.textContent = iosMsg.ok;
         msg.classList.add("ok");
       } else { throw new Error(data.error || "failed"); }
     } catch (err) {
       btn.textContent = original; btn.style.pointerEvents = "";
-      msg.textContent = "Something went wrong. Please try again in a moment."; msg.classList.add("err");
+      msg.textContent = iosMsg.err; msg.classList.add("err");
     }
   });
 }

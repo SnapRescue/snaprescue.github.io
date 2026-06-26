@@ -490,7 +490,9 @@ body.has-cd-bar nav { top: 40px; }
 /* ── Modal platform switch link ────────────────────────────────── */
 .modal-switch { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 13px; font-family: inherit; margin-top: 14px; text-decoration: underline; text-underline-offset: 2px; }
 .modal-switch:hover { color: var(--sunset); }
-#dl-mac .ss-cap { margin-top: 14px; }
+/* Captions that sit directly under a download button (not a screenshot mock)
+   must clear the button + its glow, overriding the global negative top margin. */
+#dl-mac .ss-cap, #dl-android .ss-cap, #dl-ios .ss-cap { margin-top: 14px; }
 
 /* ── Download modal: 4-platform switcher + iPhone waitlist ─────────────── */
 .dl-switch-row { display: flex; gap: 6px; justify-content: center; margin: 18px 0 4px; flex-wrap: wrap; }

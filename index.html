@@ -305,7 +305,7 @@
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q6">Where do the files end up?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a6">In a clean set of <code>2019/ 2020/ …</code> folders you choose, with every file's real date and location embedded, ready to drag into Google Photos, Apple Photos, Immich, Lightroom, or anywhere else.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q7">How do I bring these into Immich (or another self-hosted library)?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a7">Just import the rescued photos and videos like any others. The date, GPS and caption are written <b>inside each file</b>, so Immich reads them straight away. No need to import anything else. If you run an <b>external library</b> (Immich scanning a folder without altering your originals), tick <b>“Also write XMP sidecar files”</b> in SnapRescue and a matching <code>.xmp</code> is placed next to each item. One thing to note: a sidecar is only ever read <b>alongside its photo or video</b>, never uploaded on its own.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q8">Windows showed a blue “protected your PC” warning. Is it safe?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a8">Yes. That SmartScreen notice appears for any new app from an independent developer that hasn't yet built up download history with Microsoft. SnapRescue is safe and runs entirely on your computer. To open it: click <b>“More info”</b>, then <b>“Run anyway”</b>. The warning fades as more people download it.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q9">Mac or phone?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows and Mac (Apple Silicon) are available now. Intel Mac and iOS/Android versions are in the works. Buy once and you'll get them all included.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="faq_q9">Mac or phone?</span><span class="pm">+</span></button><div class="faq-a"><p data-i18n="faq_a9">Windows, Mac (Apple Silicon and Intel) and Android are available now. The iPhone version is in the works. Buy once and you'll get them all included.</p></div></div>
     </div>
   </div>
 </section>
@@ -360,12 +360,13 @@
       <p class="ss-cap" data-i18n="ss_cap">This is the exact box you'll see. Click <b>More info</b> to reveal <b>Run anyway</b>.</p>
       <a href="#" class="btn btn-primary" id="dl-go" data-i18n="win_dl">⬇ Download for Windows</a>
     </div>
-    <!-- MAC (Apple Silicon) -->
+    <!-- MAC (Apple Silicon + Intel) -->
     <div id="dl-mac" hidden>
       <p data-i18n="mac_body">SnapRescue is not in the App Store, so macOS may say it <b>“cannot be opened because Apple cannot check it for malicious software.”</b> That is normal for apps outside the store, and SnapRescue is completely safe and runs entirely on your computer.</p>
       <div class="modal-steps"><span class="shield">🛡️</span> <span data-i18n="mac_steps">To open it: <b>right-click</b> the app and choose <b>Open</b>, then <b>Open</b> again.</span></div>
       <a href="#" class="btn btn-primary" id="dl-go-mac" data-i18n="mac_dl">⬇ Download for Mac (Apple Silicon)</a>
-      <p class="ss-cap" data-i18n="mac_arch">For Apple Silicon Macs (M1, M2, M3 and newer). Check yours under Apple menu → About This Mac. Intel Mac support is coming very soon.</p>
+      <a href="#" class="btn btn-ghost" id="dl-go-mac-intel" data-i18n="mac_dl_intel" style="margin-top:10px">⬇ Download for Intel Mac</a>
+      <p class="ss-cap" data-i18n="mac_arch">Most Macs from 2020 onward are Apple Silicon (M1, M2, M3 and newer); older Macs are Intel. Not sure which you have? Open the Apple menu and choose About This Mac.</p>
     </div>
     <!-- ANDROID -->
     <div id="dl-android" hidden>
@@ -504,7 +505,7 @@
           "name": "Is there a Mac or phone version?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Windows and Mac (Apple Silicon) are available now. Intel Mac and iOS/Android versions are in the works. Buy once and you'll get them all included."
+            "text": "Windows, Mac (Apple Silicon and Intel) and Android are available now. The iPhone version is in the works. Buy once and you'll get them all included."
           }
         }
       ]

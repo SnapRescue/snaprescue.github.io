@@ -10,7 +10,8 @@ const CONFIG = {
   DOWNLOAD_URL_MAC: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-mac-arm64.dmg",
   DOWNLOAD_URL_MAC_INTEL: "https://github.com/SnapRescue/snaprescue.github.io/releases/download/v1.0.0/SnapRescue-mac-intel.dmg",
   // Android: sideloaded APK served from this site (not the Play Store).
-  DOWNLOAD_URL_ANDROID: "https://snaprescue.app/download/SnapRescue-android.apk",
+  // Cache-bust token: bump on every new APK so phones don't re-serve a stale (cached) build.
+  DOWNLOAD_URL_ANDROID: "https://snaprescue.app/download/SnapRescue-android.apk?v=20260626b",
 };
 
 // ── Nav shadow on scroll ─────────────────────────────────────

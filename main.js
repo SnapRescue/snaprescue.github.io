@@ -183,7 +183,7 @@ if (buyBtn) {
     } catch (err) {
       buyBtn.textContent = original;
       buyBtn.style.pointerEvents = "";
-      alert("Checkout isn't available yet — the store is still being set up. Please try again soon!");
+      alert("Sorry, checkout couldn't open just now. Please try again in a minute, or email support@snaprescue.app and we'll sort you out.");
     }
   });
 }

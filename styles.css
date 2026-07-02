@@ -78,6 +78,7 @@ a { color: inherit; text-decoration: none; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-ghost:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
 .btn-lg { padding: 18px 34px; font-size: 17px; }
+.btn-wrap { white-space: normal; text-align: center; max-width: 90%; }
 
 /* ── Nav ─────────────────────────────────────────────────── */
 nav {
@@ -327,6 +328,9 @@ footer { padding: 56px 0 40px; border-top: 1px solid var(--line); margin-top: 40
 /* Very narrow: drop the plain nav text link, keep logo + the CTA */
 @media (max-width: 440px) {
   .nav-links a:not(.nav-cta) { display: none; }
+  .nav-links { gap: 8px; flex: 1; min-width: 0; justify-content: flex-end; }
+  .logo { font-size: 17px; flex-shrink: 0; }
+  .nav-cta { padding: 8px 12px; font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; display: inline-block; white-space: nowrap; }
 }
 
 /* ═══════════════════════════════════════════════════════════════

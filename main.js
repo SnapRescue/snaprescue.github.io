@@ -137,6 +137,50 @@ if (iosForm) {
   });
 }
 
+// Deadline reminder opt-in: same /waitlist table, platform "reminder".
+// One email before Sept 1 so bounced visitors come back in time.
+const REM_OK = {
+  en: "Done. We'll email you one reminder before September 1, 2026.",
+  fr: "C'est noté. Nous vous enverrons un rappel avant le 1er septembre 2026.",
+  de: "Erledigt. Wir schicken dir vor dem 1. September 2026 eine Erinnerung.",
+  es: "Listo. Te enviaremos un recordatorio antes del 1 de septiembre de 2026.",
+  nl: "Gelukt. We sturen je één herinnering vóór 1 september 2026.",
+};
+const remForm = document.getElementById("rem-form");
+if (remForm) {
+  remForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const input = document.getElementById("rem-email");
+    const msg = document.getElementById("rem-msg");
+    const btn = document.getElementById("rem-submit");
+    const email = (input.value || "").trim();
+    msg.className = "ss-cap";
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      input.classList.add("err"); msg.textContent = iosMsg.invalid; msg.classList.add("err");
+      return;
+    }
+    input.classList.remove("err");
+    const original = btn.textContent;
+    btn.textContent = iosMsg.saving; btn.style.pointerEvents = "none";
+    try {
+      const res = await fetch(`${CONFIG.LICENSE_API}/waitlist`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, platform: "reminder" }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        remForm.hidden = true;
+        msg.textContent = REM_OK[(document.documentElement.lang || "en").slice(0, 2)] || REM_OK.en;
+        msg.classList.add("ok");
+      } else { throw new Error(data.error || "failed"); }
+    } catch (err) {
+      btn.textContent = original; btn.style.pointerEvents = "";
+      msg.textContent = iosMsg.err; msg.classList.add("err");
+    }
+  });
+}
+
 document.getElementById("dl-x")?.addEventListener("click", closeDlModal);
 document.getElementById("dl-why")?.addEventListener("click", closeDlModal);
 dlModal?.addEventListener("click", (e) => { if (e.target === dlModal) closeDlModal(); });

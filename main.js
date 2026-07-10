@@ -14,6 +14,25 @@ const CONFIG = {
   DOWNLOAD_URL_ANDROID: "https://snaprescue.app/download/SnapRescue-android.apk?v=20260701d",
 };
 
+// ── Dark mode toggle ─────────────────────────────────────────
+// The <head> snippet already set html[data-theme] before first paint;
+// this just adds the button (kept in JS so every page + locale gets it).
+const navLinks = document.querySelector(".nav-links");
+if (navLinks) {
+  const tbtn = document.createElement("button");
+  tbtn.className = "theme-btn";
+  tbtn.setAttribute("aria-label", "Switch between dark and light mode");
+  tbtn.innerHTML =
+    '<svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>' +
+    '<svg class="icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+  tbtn.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+  navLinks.insertBefore(tbtn, navLinks.querySelector(".nav-cta"));
+}
+
 // ── Nav shadow on scroll ─────────────────────────────────────
 const nav = document.getElementById("nav");
 const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 12);

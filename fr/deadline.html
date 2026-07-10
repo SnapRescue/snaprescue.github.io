@@ -33,8 +33,10 @@
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20260702b" rel="stylesheet"/>
+<link href="https://api.fontshare.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&amp;display=swap" rel="stylesheet"/>
+<link href="../styles.css?v=20260711b" rel="stylesheet"/>
 </head>
 <body class="has-cd-bar">
 <!-- COUNTDOWN BAR -->
@@ -56,7 +58,7 @@
 <button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">Français</span> <span class="chev">▾</span></button>
 <div class="lang-menu" id="langMenu">
 <a class="lang-opt" data-lang="en" href="https://snaprescue.app/deadline.html">English</a>
-<a class="lang-opt on" data-lang="fr" href="https://snaprescue.app/fr/deadline.html">Français</a>
+<a class="on lang-opt" data-lang="fr" href="https://snaprescue.app/fr/deadline.html">Français</a>
 <a class="lang-opt" data-lang="de" href="https://snaprescue.app/de/deadline.html">Deutsch</a>
 <a class="lang-opt" data-lang="es" href="https://snaprescue.app/es/deadline.html">Español</a>
 <a class="lang-opt" data-lang="nl" href="https://snaprescue.app/nl/deadline.html">Nederlands</a>
@@ -128,7 +130,7 @@
 <a class="btn btn-ghost btn-wrap" data-i18n="dl_whbtn" href="index.html#how" style="margin-top:24px">Comment SnapRescue corrige cela →</a>
 </div>
 <div class="file-demo reveal">
-<div data-i18n="dl_optt" style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">Vos trois options</div>
+<div data-i18n="dl_optt" style="font-family:'Erode',Georgia,serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">Vos trois options</div>
 <div class="file-row"><span class="k" data-i18n="dl_o1k">Ne rien faire</span><span class="v missing" data-i18n="dl_o1v">✗ souvenirs récents supprimés le 1er sept.</span></div>
 <div class="file-row"><span class="k" data-i18n="dl_o2k">Payer Snapchat tous les mois</span><span class="v missing" data-i18n="dl_o2v">✗ 3,99 $+/mois, à vie, pour louer vos propres photos</span></div>
 <div class="file-row"><span class="k" data-i18n="dl_o3k">Exporter avec SnapRescue</span><span class="v fixed" data-i18n="dl_o3v">✓ tout garder, 9,99 $ une fois, à vous pour toujours</span></div>
@@ -165,6 +167,20 @@
 <p data-i18n="dl_ctap">Restaurez les vraies dates et les lieux, rangez tout dans des dossiers nets, et possédez-les pour toujours. Gratuit pour vos 100 premiers fichiers.</p>
 <a class="btn btn-primary btn-lg" href="index.html#download" style="position:relative"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg><span data-i18n="dl_ctabtn">Télécharger SnapRescue gratuitement</span></a>
 <p data-i18n="dl_ctasub" style="color:#d9ccb4;font-size:14.5px;margin-top:18px;position:relative">Puis débloquez l'illimité pour un paiement unique de <b>9,99 $ USD</b>. Satisfait ou remboursé sous 30 jours.</p>
+</div>
+</section>
+<!-- DEADLINE REMINDER OPT-IN -->
+<section class="rem-sec" style="padding-top:0">
+<div class="wrap">
+<div class="rem-box reveal">
+<h3 data-i18n="rem_t">Not ready today? Don't lose track of the deadline.</h3>
+<p data-i18n="rem_p">Leave your email and we'll send you one reminder before September 1, 2026, while there's still time to export. No newsletter, no spam, just the one heads-up.</p>
+<form class="ios-waitlist" id="rem-form" novalidate="">
+<input autocomplete="email" data-i18n-attr="ios_ph|placeholder" id="rem-email" placeholder="vous@email.com" required="" type="email"/>
+<button class="btn btn-ghost" data-i18n="rem_btn" id="rem-submit" type="submit">Remind me before the deadline</button>
+</form>
+<p class="ss-cap" data-i18n="rem_cap" id="rem-msg">One reminder email, nothing else. Your address is never shared.</p>
+</div>
 </div>
 </section>
 <!-- FOOTER -->

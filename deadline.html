@@ -33,8 +33,10 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260702b">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260711b">
 </head>
 <body class="has-cd-bar">
 
@@ -134,7 +136,7 @@
       <a href="index.html#how" class="btn btn-ghost btn-wrap" style="margin-top:24px" data-i18n="dl_whbtn">How SnapRescue fixes that →</a>
     </div>
     <div class="file-demo reveal">
-      <div style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px" data-i18n="dl_optt">Your three options</div>
+      <div style="font-family:'Erode',Georgia,serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px" data-i18n="dl_optt">Your three options</div>
       <div class="file-row"><span class="k" data-i18n="dl_o1k">Do nothing</span><span class="v missing" data-i18n="dl_o1v">✗ newest Memories deleted Sept 1</span></div>
       <div class="file-row"><span class="k" data-i18n="dl_o2k">Pay Snapchat monthly</span><span class="v missing" data-i18n="dl_o2v">✗ $3.99+/mo, forever, to rent your own photos</span></div>
       <div class="file-row"><span class="k" data-i18n="dl_o3k">Export with SnapRescue</span><span class="v fixed" data-i18n="dl_o3v">✓ keep everything, $9.99 once, yours for good</span></div>
@@ -173,6 +175,21 @@
     <p data-i18n="dl_ctap">Restore the real dates and locations, organize everything into tidy folders, and own it forever. Free for your first 100 files.</p>
     <a href="index.html#download" class="btn btn-primary btn-lg" style="position:relative"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl_ctabtn">Download SnapRescue free</span></a>
     <p style="color:#d9ccb4;font-size:14.5px;margin-top:18px;position:relative" data-i18n="dl_ctasub">Then unlock unlimited for a one-time <b>$9.99 USD</b>. 30-day money-back guarantee.</p>
+  </div>
+</section>
+
+<!-- DEADLINE REMINDER OPT-IN -->
+<section class="rem-sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="rem-box reveal">
+      <h3 data-i18n="rem_t">Not ready today? Don't lose track of the deadline.</h3>
+      <p data-i18n="rem_p">Leave your email and we'll send you one reminder before September 1, 2026, while there's still time to export. No newsletter, no spam, just the one heads-up.</p>
+      <form id="rem-form" class="ios-waitlist" novalidate>
+        <input type="email" id="rem-email" placeholder="you@email.com" autocomplete="email" data-i18n-attr="ios_ph|placeholder" required>
+        <button type="submit" class="btn btn-ghost" id="rem-submit" data-i18n="rem_btn">Remind me before the deadline</button>
+      </form>
+      <p class="ss-cap" id="rem-msg" data-i18n="rem_cap">One reminder email, nothing else. Your address is never shared.</p>
+    </div>
   </div>
 </section>
 

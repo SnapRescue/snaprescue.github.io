@@ -42,9 +42,7 @@ window.addEventListener("load", () => {
 document.querySelectorAll(".faq-q").forEach((btn) => {
   btn.addEventListener("click", () => {
     const open = btn.getAttribute("aria-expanded") === "true";
-    const panel = btn.nextElementSibling;
     btn.setAttribute("aria-expanded", String(!open));
-    panel.style.maxHeight = open ? null : panel.scrollHeight + "px";
   });
 });
 

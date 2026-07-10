@@ -33,8 +33,10 @@
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20260702b" rel="stylesheet"/>
+<link href="https://api.fontshare.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&amp;display=swap" rel="stylesheet"/>
+<link href="../styles.css?v=20260711b" rel="stylesheet"/>
 </head>
 <body class="has-cd-bar">
 <!-- COUNTDOWN BAR -->
@@ -58,7 +60,7 @@
 <a class="lang-opt" data-lang="en" href="https://snaprescue.app/deadline.html">English</a>
 <a class="lang-opt" data-lang="fr" href="https://snaprescue.app/fr/deadline.html">Français</a>
 <a class="lang-opt" data-lang="de" href="https://snaprescue.app/de/deadline.html">Deutsch</a>
-<a class="lang-opt on" data-lang="es" href="https://snaprescue.app/es/deadline.html">Español</a>
+<a class="on lang-opt" data-lang="es" href="https://snaprescue.app/es/deadline.html">Español</a>
 <a class="lang-opt" data-lang="nl" href="https://snaprescue.app/nl/deadline.html">Nederlands</a>
 </div>
 </div>
@@ -128,7 +130,7 @@
 <a class="btn btn-ghost btn-wrap" data-i18n="dl_whbtn" href="index.html#how" style="margin-top:24px">Cómo lo arregla SnapRescue →</a>
 </div>
 <div class="file-demo reveal">
-<div data-i18n="dl_optt" style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">Tus tres opciones</div>
+<div data-i18n="dl_optt" style="font-family:'Erode',Georgia,serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">Tus tres opciones</div>
 <div class="file-row"><span class="k" data-i18n="dl_o1k">No hacer nada</span><span class="v missing" data-i18n="dl_o1v">✗ recuerdos recientes borrados el 1 sept.</span></div>
 <div class="file-row"><span class="k" data-i18n="dl_o2k">Pagar Snapchat cada mes</span><span class="v missing" data-i18n="dl_o2v">✗ 3,99 $+/mes, para siempre, por alquilar tus propias fotos</span></div>
 <div class="file-row"><span class="k" data-i18n="dl_o3k">Exportar con SnapRescue</span><span class="v fixed" data-i18n="dl_o3v">✓ guárdalo todo, 9,99 $ una vez, tuyo para siempre</span></div>
@@ -165,6 +167,20 @@
 <p data-i18n="dl_ctap">Restaura las fechas y ubicaciones reales, ordénalo todo en carpetas limpias y consérvalo para siempre. Gratis para tus primeros 100 archivos.</p>
 <a class="btn btn-primary btn-lg" href="index.html#download" style="position:relative"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg><span data-i18n="dl_ctabtn">Descargar SnapRescue gratis</span></a>
 <p data-i18n="dl_ctasub" style="color:#d9ccb4;font-size:14.5px;margin-top:18px;position:relative">Luego desbloquea ilimitado por un pago único de <b>9,99 $ USD</b>. Garantía de reembolso de 30 días.</p>
+</div>
+</section>
+<!-- DEADLINE REMINDER OPT-IN -->
+<section class="rem-sec" style="padding-top:0">
+<div class="wrap">
+<div class="rem-box reveal">
+<h3 data-i18n="rem_t">Not ready today? Don't lose track of the deadline.</h3>
+<p data-i18n="rem_p">Leave your email and we'll send you one reminder before September 1, 2026, while there's still time to export. No newsletter, no spam, just the one heads-up.</p>
+<form class="ios-waitlist" id="rem-form" novalidate="">
+<input autocomplete="email" data-i18n-attr="ios_ph|placeholder" id="rem-email" placeholder="tu@email.com" required="" type="email"/>
+<button class="btn btn-ghost" data-i18n="rem_btn" id="rem-submit" type="submit">Remind me before the deadline</button>
+</form>
+<p class="ss-cap" data-i18n="rem_cap" id="rem-msg">One reminder email, nothing else. Your address is never shared.</p>
+</div>
 </div>
 </section>
 <!-- FOOTER -->

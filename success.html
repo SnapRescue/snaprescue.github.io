@@ -20,8 +20,10 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260702b">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260711b">
 <style>
   .success-wrap { min-height: 100vh; display: grid; place-items: center; padding: 40px 24px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); max-width: min(560px, 100%); width: 100%; min-width: 0; padding: 46px clamp(20px, 6vw, 42px); text-align: center; overflow-wrap: break-word; }
@@ -30,7 +32,7 @@
   .card p { color: var(--ink-soft); margin-bottom: 22px; }
   .keybox { background: var(--paper-2); border: 1.5px dashed var(--sunset); border-radius: 14px; padding: 20px; margin: 8px 0 18px; }
   .keybox .label { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-faint); margin-bottom: 8px; }
-  .keybox .key { font-family: "Fraunces", serif; font-size: clamp(17px, 6vw, 26px); font-weight: 600; letter-spacing: .04em; color: var(--ink); user-select: all; overflow-wrap: anywhere; }
+  .keybox .key { font-family: "Erode",Georgia,serif; font-size: clamp(17px, 6vw, 26px); font-weight: 600; letter-spacing: .04em; color: var(--ink); user-select: all; overflow-wrap: anywhere; }
   .copy-btn { margin-top: 14px; }
   .steps-mini { text-align: left; background: var(--paper-2); border-radius: 14px; padding: 22px 24px; margin-top: 8px; }
   .steps-mini li { margin: 8px 0; color: var(--ink-soft); font-size: 15.5px; }
@@ -51,7 +53,7 @@
     </div>
 
     <div class="steps-mini">
-      <strong style="font-family:'Fraunces',serif">Activate it:</strong>
+      <strong style="font-family:'Erode',Georgia,serif">Activate it:</strong>
       <ol style="padding-left:18px;margin-top:8px">
         <li>Open SnapRescue and click the <b>“Free”</b> badge in the top-right corner.</li>
         <li>Under <b>“already bought?”</b>, paste the key above and hit <b>Activate</b>.</li>

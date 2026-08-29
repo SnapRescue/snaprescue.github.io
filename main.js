@@ -205,7 +205,7 @@ document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDlMod
 
 // ── Deadline countdown (bar + big timer) ─────────────────────
 // Snapchat begins deleting Memories over the free 5GB limit on Sept 1, 2026.
-const DEADLINE = new Date("2026-09-01T00:00:00");
+const DEADLINE = new Date("2026-10-01T00:00:00");
 function tickCountdown() {
   let diff = Math.max(0, DEADLINE - new Date());
   const day = Math.floor(diff / 86400000); diff -= day * 86400000;

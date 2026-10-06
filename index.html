@@ -41,7 +41,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
 <link rel="preload" href="assets/fonts/dseg7-classic-bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=20261006a">
+<link rel="stylesheet" href="styles.css?v=20261006b">
 </head>
 <body class="home">
 
@@ -74,6 +74,7 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
+      <a href="deadline.html" class="urgency"><span class="dot" aria-hidden="true"></span><span data-i18n="dl_stamp">The 5GB cap is live now, and grace periods are already ending.</span></a>
       <h1 data-i18n="v2_hero_h1">Your Snapchat memories, back on the day they <span class="accent">happened.</span></h1>
       <p class="lead" data-i18n="v2_hero_lead">Snapchat's export drops every photo and video into your library stamped <em>today</em>. SnapRescue reads the dates and places Snapchat kept in a separate file and writes them back into every memory, captions included. On your own computer or phone, nothing uploaded.</p>
       <div class="hero-cta">
@@ -93,6 +94,17 @@
     </div>
   </div>
 </header>
+
+<!-- TRUST BAND -->
+<div class="trust-band">
+  <div class="trust-row">
+    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span> <span data-i18n="v2_trust1">100% on your device</span></span>
+    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/></svg></span> <span data-i18n="trust2">Nothing uploaded, no account</span></span>
+    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v10l2.4-2 2.3 2 2.3-2 2.3 2 2.3-2 2.4 2V10a7 7 0 0 0-7-7z"/><line x1="9.5" y1="10" x2="9.51" y2="10"/><line x1="14.5" y1="10" x2="14.51" y2="10"/></svg></span> <span data-i18n="trust3">Not affiliated with Snap</span></span>
+    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span> <span data-i18n="trust4">Secure Stripe checkout</span></span>
+    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> <span data-i18n="trust5">30-day money-back guarantee</span></span>
+  </div>
+</div>
 
 <!-- PROBLEM -->
 <section class="problem" id="problem">
@@ -387,7 +399,7 @@
 </div>
 
 <script src="home.js?v=20261006a" defer></script>
-<script src="main.js?v=20261006a"></script>
+<script src="main.js?v=20261006b"></script>
 <script type="application/ld+json" class="i18n-drop">
 {
   "@context": "https://schema.org",

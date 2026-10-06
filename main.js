@@ -14,6 +14,14 @@ const CONFIG = {
   DOWNLOAD_URL_ANDROID: "https://snaprescue.app/download/SnapRescue-android.apk?v=20261006a",
 };
 
+// ── Analytics events (GA4) ──────────────────────────────────
+// Funnel steps we can count per visitor long before there are enough sales
+// to compare: opened the download modal, actually downloaded (by platform),
+// started checkout. Beacon transport so a navigation doesn't drop the hit.
+const track = (name, params) => {
+  try { if (typeof gtag === "function") gtag("event", name, Object.assign({ transport_type: "beacon" }, params || {})); } catch (e) {}
+};
+
 // ── Dark mode toggle ─────────────────────────────────────────
 // The <head> snippet already set html[data-theme] before first paint;
 // this just adds the button (kept in JS so every page + locale gets it).
@@ -75,6 +83,7 @@ const closeDlModal = () => { if (dlModal) { dlModal.classList.remove("open"); dl
 
 document.querySelectorAll('a[href="#download"], #download-btn').forEach((a) => {
   a.addEventListener("click", (e) => {
+    track("download_open", { page: location.pathname, link: a.id || a.closest("section, header, nav")?.className || "" });
     if (dlModal) { e.preventDefault(); openDlModal(); }
     else if (CONFIG.DOWNLOAD_URL && CONFIG.DOWNLOAD_URL !== "#") { e.preventDefault(); window.location.href = CONFIG.DOWNLOAD_URL; }
   });
@@ -86,6 +95,10 @@ setHref("dl-go", CONFIG.DOWNLOAD_URL);
 setHref("dl-go-mac", CONFIG.DOWNLOAD_URL_MAC);
 setHref("dl-go-mac-intel", CONFIG.DOWNLOAD_URL_MAC_INTEL);
 setHref("dl-go-android", CONFIG.DOWNLOAD_URL_ANDROID);
+[["dl-go", "windows"], ["dl-go-mac", "mac-arm64"], ["dl-go-mac-intel", "mac-intel"], ["dl-go-android", "android"]].forEach(([id, plat]) => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener("click", () => track("app_download", { platform: plat, page: location.pathname }));
+});
 
 // Show the block for the visitor's platform (Windows / Mac / Android / iPhone),
 // and let them switch with the pill row at the bottom of the modal.
@@ -143,6 +156,7 @@ if (iosForm) {
       });
       const data = await res.json();
       if (data.ok) {
+        track("generate_lead", { platform: "ios" });
         iosForm.hidden = true;
         msg.textContent = iosMsg.ok;
         msg.classList.add("ok");
@@ -159,6 +173,7 @@ const buyBtn = document.getElementById("buy-btn");
 if (buyBtn) {
   buyBtn.addEventListener("click", async (e) => {
     e.preventDefault();
+    track("begin_checkout", { currency: "USD", value: 9.99, page: location.pathname });
     const original = buyBtn.textContent;
     buyBtn.textContent = "Opening secure checkout…";
     buyBtn.style.pointerEvents = "none";

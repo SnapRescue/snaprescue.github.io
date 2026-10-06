@@ -41,7 +41,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&amp;display=swap" rel="stylesheet"/>
 <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
 <link as="font" crossorigin="" href="../assets/fonts/dseg7-classic-bold.woff2" rel="preload" type="font/woff2"/>
-<link href="../styles.css?v=20261006a" rel="stylesheet"/>
+<link href="../styles.css?v=20261006b" rel="stylesheet"/>
 </head>
 <body class="home">
 <!-- NAV -->
@@ -72,8 +72,9 @@
 <header class="hero">
 <div class="wrap hero-grid">
 <div class="hero-copy">
-<h1 data-i18n="v2_hero_h1">Deine Snapchat-Erinnerungen, zurück an dem Tag, an dem sie <span class="accent">passiert sind.</span></h1>
-<p class="lead" data-i18n="v2_hero_lead">Der Snapchat-Export legt jedes Foto und Video mit dem Datum von <em>heute</em> in deiner Mediathek ab. SnapRescue liest die Daten und Orte, die Snapchat in einer separaten Datei aufbewahrt, und schreibt sie zurück in jede Erinnerung, Bildunterschriften inklusive. Auf deinem eigenen Computer oder Handy, ohne Upload.</p>
+<a class="urgency" href="deadline.html"><span aria-hidden="true" class="dot"></span><span data-i18n="dl_stamp">Das 5-GB-Limit gilt bereits, und die Schonfristen laufen aus.</span></a>
+<h1 data-i18n="v2_hero_h1">Ihre Snapchat-Erinnerungen, zurück an dem Tag, an dem sie <span class="accent">passiert sind.</span></h1>
+<p class="lead" data-i18n="v2_hero_lead">Der Snapchat-Export legt jedes Foto und Video mit dem Datum von <em>heute</em> in Ihrer Mediathek ab. SnapRescue liest die Daten und Orte, die Snapchat in einer separaten Datei aufbewahrt, und schreibt sie zurück in jede Erinnerung, Bildunterschriften inklusive. Auf Ihrem eigenen Computer oder Handy, ohne Upload.</p>
 <div class="hero-cta">
 <a class="btn btn-primary btn-lg" href="#download"><span data-i18n="v2_hero_dl">Kostenlos herunterladen</span></a>
 <a class="btn btn-ghost btn-lg" data-i18n="hero_how" href="#problem">So funktioniert es</a>
@@ -90,6 +91,16 @@
 </div>
 </div>
 </header>
+<!-- TRUST BAND -->
+<div class="trust-band">
+<div class="trust-row">
+<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span> <span data-i18n="v2_trust1">100% auf Ihrem Gerät</span></span>
+<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="12" cy="12" r="9"></circle><line x1="5.6" x2="18.4" y1="5.6" y2="18.4"></line></svg></span> <span data-i18n="trust2">Nichts wird hochgeladen, kein Konto</span></span>
+<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M12 3a7 7 0 0 0-7 7v10l2.4-2 2.3 2 2.3-2 2.3 2 2.3-2 2.4 2V10a7 7 0 0 0-7-7z"></path><line x1="9.5" x2="9.51" y1="10" y2="10"></line><line x1="14.5" x2="14.51" y1="10" y2="10"></line></svg></span> <span data-i18n="trust3">Nicht mit Snap verbunden</span></span>
+<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><rect height="16" rx="2" width="22" x="1" y="4"></rect><line x1="1" x2="23" y1="10" y2="10"></line></svg></span> <span data-i18n="trust4">Sichere Zahlung über Stripe</span></span>
+<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> <span data-i18n="trust5">30 Tage Geld-zurück-Garantie</span></span>
+</div>
+</div>
 <!-- PROBLEM -->
 <section class="problem" id="problem">
 <div class="wrap split">
@@ -115,7 +126,7 @@
 <!-- WHAT IT FIXES -->
 <section class="fixes" id="features">
 <div class="wrap">
-<h2 class="sec-title" data-i18n="v2_fix_h2">Dein Export hat vier Dinge verloren. Alle vier kommen zurück.</h2>
+<h2 class="sec-title" data-i18n="v2_fix_h2">Ihr Export hat vier Dinge verloren. Alle vier kommen zurück.</h2>
 <article class="fix">
 <div class="fix-copy">
 <h3 data-i18n="feat1t">Wirklich korrekte Ortszeiten</h3>
@@ -130,14 +141,14 @@
 <article class="fix flip">
 <div class="fix-copy">
 <h3 data-i18n="v2_map_t">Zurück auf der Karte</h3>
-<p data-i18n="v2_map_d">Die Koordinaten kommen in jede Datei zurück, also zeigen Google Fotos, Apple Fotos und Immich jede Erinnerung dort, wo sie passiert ist. Die Karte in SnapRescue fasst nahe Erinnerungen zusammen, damit du in Ruhe durch sie stöbern kannst.</p>
+<p data-i18n="v2_map_d">Die Koordinaten kommen in jede Datei zurück, also zeigen Google Fotos, Apple Fotos und Immich jede Erinnerung dort, wo sie passiert ist. Die Karte in SnapRescue fasst nahe Erinnerungen zusammen, damit Sie in Ruhe durch sie stöbern können.</p>
 </div>
 <div class="fix-vis shot"><img alt="SnapRescue's map with memories pinned across Australia" height="1031" loading="lazy" src="../assets/app/desktop-map.jpg" width="1600"/></div>
 </article>
 <article class="fix">
 <div class="fix-copy">
-<h3 data-i18n="v2_cap_t">Bildunterschriften dort, wo du sie geschrieben hast</h3>
-<p data-i18n="v2_cap_d">Snapchat speichert deine Bildunterschriften und Sticker als separate, durchsichtige Bilder. SnapRescue legt jedes davon wieder auf sein Foto oder Video, genau dort, wo du es platziert hast. Zieh die Linie zum Vergleichen.</p>
+<h3 data-i18n="v2_cap_t">Bildunterschriften dort, wo Sie sie geschrieben haben</h3>
+<p data-i18n="v2_cap_d">Snapchat speichert Ihre Bildunterschriften und Sticker als separate, durchsichtige Bilder. SnapRescue legt jedes davon wieder auf sein Foto oder Video, genau dort, wo Sie es platziert haben. Ziehen Sie die Linie zum Vergleichen.</p>
 </div>
 <div class="fix-vis capcmp" id="capCompare" style="--pos:50%">
 <img alt="The photo with its caption back on" height="1200" loading="lazy" src="../assets/photos/caption-after.jpg" width="900"/>
@@ -169,14 +180,14 @@
 <!-- THE APP -->
 <section class="showcase" id="app">
 <div class="wrap">
-<h2 class="sec-title" data-i18n="v2_app_h2">Die echte App, auf deinem Computer oder deinem Handy.</h2>
-<p class="sec-lede" data-i18n="v2_app_p">Wähle deinen Export, prüfe, was gefunden wurde, und sieh zu, wie jede Erinnerung ihr Datum zurückbekommt. Danach stöberst du nach Jahr, nach „an diesem Tag“ oder auf der Karte. Eine Lizenz gilt für Windows, Mac und Android.</p>
+<h2 class="sec-title" data-i18n="v2_app_h2">Die echte App, auf Ihrem Computer oder Ihrem Handy.</h2>
+<p class="sec-lede" data-i18n="v2_app_p">Wählen Sie Ihren Export, prüfen Sie, was gefunden wurde, und sehen Sie zu, wie jede Erinnerung ihr Datum zurückbekommt. Danach stöbern Sie nach Jahr, nach „an diesem Tag“ oder auf der Karte. Eine Lizenz gilt für Windows, Mac und Android.</p>
 <div class="devices">
 <div class="window"><img alt="SnapRescue on a computer, rescuing memories with their real dates" height="1031" loading="lazy" src="../assets/app/desktop-rescue.jpg" width="1600"/></div>
 <div class="phone device-phone"><div class="phone-screen"><img alt="SnapRescue on an Android phone after a rescue" height="1600" loading="lazy" src="../assets/app/phone-done.jpg" width="720"/></div></div>
 </div>
 <div class="app-strip">
-<figure><img alt="The review screen: memories per year and a before and after of one memory" height="1031" loading="lazy" src="../assets/app/desktop-review.jpg" width="1600"/><figcaption data-i18n="v2_app_c1">Sieh genau, was gefunden wurde</figcaption></figure>
+<figure><img alt="The review screen: memories per year and a before and after of one memory" height="1031" loading="lazy" src="../assets/app/desktop-review.jpg" width="1600"/><figcaption data-i18n="v2_app_c1">Sehen Sie genau, was gefunden wurde</figcaption></figure>
 <figure><img alt="The memories timeline grouped by month" height="1031" loading="lazy" src="../assets/app/desktop-timeline.jpg" width="1600"/><figcaption data-i18n="v2_app_c2">Nach Monaten stöbern</figcaption></figure>
 <figure><img alt="The finished rescue with a summary of what was restored" height="1031" loading="lazy" src="../assets/app/desktop-done.jpg" width="1600"/><figcaption data-i18n="v2_app_c3">Wissen, was wiederhergestellt wurde</figcaption></figure>
 </div>
@@ -367,7 +378,7 @@
 </div>
 </div>
 <script defer="" src="../home.js?v=20261006a"></script>
-<script src="../main.js?v=20261006a"></script>
+<script src="../main.js?v=20261006b"></script>
 
 </body>
 </html>

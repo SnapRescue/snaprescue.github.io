@@ -411,7 +411,8 @@
   "v2_app_c3": "Sachez ce qui a été restauré",
   "v2_guarantee": "Paiement sécurisé via Stripe · Paiement unique, sans abonnement · Windows, Mac et Android",
   "v2_foot_credits": "Crédits photos",
-  "v2_cap_slider": "Comparer avant et après"
+  "v2_cap_slider": "Comparer avant et après",
+  "v2_trust1": "100% sur votre appareil"
  },
  "de": {
   "meta_title": "SnapRescue: Retten Sie Ihre Snapchat-Erinnerungen, bevor sie weg sind",
@@ -799,8 +800,8 @@
   "pol_today": "Heute 2026",
   "ticker_line": "<b>5 GB</b> Gratis-Limit  ·  <b>12 Monate</b> bis Überschuss gelöscht wird  ·  <b>3,99 $/Monat</b> um Snapchat weiter zu bezahlen  ·  oder <b>einmal 9,99 $</b> und sie gehören für immer Ihnen  · ",
   "canon_index": "https://snaprescue.app/de/index.html",
-  "v2_hero_h1": "Deine Snapchat-Erinnerungen, zurück an dem Tag, an dem sie <span class=\"accent\">passiert sind.</span>",
-  "v2_hero_lead": "Der Snapchat-Export legt jedes Foto und Video mit dem Datum von <em>heute</em> in deiner Mediathek ab. SnapRescue liest die Daten und Orte, die Snapchat in einer separaten Datei aufbewahrt, und schreibt sie zurück in jede Erinnerung, Bildunterschriften inklusive. Auf deinem eigenen Computer oder Handy, ohne Upload.",
+  "v2_hero_h1": "Ihre Snapchat-Erinnerungen, zurück an dem Tag, an dem sie <span class=\"accent\">passiert sind.</span>",
+  "v2_hero_lead": "Der Snapchat-Export legt jedes Foto und Video mit dem Datum von <em>heute</em> in Ihrer Mediathek ab. SnapRescue liest die Daten und Orte, die Snapchat in einer separaten Datei aufbewahrt, und schreibt sie zurück in jede Erinnerung, Bildunterschriften inklusive. Auf Ihrem eigenen Computer oder Handy, ohne Upload.",
   "v2_hero_dl": "Kostenlos herunterladen",
   "v2_hero_note": "Die ersten 100 Dateien gratis · Windows, Mac und Android · 9,99 $ einmalig für alles",
   "v2_today": "Heute",
@@ -808,24 +809,25 @@
   "v2_roll_before": "Wie heruntergeladen",
   "v2_roll_after": "Nach SnapRescue",
   "v2_roll_head": "Fotos",
-  "v2_fix_h2": "Dein Export hat vier Dinge verloren. Alle vier kommen zurück.",
+  "v2_fix_h2": "Ihr Export hat vier Dinge verloren. Alle vier kommen zurück.",
   "v2_clock_utc": "Snapchats Liste (UTC)",
   "v2_map_t": "Zurück auf der Karte",
-  "v2_map_d": "Die Koordinaten kommen in jede Datei zurück, also zeigen Google Fotos, Apple Fotos und Immich jede Erinnerung dort, wo sie passiert ist. Die Karte in SnapRescue fasst nahe Erinnerungen zusammen, damit du in Ruhe durch sie stöbern kannst.",
-  "v2_cap_t": "Bildunterschriften dort, wo du sie geschrieben hast",
-  "v2_cap_d": "Snapchat speichert deine Bildunterschriften und Sticker als separate, durchsichtige Bilder. SnapRescue legt jedes davon wieder auf sein Foto oder Video, genau dort, wo du es platziert hast. Zieh die Linie zum Vergleichen.",
+  "v2_map_d": "Die Koordinaten kommen in jede Datei zurück, also zeigen Google Fotos, Apple Fotos und Immich jede Erinnerung dort, wo sie passiert ist. Die Karte in SnapRescue fasst nahe Erinnerungen zusammen, damit Sie in Ruhe durch sie stöbern können.",
+  "v2_cap_t": "Bildunterschriften dort, wo Sie sie geschrieben haben",
+  "v2_cap_d": "Snapchat speichert Ihre Bildunterschriften und Sticker als separate, durchsichtige Bilder. SnapRescue legt jedes davon wieder auf sein Foto oder Video, genau dort, wo Sie es platziert haben. Ziehen Sie die Linie zum Vergleichen.",
   "v2_cap_before": "Wie heruntergeladen",
   "v2_cap_after": "Gerettet",
   "v2_vid_t": "Videos auf die Sekunde genau",
   "v2_vid_d": "Die meisten speichern mehrere Snaps am Tag, und Dateinamen enthalten nur den Tag. SnapRescue liest die Uhrzeit, die Snapchat in jedem Video hinterlässt, damit jedes seine eigene Zeit und seinen eigenen Ort bekommt, nicht die eines Nachbarvideos.",
-  "v2_app_h2": "Die echte App, auf deinem Computer oder deinem Handy.",
-  "v2_app_p": "Wähle deinen Export, prüfe, was gefunden wurde, und sieh zu, wie jede Erinnerung ihr Datum zurückbekommt. Danach stöberst du nach Jahr, nach „an diesem Tag“ oder auf der Karte. Eine Lizenz gilt für Windows, Mac und Android.",
-  "v2_app_c1": "Sieh genau, was gefunden wurde",
+  "v2_app_h2": "Die echte App, auf Ihrem Computer oder Ihrem Handy.",
+  "v2_app_p": "Wählen Sie Ihren Export, prüfen Sie, was gefunden wurde, und sehen Sie zu, wie jede Erinnerung ihr Datum zurückbekommt. Danach stöbern Sie nach Jahr, nach „an diesem Tag“ oder auf der Karte. Eine Lizenz gilt für Windows, Mac und Android.",
+  "v2_app_c1": "Sehen Sie genau, was gefunden wurde",
   "v2_app_c2": "Nach Monaten stöbern",
   "v2_app_c3": "Wissen, was wiederhergestellt wurde",
   "v2_guarantee": "Sicherer Checkout über Stripe · Einmalzahlung, kein Abo · Windows, Mac und Android",
   "v2_foot_credits": "Bildnachweise",
-  "v2_cap_slider": "Vorher und nachher vergleichen"
+  "v2_cap_slider": "Vorher und nachher vergleichen",
+  "v2_trust1": "100% auf Ihrem Gerät"
  },
  "es": {
   "meta_title": "SnapRescue: salva tus recuerdos de Snapchat antes de que desaparezcan",
@@ -1239,7 +1241,8 @@
   "v2_app_c3": "Sabe qué se restauró",
   "v2_guarantee": "Pago seguro con Stripe · Pago único, sin suscripción · Windows, Mac y Android",
   "v2_foot_credits": "Créditos de fotos",
-  "v2_cap_slider": "Comparar antes y después"
+  "v2_cap_slider": "Comparar antes y después",
+  "v2_trust1": "100% en tu dispositivo"
  },
  "nl": {
   "meta_title": "SnapRescue: red je Snapchat-herinneringen voordat ze weg zijn",
@@ -1653,6 +1656,7 @@
   "v2_app_c3": "Weet wat er hersteld is",
   "v2_guarantee": "Veilig afrekenen via Stripe · Eenmalige betaling, geen abonnement · Windows, Mac en Android",
   "v2_foot_credits": "Fotoverantwoording",
-  "v2_cap_slider": "Vergelijk voor en na"
+  "v2_cap_slider": "Vergelijk voor en na",
+  "v2_trust1": "100% op je eigen apparaat"
  }
 }

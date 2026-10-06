@@ -38,7 +38,7 @@ PAGES = [
 
 # Resources that exist ONLY at the site root (not duplicated per language).
 # References to these get one extra ../ so a localized page reaches the root.
-NON_LOCALIZED = ("styles.css", "main.js", "assets/", "privacy.html", "tos.html",
+NON_LOCALIZED = ("styles.css", "main.js", "home.js", "credits.html", "assets/", "privacy.html", "tos.html",
                  "success.html", "robots.txt", "sitemap.xml")
 
 

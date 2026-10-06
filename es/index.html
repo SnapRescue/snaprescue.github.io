@@ -39,10 +39,11 @@
 <link href="https://api.fontshare.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&amp;display=swap" rel="stylesheet"/>
-<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-<link href="../styles.css?v=20260711c" rel="stylesheet"/>
+<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<link as="font" crossorigin="" href="../assets/fonts/dseg7-classic-bold.woff2" rel="preload" type="font/woff2"/>
+<link href="../styles.css?v=20261006a" rel="stylesheet"/>
 </head>
-<body class="has-cd-bar">
+<body class="home">
 <!-- NAV -->
 <nav id="nav">
 <div class="wrap nav-in">
@@ -59,7 +60,7 @@
 <a class="lang-opt" data-lang="en" href="https://snaprescue.app/index.html">English</a>
 <a class="lang-opt" data-lang="fr" href="https://snaprescue.app/fr/index.html">Français</a>
 <a class="lang-opt" data-lang="de" href="https://snaprescue.app/de/index.html">Deutsch</a>
-<a class="on lang-opt" data-lang="es" href="https://snaprescue.app/es/index.html">Español</a>
+<a class="lang-opt on" data-lang="es" href="https://snaprescue.app/es/index.html">Español</a>
 <a class="lang-opt" data-lang="nl" href="https://snaprescue.app/nl/index.html">Nederlands</a>
 </div>
 </div>
@@ -71,127 +72,127 @@
 <header class="hero">
 <div class="wrap hero-grid">
 <div class="hero-copy">
-<span class="eyebrow reveal" style="--i:0"><span class="dot"></span> <span data-i18n="hero_eyebrow">Snapchat borra los recuerdos que superan el límite gratuito de 5 GB</span></span>
-<h1 class="reveal" data-i18n="hero_h1" style="--i:1">Recupera tus recuerdos,<br/><span class="serif-italic accent">con sus fechas intactas.</span></h1>
-<p class="lead reveal" data-i18n="hero_lead" style="--i:2">Tus recuerdos son las personas, los lugares y las versiones de ti que algún día querrás recuperar. Pero la exportación de Snapchat borra las fechas y las ubicaciones, así que todo llega a tu fototeca con la fecha de <em>hoy</em>. SnapRescue devuelve la hora, el lugar y los textos reales, y lo organiza todo por el día en que de verdad ocurrió.</p>
-<div class="hero-cta reveal" style="--i:3">
-<a class="btn btn-primary btn-lg" href="#download"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg><span data-i18n="hero_dl">Descargar</span></a>
-<a class="btn btn-ghost btn-lg" data-i18n="hero_how" href="#how">Cómo funciona</a>
+<h1 data-i18n="v2_hero_h1">Tus recuerdos de Snapchat, de vuelta en el día en que <span class="accent">ocurrieron.</span></h1>
+<p class="lead" data-i18n="v2_hero_lead">La exportación de Snapchat mete cada foto y vídeo en tu biblioteca con la fecha de <em>hoy</em>. SnapRescue lee las fechas y los lugares que Snapchat guarda en un archivo aparte y los vuelve a escribir en cada recuerdo, con los textos incluidos. En tu propio ordenador o móvil, sin subir nada.</p>
+<div class="hero-cta">
+<a class="btn btn-primary btn-lg" href="#download"><span data-i18n="v2_hero_dl">Descargar gratis</span></a>
+<a class="btn btn-ghost btn-lg" data-i18n="hero_how" href="#problem">Cómo funciona</a>
 </div>
-<div class="hero-note reveal" data-i18n="hero_note" style="--i:4">✓ Gratis para tus primeros 100 archivos  ·  ✓ 100% en tu ordenador  ·  ✓ Sin cuenta</div>
+<p class="hero-note" data-i18n="v2_hero_note">Los primeros 100 archivos gratis · Windows, Mac y Android · 9,99 $ una sola vez por todo</p>
 </div>
-<div class="stack reveal" style="--i:3">
-<div class="stamp" data-i18n="stamp_fixed">Arreglado en segundos</div>
-<div class="polaroid p1 float">
-<div class="photo ph-a"><span class="stage before" data-i18n="stage_before">antes</span><img alt="A brunch memory" loading="lazy" src="../assets/mem-brunch.jpg"/><div class="meta-tag bad"><span><svg aria-hidden="true" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="11"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg> <span data-i18n="pol_today">Hoy 2026</span></span><span><svg aria-hidden="true" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="11"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> ✕</span></div></div>
-<div class="cap" data-i18n="cap_before">antes</div>
-</div>
-<div class="polaroid p2 float d1">
-<div class="photo ph-b"><span class="stage before" data-i18n="stage_before">antes</span><img alt="A sunset memory" loading="lazy" src="../assets/mem-sunset.jpg"/><div class="meta-tag bad"><span><svg aria-hidden="true" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="11"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg> <span data-i18n="pol_today">Hoy 2026</span></span><span><svg aria-hidden="true" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="11"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> ✕</span></div></div>
-<div class="cap" data-i18n="cap_before">antes</div>
-</div>
-<div class="polaroid p3 float d2">
-<div class="photo ph-c"><span class="stage after" data-i18n="stage_after">después</span><img alt="A beach memory, restored" loading="lazy" src="../assets/mem-beach.jpg"/><div class="meta-tag"><span><svg aria-hidden="true" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="11"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg> 14 Jan 2019</span><span><svg aria-hidden="true" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="11"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Jervis Bay</span></div></div>
-<div class="cap" data-i18n="cap_after">después · donde debe estar</div>
-</div>
-</div>
-</div>
-<!-- ticker -->
-<div class="ticker">
-<div class="ticker-track">
-<span data-i18n="ticker_line"><b>5 GB</b> de límite gratis  ·  <b>12 meses</b> antes de que borren el exceso  ·  <b>$3.99/mes</b> por seguir pagando a Snapchat  ·  o <b>$9.99 una vez</b> y son tuyos para siempre  · </span>
-<span data-i18n="ticker_line"><b>5 GB</b> de límite gratis  ·  <b>12 meses</b> antes de que borren el exceso  ·  <b>$3.99/mes</b> por seguir pagando a Snapchat  ·  o <b>$9.99 una vez</b> y son tuyos para siempre  · </span>
+<div aria-label="Photos getting their real dates back" class="wall">
+<figure class="snap s1"><img alt="A puppy looking up at the camera" height="750" src="../assets/photos/p00.jpg" width="600"/><span class="today" data-i18n="v2_today">Hoy</span><span class="dstamp">'19  4 23</span></figure>
+<figure class="snap s2"><img alt="A sparkler at night" height="750" src="../assets/photos/p02.jpg" width="600"/><span class="today" data-i18n="v2_today">Hoy</span><span class="dstamp">'21 12 31</span></figure>
+<figure class="snap s3"><img alt="Pizza night" height="750" src="../assets/photos/p01.jpg" width="600"/><span class="today" data-i18n="v2_today">Hoy</span><span class="dstamp">'20  8  7</span></figure>
+<figure class="snap s4"><img alt="Rooftops at sunset" height="750" src="../assets/photos/p06.jpg" width="600"/><span class="today" data-i18n="v2_today">Hoy</span><span class="dstamp">'23  6 14</span></figure>
+<figure class="snap s5"><img alt="A ferris wheel lit up at night" height="750" src="../assets/photos/p03.jpg" width="600"/><span class="today" data-i18n="v2_today">Hoy</span><span class="dstamp">'22  1  2</span></figure>
+<figure class="snap s6"><img alt="Roasting marshmallows over a fire" height="750" src="../assets/photos/p04.jpg" width="600"/><span class="today" data-i18n="v2_today">Hoy</span><span class="dstamp">'24  7 19</span></figure>
 </div>
 </div>
 </header>
-<!-- TRUST BAND -->
-<div class="trust-band">
-<div class="trust-row">
-<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span> <span data-i18n="trust1">100% en tu ordenador</span></span>
-<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="12" cy="12" r="9"></circle><line x1="5.6" x2="18.4" y1="5.6" y2="18.4"></line></svg></span> <span data-i18n="trust2">No se sube nada, sin cuenta</span></span>
-<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M12 3a7 7 0 0 0-7 7v10l2.4-2 2.3 2 2.3-2 2.3 2 2.3-2 2.4 2V10a7 7 0 0 0-7-7z"></path><line x1="9.5" x2="9.51" y1="10" y2="10"></line><line x1="14.5" x2="14.51" y1="10" y2="10"></line></svg></span> <span data-i18n="trust3">Sin relación con Snap</span></span>
-<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><rect height="16" rx="2" width="22" x="1" y="4"></rect><line x1="1" x2="23" y1="10" y2="10"></line></svg></span> <span data-i18n="trust4">Pago seguro con Stripe</span></span>
-<span class="trust-item"><span class="ti"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> <span data-i18n="trust5">Garantía de reembolso de 30 días</span></span>
-</div>
-</div>
-<!-- APP SHOWCASE -->
-<section class="showcase">
-<div class="wrap">
-<div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto;max-width:42rem">
-<p class="kicker" data-i18n="showcase_kicker">La aplicación</p>
-<h2 data-i18n="showcase_h2">Claro, guiado, cuatro pasos simples.</h2>
-<p data-i18n="showcase_p">Sin lío ni carpetas que combinar a mano. Importa tu exportación, mira qué se encontró, elige dónde guardarlo y observa cómo se rescatan tus recuerdos.</p>
-</div>
-<div class="app-frame reveal">
-<img alt="SnapRescue showing 2,483 memories found, with photo, video and with-location counts and a preview list" loading="lazy" src="../assets/app-review.png"/>
-</div>
-<p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue en Windows y Mac. Móvil muy pronto.</p>
-</div>
-</section>
 <!-- PROBLEM -->
 <section class="problem" id="problem">
 <div class="wrap split">
-<div class="reveal">
-<p class="kicker" data-i18n="problem_kicker">La trampa que nadie te cuenta</p>
-<h2 data-i18n="problem_h2">La exportación se descarga bien.<br/>Y luego tu galería queda <span class="serif-italic accent">hecha un desastre.</span></h2>
-<p data-i18n="home_pp1" style="font-size:19px;color:var(--ink-soft);margin-top:18px">Snapchat te da las fotos y vídeos en bruto, pero las fechas y el GPS viven en un archivo <code>memories_history.json</code> aparte que tu galería nunca lee. Impórtalos y 2.000 recuerdos de años de tu vida se amontonan en la fecha de hoy, sin mapa, sin orden, sin historia.</p>
-<p data-i18n="home_pp2" style="font-size:19px;color:var(--ink-soft);margin-top:16px">SnapRescue reúne cada archivo con sus metadatos reales antes de que toque tu galería.</p>
+<div class="problem-copy">
+<h2 data-i18n="v2_problem_h2">Exportar es lo fácil. Después, cada foto dice <span class="accent">hoy.</span></h2>
+<p data-i18n="home_pp1">Snapchat te da las fotos y vídeos en bruto, pero las fechas y el GPS viven en un archivo <code>memories_history.json</code> aparte que tu galería nunca lee. Impórtalos y 2.000 recuerdos de años de tu vida se amontonan en la fecha de hoy, sin mapa, sin orden, sin historia.</p>
+<p data-i18n="home_pp2">SnapRescue reúne cada archivo con sus metadatos reales antes de que toque tu galería.</p>
+<div aria-label="Camera roll" class="roll-switch" role="tablist">
+<button class="on" data-i18n="v2_roll_before" data-roll="before" role="tab" type="button">Tal como se descargó</button>
+<button data-i18n="v2_roll_after" data-roll="after" role="tab" type="button">Después de SnapRescue</button>
 </div>
-<div class="file-demo reveal">
-<div style="font-family:'Erode',Georgia,serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">2019-summer-roadtrip.jpg</div>
-<div class="file-row"><span class="k" data-i18n="fd_cd">Fecha de captura</span><span class="v missing" data-i18n="fd_cd_bad">✗ muestra «hoy»</span></div>
-<div class="file-row"><span class="k" data-i18n="fd_loc">Ubicación</span><span class="v missing" data-i18n="fd_loc_bad">✗ eliminada</span></div>
-<div class="file-row"><span class="k" data-i18n="fd_cap">Texto</span><span class="v missing" data-i18n="fd_cap_bad">✗ capa separada</span></div>
-<div class="arrow-down">↓ SnapRescue ↓</div>
-<div class="file-row"><span class="k" data-i18n="fd_cd">Fecha de captura</span><span class="v fixed">✓ 14 Jul 2019, 7:32 pm</span></div>
-<div class="file-row"><span class="k" data-i18n="fd_loc">Ubicación</span><span class="v fixed" data-i18n="fd_loc_ok">✓ Byron Bay, AU (en el mapa)</span></div>
-<div class="file-row"><span class="k" data-i18n="fd_cap">Texto</span><span class="v fixed" data-i18n="fd_cap_ok">✓ fusionado en la foto</span></div>
+</div>
+<div aria-hidden="true" class="phone roll-phone">
+<div class="phone-screen">
+<div class="roll" data-state="before" id="roll">
+<p class="roll-head" data-i18n="v2_roll_head">Fotos</p>
+<div class="roll-body" id="rollBody"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHAT IT FIXES -->
+<section class="fixes" id="features">
+<div class="wrap">
+<h2 class="sec-title" data-i18n="v2_fix_h2">Tu exportación perdió cuatro cosas. Las cuatro vuelven.</h2>
+<article class="fix">
+<div class="fix-copy">
+<h3 data-i18n="feat1t">Horas locales realmente correctas</h3>
+<p data-i18n="feat1d">Snapchat guarda cada momento en UTC. Otras herramientas lo pegan en bruto, así que un snap nocturno en el extranjero aparece a la hora del desayuno. SnapRescue usa el GPS de cada foto para convertirlo a la hora local real.</p>
+</div>
+<div class="fix-vis clocks">
+<div class="clock bad"><span class="clock-label" data-i18n="v2_clock_utc">La lista de Snapchat (UTC)</span><span class="digits">09:30</span></div>
+<span class="clock-arrow">→</span>
+<div class="clock good"><span class="clock-label" data-i18n="feat1tz">Bali, donde ocurrió</span><span class="digits">17:30</span></div>
+</div>
+</article>
+<article class="fix flip">
+<div class="fix-copy">
+<h3 data-i18n="v2_map_t">De vuelta en el mapa</h3>
+<p data-i18n="v2_map_d">Las coordenadas vuelven a cada archivo, así que Google Fotos, Apple Fotos e Immich colocan cada recuerdo donde ocurrió. El mapa de SnapRescue agrupa los recuerdos cercanos para que puedas volver a recorrerlos.</p>
+</div>
+<div class="fix-vis shot"><img alt="SnapRescue's map with memories pinned across Australia" height="1031" loading="lazy" src="../assets/app/desktop-map.jpg" width="1600"/></div>
+</article>
+<article class="fix">
+<div class="fix-copy">
+<h3 data-i18n="v2_cap_t">Los textos donde los escribiste</h3>
+<p data-i18n="v2_cap_d">Snapchat guarda tus textos y stickers como imágenes transparentes aparte. SnapRescue vuelve a colocar cada uno sobre su foto o vídeo, justo donde lo pusiste. Arrastra la línea para comparar.</p>
+</div>
+<div class="fix-vis capcmp" id="capCompare" style="--pos:50%">
+<img alt="The photo with its caption back on" height="1200" loading="lazy" src="../assets/photos/caption-after.jpg" width="900"/>
+<div class="capcmp-before"><img alt="The photo as Snapchat exported it, without the caption" height="1200" loading="lazy" src="../assets/photos/caption-before.jpg" width="900"/></div>
+<span class="capcmp-tag l" data-i18n="v2_cap_before">Tal como se descargó</span>
+<span class="capcmp-tag r" data-i18n="v2_cap_after">Rescatado</span>
+<input aria-label="Comparar antes y después" data-i18n-attr="v2_cap_slider|aria-label" max="100" min="0" type="range" value="50"/>
+</div>
+</article>
+<article class="fix flip">
+<div class="fix-copy">
+<h3 data-i18n="v2_vid_t">Vídeos fechados al segundo</h3>
+<p data-i18n="v2_vid_d">La mayoría guarda varios snaps al día, y los nombres de archivo solo indican el día. SnapRescue lee el reloj que Snapchat deja dentro de cada vídeo, para que cada uno tenga su propia hora y su propio lugar, no los de otro.</p>
+</div>
+<div class="fix-vis vids">
+<div class="vid-row"><span class="vid-thumb v1"></span><span class="digits sm">08:15:30</span><span class="vid-place">Bondi</span></div>
+<div class="vid-row"><span class="vid-thumb v2"></span><span class="digits sm">13:42:07</span><span class="vid-place">Manly</span></div>
+<div class="vid-row"><span class="vid-thumb v3"></span><span class="digits sm">21:00:05</span><span class="vid-place">Newtown</span></div>
+</div>
+</article>
+<div class="extras">
+<div class="extra"><h4 data-i18n="feat2t">GPS + nombres de lugares</h4><p data-i18n="feat2d">Coordenadas integradas para que el mapa funcione, más una ubicación legible como «Byron Bay» escrita.</p></div>
+<div class="extra"><h4 data-i18n="feat5t">Carpetas por fecha</h4><p data-i18n="feat5d">Organizado automáticamente en carpetas por año con nombres de archivo con fecha, un archivo navegable al instante.</p></div>
+<div class="extra"><h4 data-i18n="feat6t">100% privado</h4><p data-i18n="feat6d">Todo se ejecuta en tu ordenador. No se sube nada, sin cuenta, ningún servidor ve tus fotos.</p></div>
+<div class="extra"><h4 data-i18n="feat8t">Pausa y reanuda</h4><p data-i18n="feat8d">¿30.000 recuerdos? Para cuando quieras y continúa justo donde lo dejaste. Nada se repite.</p></div>
+</div>
+</div>
+</section>
+<!-- THE APP -->
+<section class="showcase" id="app">
+<div class="wrap">
+<h2 class="sec-title" data-i18n="v2_app_h2">La app de verdad, en tu ordenador o en tu móvil.</h2>
+<p class="sec-lede" data-i18n="v2_app_p">Elige tu exportación, revisa lo que se encontró y mira cómo cada recuerdo recupera su fecha. Luego recórrelos por año, por «un día como hoy» o en el mapa. Una sola licencia vale para Windows, Mac y Android.</p>
+<div class="devices">
+<div class="window"><img alt="SnapRescue on a computer, rescuing memories with their real dates" height="1031" loading="lazy" src="../assets/app/desktop-rescue.jpg" width="1600"/></div>
+<div class="phone device-phone"><div class="phone-screen"><img alt="SnapRescue on an Android phone after a rescue" height="1600" loading="lazy" src="../assets/app/phone-done.jpg" width="720"/></div></div>
+</div>
+<div class="app-strip">
+<figure><img alt="The review screen: memories per year and a before and after of one memory" height="1031" loading="lazy" src="../assets/app/desktop-review.jpg" width="1600"/><figcaption data-i18n="v2_app_c1">Mira exactamente lo que se encontró</figcaption></figure>
+<figure><img alt="The memories timeline grouped by month" height="1031" loading="lazy" src="../assets/app/desktop-timeline.jpg" width="1600"/><figcaption data-i18n="v2_app_c2">Recórrelos por meses</figcaption></figure>
+<figure><img alt="The finished rescue with a summary of what was restored" height="1031" loading="lazy" src="../assets/app/desktop-done.jpg" width="1600"/><figcaption data-i18n="v2_app_c3">Sabe qué se restauró</figcaption></figure>
 </div>
 </div>
 </section>
 <!-- HOW -->
-<section id="how">
+<section class="how" id="how">
 <div class="wrap">
-<div class="sec-head reveal">
-<p class="kicker" data-i18n="how_kicker">Cuatro pasos, sin saber de tecnología</p>
-<h2 data-i18n="how_h2">De un ZIP desordenado a un archivo precioso.</h2>
-</div>
-<div class="steps">
-<div class="step reveal"><h3 data-i18n="how_s1t">Pide a Snapchat</h3><p data-i18n="how_s1d">En la app: Ajustes → Mis datos → Enviar solicitud. Te envían un enlace de descarga. (Nunca tocamos tu cuenta.)</p></div>
-<div class="step reveal"><h3 data-i18n="how_s2t">Ponlo en una carpeta</h3><p data-i18n="how_s2d">Snapchat puede enviar <b>varios archivos ZIP</b>. Ponlos todos en una sola carpeta. No hace falta que los descomprimas tú.</p></div>
-<div class="step reveal"><h3 data-i18n="how_s3t">Apunta y listo</h3><p data-i18n="how_s3d">Abre SnapRescue y selecciona esa carpeta. Descomprime y encuentra cada recuerdo con sus metadatos, automáticamente.</p></div>
-<div class="step reveal"><h3 data-i18n="how_s4t">Arrástralo donde sea</h3><p data-i18n="how_s4d">Obtén carpetas limpias <code>2019/ 2020/ …</code> listas para Google Photos, Apple Photos, Immich o donde sea.</p></div>
-</div>
-<div class="reveal" style="text-align:center;margin-top:36px">
-<a class="btn btn-ghost btn-wrap" data-i18n="guide_cta" href="guide.html">Ver la guía completa paso a paso, con tiempos →</a>
-</div>
-<!-- Detailed export guide (English only; localized pages link to the full translated guide.html above) -->
-
-</div>
-</section>
-<!-- FEATURES -->
-<section id="features">
-<div class="wrap">
-<div class="sec-head reveal">
-<p class="kicker" data-i18n="features_kicker">Por qué es la buena</p>
-<h2 data-i18n="features_h2">Todo lo que hacen los demás, más lo que se les escapa.</h2>
-</div>
-<div class="feat-grid">
-<div class="feat hero-feat reveal">
-<span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg></span>
-<h3 data-i18n="feat1t">Horas locales realmente correctas</h3>
-<p data-i18n="feat1d">Snapchat guarda cada momento en UTC. Otras herramientas lo pegan en bruto, así que un snap nocturno en el extranjero aparece a la hora del desayuno. SnapRescue usa el GPS de cada foto para convertirlo a la hora local real.</p>
-<div class="tz-demo"><span class="from">09:30</span><span class="ar">→</span><span class="to">7:30 pm</span><span data-i18n="feat1tz" style="font-size:14px;color:var(--ink-faint)">Bali, donde ocurrió</span></div>
-</div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h3 data-i18n="feat2t">GPS + nombres de lugares</h3><p data-i18n="feat2d">Coordenadas integradas para que el mapa funcione, más una ubicación legible como «Byron Bay» escrita.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span><h3 data-i18n="feat3t">Capas fusionadas</h3><p data-i18n="feat3d">Textos, pegatinas y las capas de fecha recompuestas sobre la foto o el vídeo en un solo archivo limpio.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></span><h3 data-i18n="feat4t">Lo descomprime por ti</h3><p data-i18n="feat4d">Snapchat envía tu exportación en varios archivos ZIP. Otras herramientas te obligan a extraer cada uno y combinar las carpetas a mano. SnapRescue toma los ZIP tal cual y hace ese paso por ti.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></span><h3 data-i18n="feat5t">Carpetas por fecha</h3><p data-i18n="feat5d">Organizado automáticamente en carpetas por año con nombres de archivo con fecha, un archivo navegable al instante.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span><h3 data-i18n="feat6t">100% privado</h3><p data-i18n="feat6d">Todo se ejecuta en tu ordenador. No se sube nada, sin cuenta, ningún servidor ve tus fotos.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><rect height="20" rx="2.18" width="20" x="2" y="2"></rect><line x1="7" x2="7" y1="2" y2="22"></line><line x1="17" x2="17" y1="2" y2="22"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="2" x2="7" y1="7" y2="7"></line><line x1="2" x2="7" y1="17" y2="17"></line><line x1="17" x2="22" y1="17" y2="17"></line><line x1="17" x2="22" y1="7" y2="7"></line></svg></span><h3 data-i18n="feat7t">Fotos y vídeos</h3><p data-i18n="feat7d">Metadatos completos para ambos, sin pérdida de calidad. Solo cambian los metadatos, nunca los píxeles.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><circle cx="12" cy="12" r="9"></circle><line x1="10" x2="10" y1="9" y2="15"></line><line x1="14" x2="14" y1="9" y2="15"></line></svg></span><h3 data-i18n="feat8t">Pausa y reanuda</h3><p data-i18n="feat8d">¿30.000 recuerdos? Para cuando quieras y continúa justo donde lo dejaste. Nada se repite.</p></div>
-<div class="feat reveal"><span class="ico"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><rect height="8" rx="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span><h3 data-i18n="feat9t">Compatible con autoalojamiento</h3><p data-i18n="feat9d">EXIF integrado que Immich, Jellyfin, Photoprism y cualquier biblioteca leen al importar, más archivos XMP opcionales para bibliotecas externas. Algo que ningún rival ofrece.</p></div>
-</div>
+<h2 class="sec-title" data-i18n="how_h2">De un ZIP desordenado a un archivo precioso.</h2>
+<ol class="how-steps" id="guide">
+<li><h3 data-i18n="how_s1t">Pide a Snapchat</h3><p data-i18n="how_s1d">En la app: Ajustes → Mis datos → Enviar solicitud. Te envían un enlace de descarga. (Nunca tocamos tu cuenta.)</p></li>
+<li><h3 data-i18n="how_s2t">Ponlo en una carpeta</h3><p data-i18n="how_s2d">Snapchat puede enviar <b>varios archivos ZIP</b>. Ponlos todos en una sola carpeta. No hace falta que los descomprimas tú.</p></li>
+<li><h3 data-i18n="how_s3t">Apunta y listo</h3><p data-i18n="how_s3d">Abre SnapRescue y selecciona esa carpeta. Descomprime y encuentra cada recuerdo con sus metadatos, automáticamente.</p></li>
+<li><h3 data-i18n="how_s4t">Arrástralo donde sea</h3><p data-i18n="how_s4d">Obtén carpetas limpias <code>2019/ 2020/ …</code> listas para Google Photos, Apple Photos, Immich o donde sea.</p></li>
+</ol>
+<p class="how-more"><a class="btn btn-ghost btn-wrap" data-i18n="guide_cta" href="guide.html">Ver la guía completa paso a paso, con tiempos →</a></p>
 </div>
 </section>
 <!-- COMPARE -->
@@ -260,7 +261,7 @@
 <div class="mbg" data-i18n="mbg">↩️ Garantía de reembolso de 30 días, sin preguntas</div>
 </div>
 </div>
-<p class="guarantee"><svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="vertical-align:-1.5px" viewbox="0 0 24 24" width="13"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span data-i18n="guarantee">Pago seguro con Stripe · Pago único, sin suscripción · Windows y Mac, móvil muy pronto</span></p>
+<p class="guarantee"><svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="vertical-align:-1.5px" viewbox="0 0 24 24" width="13"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span data-i18n="v2_guarantee">Pago seguro con Stripe · Pago único, sin suscripción · Windows, Mac y Android</span></p>
 </div>
 </section>
 <!-- FAQ -->
@@ -306,6 +307,7 @@
 <a data-i18n="foot_support" href="mailto:support@snaprescue.app">Soporte</a>
 <a data-i18n="foot_privacy" href="../privacy.html">Privacidad</a>
 <a data-i18n="foot_terms" href="../tos.html">Términos</a>
+<a data-i18n="v2_foot_credits" href="../credits.html">Créditos de fotos</a>
 </div>
 </div>
 <p class="foot-fine" data-i18n="foot_fine1">SnapRescue es una herramienta independiente y no está afiliada, respaldada ni patrocinada por Snap Inc. «Snapchat» es una marca de Snap Inc. SnapRescue solo procesa los datos que hayas exportado oficialmente desde tu propia cuenta, totalmente en tu dispositivo.</p>
@@ -364,7 +366,8 @@
 <p class="modal-fine" data-i18n="modal_fine">No se sube nada · Sin cuenta · <a href="#faq" id="dl-why">¿Por qué me avisa Windows?</a></p>
 </div>
 </div>
-<script src="../main.js?v=20260711c"></script>
+<script defer="" src="../home.js?v=20261006a"></script>
+<script src="../main.js?v=20261006a"></script>
 
 </body>
 </html>

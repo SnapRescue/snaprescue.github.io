@@ -39,11 +39,11 @@
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&display=swap" rel="stylesheet">
-<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260711c">
+<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<link rel="preload" href="assets/fonts/dseg7-classic-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=20261006a">
 </head>
-<body class="has-cd-bar">
-
+<body class="home">
 
 <!-- NAV -->
 <nav id="nav">
@@ -74,154 +74,137 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow reveal" style="--i:0"><span class="dot"></span> <span data-i18n="hero_eyebrow">Snapchat is deleting Memories over the free 5GB limit</span></span>
-      <h1 class="reveal" style="--i:1" data-i18n="hero_h1">Get your memories out,<br><span class="serif-italic accent">with their dates intact.</span></h1>
-      <p class="lead reveal" style="--i:2" data-i18n="hero_lead">Your memories are the people, places and old versions of you that you'll want back one day. But Snapchat's export strips the dates and locations, so they all land in your library stamped <em>today</em>. SnapRescue puts the real time, place and captions back, and files everything by the day it actually happened.</p>
-      <div class="hero-cta reveal" style="--i:3">
-        <a href="#download" class="btn btn-primary btn-lg"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="hero_dl">Download</span></a>
-        <a href="#how" class="btn btn-ghost btn-lg" data-i18n="hero_how">See how it works</a>
+      <h1 data-i18n="v2_hero_h1">Your Snapchat memories, back on the day they <span class="accent">happened.</span></h1>
+      <p class="lead" data-i18n="v2_hero_lead">Snapchat's export drops every photo and video into your library stamped <em>today</em>. SnapRescue reads the dates and places Snapchat kept in a separate file and writes them back into every memory, captions included. On your own computer or phone, nothing uploaded.</p>
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-primary btn-lg"><span data-i18n="v2_hero_dl">Download free</span></a>
+        <a href="#problem" class="btn btn-ghost btn-lg" data-i18n="hero_how">See how it works</a>
       </div>
-      <div class="hero-note reveal" style="--i:4" data-i18n="hero_note">✓ Free for your first 100 files &nbsp;·&nbsp; ✓ 100% on your computer &nbsp;·&nbsp; ✓ No account</div>
+      <p class="hero-note" data-i18n="v2_hero_note">First 100 files free · Windows, Mac and Android · $9.99 once for everything</p>
     </div>
 
-    <div class="stack reveal" style="--i:3">
-      <div class="stamp" data-i18n="stamp_fixed">Fixed in seconds</div>
-      <div class="polaroid p1 float">
-        <div class="photo ph-a"><span class="stage before" data-i18n="stage_before">before</span><img src="assets/mem-brunch.jpg" alt="A brunch memory" loading="lazy"><div class="meta-tag bad"><span><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> <span data-i18n="pol_today">Today 2026</span></span><span><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> ✕</span></div></div>
-        <div class="cap" data-i18n="cap_before">before</div>
-      </div>
-      <div class="polaroid p2 float d1">
-        <div class="photo ph-b"><span class="stage before" data-i18n="stage_before">before</span><img src="assets/mem-sunset.jpg" alt="A sunset memory" loading="lazy"><div class="meta-tag bad"><span><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> <span data-i18n="pol_today">Today 2026</span></span><span><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> ✕</span></div></div>
-        <div class="cap" data-i18n="cap_before">before</div>
-      </div>
-      <div class="polaroid p3 float d2">
-        <div class="photo ph-c"><span class="stage after" data-i18n="stage_after">after</span><img src="assets/mem-beach.jpg" alt="A beach memory, restored" loading="lazy"><div class="meta-tag"><span><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 14 Jan 2019</span><span><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Jervis Bay</span></div></div>
-        <div class="cap" data-i18n="cap_after">after · back where it belongs</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ticker -->
-  <div class="ticker">
-    <div class="ticker-track">
-      <span data-i18n="ticker_line"><b>5GB</b> free limit now &nbsp;·&nbsp; <b>12 months</b> before overflow is deleted &nbsp;·&nbsp; <b>$3.99/mo</b> to keep paying Snapchat &nbsp;·&nbsp; or <b>$9.99 once</b> to own them forever &nbsp;·&nbsp;</span>
-      <span data-i18n="ticker_line"><b>5GB</b> free limit now &nbsp;·&nbsp; <b>12 months</b> before overflow is deleted &nbsp;·&nbsp; <b>$3.99/mo</b> to keep paying Snapchat &nbsp;·&nbsp; or <b>$9.99 once</b> to own them forever &nbsp;·&nbsp;</span>
+    <div class="wall" aria-label="Photos getting their real dates back">
+      <figure class="snap s1"><img src="assets/photos/p00.jpg" alt="A puppy looking up at the camera" width="600" height="750"><span class="today" data-i18n="v2_today">Today</span><span class="dstamp">'19 &nbsp;4 23</span></figure>
+      <figure class="snap s2"><img src="assets/photos/p02.jpg" alt="A sparkler at night" width="600" height="750"><span class="today" data-i18n="v2_today">Today</span><span class="dstamp">'21 12 31</span></figure>
+      <figure class="snap s3"><img src="assets/photos/p01.jpg" alt="Pizza night" width="600" height="750"><span class="today" data-i18n="v2_today">Today</span><span class="dstamp">'20 &nbsp;8 &nbsp;7</span></figure>
+      <figure class="snap s4"><img src="assets/photos/p06.jpg" alt="Rooftops at sunset" width="600" height="750"><span class="today" data-i18n="v2_today">Today</span><span class="dstamp">'23 &nbsp;6 14</span></figure>
+      <figure class="snap s5"><img src="assets/photos/p03.jpg" alt="A ferris wheel lit up at night" width="600" height="750"><span class="today" data-i18n="v2_today">Today</span><span class="dstamp">'22 &nbsp;1 &nbsp;2</span></figure>
+      <figure class="snap s6"><img src="assets/photos/p04.jpg" alt="Roasting marshmallows over a fire" width="600" height="750"><span class="today" data-i18n="v2_today">Today</span><span class="dstamp">'24 &nbsp;7 19</span></figure>
     </div>
   </div>
 </header>
 
-<!-- TRUST BAND -->
-<div class="trust-band">
-  <div class="trust-row">
-    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span> <span data-i18n="trust1">100% on your computer</span></span>
-    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/></svg></span> <span data-i18n="trust2">Nothing uploaded, no account</span></span>
-    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v10l2.4-2 2.3 2 2.3-2 2.3 2 2.3-2 2.4 2V10a7 7 0 0 0-7-7z"/><line x1="9.5" y1="10" x2="9.51" y2="10"/><line x1="14.5" y1="10" x2="14.51" y2="10"/></svg></span> <span data-i18n="trust3">Not affiliated with Snap</span></span>
-    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span> <span data-i18n="trust4">Secure Stripe checkout</span></span>
-    <span class="trust-item"><span class="ti"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></span> <span data-i18n="trust5">30-day money-back guarantee</span></span>
-  </div>
-</div>
-
-<!-- APP SHOWCASE -->
-<section class="showcase">
-  <div class="wrap">
-    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto;max-width:42rem">
-      <p class="kicker" data-i18n="showcase_kicker">The actual app</p>
-      <h2 data-i18n="showcase_h2">Four guided steps from start to finish.</h2>
-      <p data-i18n="showcase_p">Import your export, see exactly what was found, choose where everything should land, and watch it get rescued. It even merges Snapchat's folders for you.</p>
-    </div>
-    <div class="app-frame reveal">
-      <img src="assets/app-review.png" alt="SnapRescue showing 2,483 memories found, with photo, video and with-location counts and a preview list" loading="lazy">
-    </div>
-    <p class="showcase-cap reveal" data-i18n="showcase_cap">SnapRescue on Windows and Mac. Mobile coming soon.</p>
-  </div>
-</section>
-
 <!-- PROBLEM -->
 <section class="problem" id="problem">
   <div class="wrap split">
-    <div class="reveal">
-      <p class="kicker" data-i18n="problem_kicker">The catch nobody warns you about</p>
-      <h2 data-i18n="problem_h2">Your export downloads fine.<br>Then your timeline is <span class="serif-italic accent">wrecked.</span></h2>
-      <p style="font-size:19px;color:var(--ink-soft);margin-top:18px" data-i18n="home_pp1">Snapchat hands you the raw photos and videos, but the dates and GPS live in a separate <code>memories_history.json</code> file that your photo app never reads. Import them and 2,000 memories from years of your life all stack up on today's date, with nothing left to say where or when any of it happened.</p>
-      <p style="font-size:19px;color:var(--ink-soft);margin-top:16px" data-i18n="home_pp2">SnapRescue reunites every file with its real metadata before it ever touches your library.</p>
+    <div class="problem-copy">
+      <h2 data-i18n="v2_problem_h2">The export is the easy part. Then every photo says <span class="accent">today.</span></h2>
+      <p data-i18n="home_pp1">Snapchat hands you the raw photos and videos, but the dates and GPS live in a separate <code>memories_history.json</code> file that your photo app never reads. Import them and 2,000 memories from years of your life all stack up on today's date, with nothing left to say where or when any of it happened.</p>
+      <p data-i18n="home_pp2">SnapRescue reunites every file with its real metadata before it ever touches your library.</p>
+      <div class="roll-switch" role="tablist" aria-label="Camera roll">
+        <button type="button" class="on" data-roll="before" role="tab" data-i18n="v2_roll_before">As downloaded</button>
+        <button type="button" data-roll="after" role="tab" data-i18n="v2_roll_after">After SnapRescue</button>
+      </div>
     </div>
-    <div class="file-demo reveal">
-      <div style="font-family:'Erode',Georgia,serif;font-size:15px;color:var(--ink-faint);margin-bottom:10px">2019-summer-roadtrip.jpg</div>
-      <div class="file-row"><span class="k" data-i18n="fd_cd">Capture date</span><span class="v missing" data-i18n="fd_cd_bad">✗ shows “today”</span></div>
-      <div class="file-row"><span class="k" data-i18n="fd_loc">Location</span><span class="v missing" data-i18n="fd_loc_bad">✗ stripped out</span></div>
-      <div class="file-row"><span class="k" data-i18n="fd_cap">Caption</span><span class="v missing" data-i18n="fd_cap_bad">✗ separate overlay</span></div>
-      <div class="arrow-down">↓ SnapRescue ↓</div>
-      <div class="file-row"><span class="k" data-i18n="fd_cd">Capture date</span><span class="v fixed">✓ 14 Jul 2019, 7:32 pm</span></div>
-      <div class="file-row"><span class="k" data-i18n="fd_loc">Location</span><span class="v fixed" data-i18n="fd_loc_ok">✓ Byron Bay, AU (on the map)</span></div>
-      <div class="file-row"><span class="k" data-i18n="fd_cap">Caption</span><span class="v fixed" data-i18n="fd_cap_ok">✓ merged onto the photo</span></div>
+    <div class="phone roll-phone" aria-hidden="true">
+      <div class="phone-screen">
+        <div class="roll" id="roll" data-state="before">
+          <p class="roll-head" data-i18n="v2_roll_head">Photos</p>
+          <div class="roll-body" id="rollBody"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT FIXES -->
+<section id="features" class="fixes">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="v2_fix_h2">Four things your export lost. All four come back.</h2>
+
+    <article class="fix">
+      <div class="fix-copy">
+        <h3 data-i18n="feat1t">Truly correct local times</h3>
+        <p data-i18n="feat1d">Snapchat stores every moment in UTC. Other tools paste that in raw, so an evening snap abroad shows up at breakfast. SnapRescue uses each photo's GPS to convert it to the real local time it was taken.</p>
+      </div>
+      <div class="fix-vis clocks">
+        <div class="clock bad"><span class="clock-label" data-i18n="v2_clock_utc">Snapchat's list (UTC)</span><span class="digits">09:30</span></div>
+        <span class="clock-arrow">→</span>
+        <div class="clock good"><span class="clock-label" data-i18n="feat1tz">Bali, where it happened</span><span class="digits">17:30</span></div>
+      </div>
+    </article>
+
+    <article class="fix flip">
+      <div class="fix-copy">
+        <h3 data-i18n="v2_map_t">Back on the map</h3>
+        <p data-i18n="v2_map_d">The coordinates go back inside every file, so Google Photos, Apple Photos and Immich put each memory where it happened. SnapRescue's own map groups nearby memories together, so you can wander back through them.</p>
+      </div>
+      <div class="fix-vis shot"><img src="assets/app/desktop-map.jpg" alt="SnapRescue's map with memories pinned across Australia" loading="lazy" width="1600" height="1031"></div>
+    </article>
+
+    <article class="fix">
+      <div class="fix-copy">
+        <h3 data-i18n="v2_cap_t">Captions where you wrote them</h3>
+        <p data-i18n="v2_cap_d">Snapchat saves your captions and stickers as separate see-through images. SnapRescue lays each one back over its photo or video, exactly where you put it. Drag the line to compare.</p>
+      </div>
+      <div class="fix-vis capcmp" id="capCompare" style="--pos:50%">
+        <img src="assets/photos/caption-after.jpg" alt="The photo with its caption back on" loading="lazy" width="900" height="1200">
+        <div class="capcmp-before"><img src="assets/photos/caption-before.jpg" alt="The photo as Snapchat exported it, without the caption" loading="lazy" width="900" height="1200"></div>
+        <span class="capcmp-tag l" data-i18n="v2_cap_before">As downloaded</span>
+        <span class="capcmp-tag r" data-i18n="v2_cap_after">Rescued</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after" data-i18n-attr="v2_cap_slider|aria-label">
+      </div>
+    </article>
+
+    <article class="fix flip">
+      <div class="fix-copy">
+        <h3 data-i18n="v2_vid_t">Videos matched to the second</h3>
+        <p data-i18n="v2_vid_d">Most people save several snaps a day, and file names only carry the day. SnapRescue reads the clock Snapchat leaves inside every video, so each one gets its own time and its own place, not a neighbour's.</p>
+      </div>
+      <div class="fix-vis vids">
+        <div class="vid-row"><span class="vid-thumb v1"></span><span class="digits sm">08:15:30</span><span class="vid-place">Bondi</span></div>
+        <div class="vid-row"><span class="vid-thumb v2"></span><span class="digits sm">13:42:07</span><span class="vid-place">Manly</span></div>
+        <div class="vid-row"><span class="vid-thumb v3"></span><span class="digits sm">21:00:05</span><span class="vid-place">Newtown</span></div>
+      </div>
+    </article>
+
+    <div class="extras">
+      <div class="extra"><h4 data-i18n="feat2t">GPS + place names</h4><p data-i18n="feat2d">Coordinates embedded so map view works, plus a readable location like “Byron Bay” written in.</p></div>
+      <div class="extra"><h4 data-i18n="feat5t">Dated folders</h4><p data-i18n="feat5d">Auto-organized into year folders with date-named files, an instant browsable archive.</p></div>
+      <div class="extra"><h4 data-i18n="feat6t">100% private</h4><p data-i18n="feat6d">Everything runs on your computer. Nothing uploads, no account, no servers seeing your photos.</p></div>
+      <div class="extra"><h4 data-i18n="feat8t">Pause &amp; resume</h4><p data-i18n="feat8d">Got 30,000 memories? Stop any time and pick up exactly where you left off. Nothing redone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE APP -->
+<section class="showcase" id="app">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="v2_app_h2">The real app, on your computer or your phone.</h2>
+    <p class="sec-lede" data-i18n="v2_app_p">Choose your export, check what was found, and watch every memory get its date back. Then browse them by year, on this day, or on the map. One licence covers Windows, Mac and Android.</p>
+    <div class="devices">
+      <div class="window"><img src="assets/app/desktop-rescue.jpg" alt="SnapRescue on a computer, rescuing memories with their real dates" loading="lazy" width="1600" height="1031"></div>
+      <div class="phone device-phone"><div class="phone-screen"><img src="assets/app/phone-done.jpg" alt="SnapRescue on an Android phone after a rescue" loading="lazy" width="720" height="1600"></div></div>
+    </div>
+    <div class="app-strip">
+      <figure><img src="assets/app/desktop-review.jpg" alt="The review screen: memories per year and a before and after of one memory" loading="lazy" width="1600" height="1031"><figcaption data-i18n="v2_app_c1">See exactly what was found</figcaption></figure>
+      <figure><img src="assets/app/desktop-timeline.jpg" alt="The memories timeline grouped by month" loading="lazy" width="1600" height="1031"><figcaption data-i18n="v2_app_c2">Browse them by month</figcaption></figure>
+      <figure><img src="assets/app/desktop-done.jpg" alt="The finished rescue with a summary of what was restored" loading="lazy" width="1600" height="1031"><figcaption data-i18n="v2_app_c3">Know what was restored</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- HOW -->
-<section id="how">
+<section id="how" class="how">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker" data-i18n="how_kicker">Four steps, no tech skills</p>
-      <h2 data-i18n="how_h2">From a messy ZIP to a beautiful archive.</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><h3 data-i18n="how_s1t">Ask Snapchat</h3><p data-i18n="how_s1d">In the app: Settings → My Data → Submit Request. They email you a download link. (We never touch your login.)</p></div>
-      <div class="step reveal"><h3 data-i18n="how_s2t">Put it in one folder</h3><p data-i18n="how_s2d">Snapchat may send <b>several ZIP files</b>. Save them all into one folder. No need to unzip them yourself.</p></div>
-      <div class="step reveal"><h3 data-i18n="how_s3t">Point &amp; go</h3><p data-i18n="how_s3d">Open SnapRescue and select that folder. It unzips and finds every memory plus its metadata automatically.</p></div>
-      <div class="step reveal"><h3 data-i18n="how_s4t">Drag anywhere</h3><p data-i18n="how_s4d">Get tidy <code>2019/ 2020/ …</code> folders ready for Google Photos, Apple Photos, Immich, or anywhere else.</p></div>
-    </div>
-
-    <div class="reveal" style="text-align:center;margin-top:36px">
-      <a href="guide.html" class="btn btn-ghost btn-wrap" data-i18n="guide_cta">See the complete step-by-step guide, with timings →</a>
-    </div>
-
-    <!-- Detailed export guide (English only; localized pages link to the full translated guide.html above) -->
-    <div class="reveal i18n-drop" id="guide" style="margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:34px 36px;max-width:880px;margin-left:auto;margin-right:auto">
-      <h3 style="font-family:'Erode',Georgia,serif;font-size:24px;margin-bottom:6px">How to get your Snapchat export</h3>
-      <p style="color:var(--ink-soft);margin-bottom:22px">It takes two minutes to ask, and Snapchat usually emails you within a few hours (sometimes up to a day).</p>
-      <ol style="list-style:none;counter-reset:g;padding:0">
-        <li style="counter-increment:g;position:relative;padding-left:46px;margin-bottom:18px;color:var(--ink-soft);font-size:16px">
-          <span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">1</span>
-          In Snapchat, tap your <b>profile</b> → the <b>gear ⚙️ (Settings)</b> → scroll to <b>My Data</b> → <b>Submit Request</b>. (You can also do it at <a href="https://accounts.snapchat.com" style="color:var(--sunset)">accounts.snapchat.com</a>.)</li>
-        <li style="counter-increment:g;position:relative;padding-left:46px;margin-bottom:18px;color:var(--ink-soft);font-size:16px">
-          <span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">2</span>
-          Make sure <b>“Include Memories and other files”</b> is ticked, then submit. Snapchat emails you a link when it's ready.</li>
-        <li style="counter-increment:g;position:relative;padding-left:46px;margin-bottom:18px;color:var(--ink-soft);font-size:16px">
-          <span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">3</span>
-          Download the file(s) to your computer. A big library often arrives as <b>several ZIP files</b> (data-1.zip, data-2.zip…). <b>Put them all in the same folder.</b> You don't need to unzip them.</li>
-        <li style="counter-increment:g;position:relative;padding-left:46px;color:var(--ink-soft);font-size:16px">
-          <span style="position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--paper-2);color:var(--sunset-deep);font-weight:700;display:grid;place-items:center;font-size:14px">4</span>
-          Open SnapRescue, click <b>Choose folder</b>, and pick that folder (the one holding the ZIPs). That's it.</li>
-      </ol>
-      <p style="margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--ink-faint)"><b>Tip:</b> already unzipped them? That works too. Point SnapRescue at the folder that contains your media and the <code>memories_history.json</code> file.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker" data-i18n="features_kicker">Why it's the good one</p>
-      <h2 data-i18n="features_h2">Everything the others do, plus the bits they miss.</h2>
-    </div>
-    <div class="feat-grid">
-      <div class="feat hero-feat reveal">
-        <span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span>
-        <h3 data-i18n="feat1t">Truly correct local times</h3>
-        <p data-i18n="feat1d">Snapchat stores every moment in UTC. Other tools paste that in raw, so an evening snap abroad shows up at breakfast. SnapRescue uses each photo's GPS to convert it to the real local time it was taken.</p>
-        <div class="tz-demo"><span class="from">09:30</span><span class="ar">→</span><span class="to">7:30 pm</span><span style="font-size:14px;color:var(--ink-faint)" data-i18n="feat1tz">Bali, where it happened</span></div>
-      </div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><h3 data-i18n="feat2t">GPS + place names</h3><p data-i18n="feat2d">Coordinates embedded so map view works, plus a readable location like “Byron Bay” written in.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><h3 data-i18n="feat3t">Overlays merged</h3><p data-i18n="feat3d">Captions, stickers and the date overlays composited back onto the photo or video as one clean file.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span><h3 data-i18n="feat4t">Unzips it for you</h3><p data-i18n="feat4d">Snapchat sends your export as several ZIP files. Other tools make you extract every one and merge the folders by hand first. SnapRescue takes the ZIPs as they came and does that step for you.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span><h3 data-i18n="feat5t">Dated folders</h3><p data-i18n="feat5d">Auto-organized into year folders with date-named files, an instant browsable archive.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3 data-i18n="feat6t">100% private</h3><p data-i18n="feat6d">Everything runs on your computer. Nothing uploads, no account, no servers seeing your photos.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span><h3 data-i18n="feat7t">Photos &amp; videos</h3><p data-i18n="feat7d">Full metadata for both, with zero quality loss. Only the metadata changes, never the pixels.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="10" y1="9" x2="10" y2="15"/><line x1="14" y1="9" x2="14" y2="15"/></svg></span><h3 data-i18n="feat8t">Pause &amp; resume</h3><p data-i18n="feat8d">Got 30,000 memories? Stop any time and pick up exactly where you left off. Nothing redone.</p></div>
-      <div class="feat reveal"><span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></span><h3 data-i18n="feat9t">Self-hosted friendly</h3><p data-i18n="feat9d">Embedded EXIF that Immich, Jellyfin, Photoprism and any library read on import, plus optional XMP sidecars for external-library setups. Something no rival offers.</p></div>
-    </div>
+    <h2 class="sec-title" data-i18n="how_h2">From a messy ZIP to a beautiful archive.</h2>
+    <ol class="how-steps" id="guide">
+      <li><h3 data-i18n="how_s1t">Ask Snapchat</h3><p data-i18n="how_s1d">In the app: Settings → My Data → Submit Request. They email you a download link. (We never touch your login.)</p></li>
+      <li><h3 data-i18n="how_s2t">Put it in one folder</h3><p data-i18n="how_s2d">Snapchat may send <b>several ZIP files</b>. Save them all into one folder. No need to unzip them yourself.</p></li>
+      <li><h3 data-i18n="how_s3t">Point &amp; go</h3><p data-i18n="how_s3d">Open SnapRescue and select that folder. It unzips and finds every memory plus its metadata automatically.</p></li>
+      <li><h3 data-i18n="how_s4t">Drag anywhere</h3><p data-i18n="how_s4d">Get tidy <code>2019/ 2020/ …</code> folders ready for Google Photos, Apple Photos, Immich, or anywhere else.</p></li>
+    </ol>
+    <p class="how-more"><a href="guide.html" class="btn btn-ghost btn-wrap" data-i18n="guide_cta">See the complete step-by-step guide, with timings →</a></p>
   </div>
 </section>
 
@@ -292,7 +275,7 @@
         <div class="mbg" data-i18n="mbg">↩️ 30-day money-back guarantee, no questions asked</div>
       </div>
     </div>
-    <p class="guarantee"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-1.5px"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span data-i18n="guarantee">Secure checkout via Stripe · One-time payment, no subscription · Windows &amp; Mac, mobile coming soon</span></p>
+    <p class="guarantee"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-1.5px"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span data-i18n="v2_guarantee">Secure checkout via Stripe · One-time payment, no subscription · Windows, Mac and Android</span></p>
   </div>
 </section>
 
@@ -342,6 +325,7 @@
         <a href="mailto:support@snaprescue.app" data-i18n="foot_support">Support</a>
         <a href="privacy.html" data-i18n="foot_privacy">Privacy</a>
         <a href="tos.html" data-i18n="foot_terms">Terms</a>
+        <a href="credits.html" data-i18n="v2_foot_credits">Photo credits</a>
       </div>
     </div>
     <p class="foot-fine" data-i18n="foot_fine1">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc. SnapRescue only processes data you have officially exported from your own account, entirely on your own device.</p>
@@ -402,7 +386,8 @@
   </div>
 </div>
 
-<script src="main.js?v=20260711c"></script>
+<script src="home.js?v=20261006a" defer></script>
+<script src="main.js?v=20261006a"></script>
 <script type="application/ld+json" class="i18n-drop">
 {
   "@context": "https://schema.org",

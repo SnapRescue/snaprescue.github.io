@@ -23,4 +23,5 @@
   <url><loc>https://snaprescue.app/blog/import-snapchat-into-immich.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://snaprescue.app/tos.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://snaprescue.app/privacy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://snaprescue.app/credits.html</loc></url>
 </urlset>

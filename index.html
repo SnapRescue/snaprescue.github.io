@@ -41,7 +41,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
 <link rel="preload" href="assets/fonts/dseg7-classic-bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=20261006b">
+<link rel="stylesheet" href="styles.css?v=20261013a">
 </head>
 <body class="home">
 
@@ -208,15 +208,37 @@
 
 <!-- HOW -->
 <section id="how" class="how">
-  <div class="wrap">
-    <h2 class="sec-title" data-i18n="how_h2">From a messy ZIP to a beautiful archive.</h2>
-    <ol class="how-steps" id="guide">
-      <li><h3 data-i18n="how_s1t">Ask Snapchat</h3><p data-i18n="how_s1d">In the app: Settings → My Data → Submit Request. They email you a download link. (We never touch your login.)</p></li>
-      <li><h3 data-i18n="how_s2t">Put it in one folder</h3><p data-i18n="how_s2d">Snapchat may send <b>several ZIP files</b>. Save them all into one folder. No need to unzip them yourself.</p></li>
-      <li><h3 data-i18n="how_s3t">Point &amp; go</h3><p data-i18n="how_s3d">Open SnapRescue and select that folder. It unzips and finds every memory plus its metadata automatically.</p></li>
-      <li><h3 data-i18n="how_s4t">Drag anywhere</h3><p data-i18n="how_s4d">Get tidy <code>2019/ 2020/ …</code> folders ready for Google Photos, Apple Photos, Immich, or anywhere else.</p></li>
-    </ol>
-    <p class="how-more"><a href="guide.html" class="btn btn-ghost btn-wrap" data-i18n="guide_cta">See the complete step-by-step guide, with timings →</a></p>
+  <div class="wrap how-grid">
+    <!-- english voice + burned-in english captions, so the localized pages leave it out -->
+    <figure class="how-film i18n-drop" id="howFilm">
+      <div class="film-frame">
+        <video muted playsinline loop controls preload="none" width="720" height="1280"
+          poster="assets/video/laptop-walkthrough.jpg"
+          aria-label="A 50 second walkthrough of SnapRescue on a laptop: drop in the Snapchat export, hit start, and every memory gets its date back, filed by year">
+          <source src="assets/video/laptop-walkthrough.mp4" type="video/mp4">
+        </video>
+        <button class="film-play" type="button" aria-label="Play the walkthrough"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></button>
+        <button class="film-sound" type="button" aria-pressed="false">
+          <svg class="i-off" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+          <svg class="i-on" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>
+          <span>Sound on</span>
+        </button>
+        <span class="film-bar" aria-hidden="true"><i></i></span>
+      </div>
+      <figcaption class="film-meta"><span class="film-time" aria-hidden="true"><b id="filmNow">0:00</b><span class="sep">/</span>0:52</span><span>The real app, start to finish.</span></figcaption>
+    </figure>
+
+    <div class="how-copy">
+      <h2 class="sec-title" data-i18n="how_h2">From a messy ZIP to a beautiful archive.</h2>
+      <p class="sec-lede i18n-drop">Fifty seconds on a real laptop with a real export. Tap a step to jump to it.</p>
+      <ol class="how-steps" id="guide">
+        <li data-at="5.6" data-end="8.5"><h3 data-i18n="how_s1t">Ask Snapchat</h3><p data-i18n="how_s1d">In the app: Settings → My Data → Submit Request. They email you a download link. (We never touch your login.)</p></li>
+        <li data-at="8.5" data-end="11.65"><h3 data-i18n="how_s2t">Put it in one folder</h3><p data-i18n="how_s2d">Snapchat may send <b>several ZIP files</b>. Save them all into one folder. No need to unzip them yourself.</p></li>
+        <li data-at="11.65" data-end="33.5"><h3 data-i18n="how_s3t">Point &amp; go</h3><p data-i18n="how_s3d">Open SnapRescue and select that folder. It unzips and finds every memory plus its metadata automatically.</p></li>
+        <li data-at="33.5" data-end="39"><h3 data-i18n="how_s4t">Drag anywhere</h3><p data-i18n="how_s4d">Get tidy <code>2019/ 2020/ …</code> folders ready for Google Photos, Apple Photos, Immich, or anywhere else.</p></li>
+      </ol>
+      <p class="how-more"><a href="guide.html" class="btn btn-ghost btn-wrap" data-i18n="guide_cta">See the complete step-by-step guide, with timings →</a></p>
+    </div>
   </div>
 </section>
 
@@ -398,7 +420,7 @@
   </div>
 </div>
 
-<script src="home.js?v=20261006a" defer></script>
+<script src="home.js?v=20261013a" defer></script>
 <script src="main.js?v=20261006b"></script>
 <script type="application/ld+json" class="i18n-drop">
 {

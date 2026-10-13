@@ -41,7 +41,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&amp;display=swap" rel="stylesheet"/>
 <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
 <link as="font" crossorigin="" href="../assets/fonts/dseg7-classic-bold.woff2" rel="preload" type="font/woff2"/>
-<link href="../styles.css?v=20261006b" rel="stylesheet"/>
+<link href="../styles.css?v=20261013a" rel="stylesheet"/>
 </head>
 <body class="home">
 <!-- NAV -->
@@ -58,7 +58,7 @@
 <button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">Français</span> <span class="chev">▾</span></button>
 <div class="lang-menu" id="langMenu">
 <a class="lang-opt" data-lang="en" href="https://snaprescue.app/index.html">English</a>
-<a class="lang-opt on" data-lang="fr" href="https://snaprescue.app/fr/index.html">Français</a>
+<a class="on lang-opt" data-lang="fr" href="https://snaprescue.app/fr/index.html">Français</a>
 <a class="lang-opt" data-lang="de" href="https://snaprescue.app/de/index.html">Deutsch</a>
 <a class="lang-opt" data-lang="es" href="https://snaprescue.app/es/index.html">Español</a>
 <a class="lang-opt" data-lang="nl" href="https://snaprescue.app/nl/index.html">Nederlands</a>
@@ -195,15 +195,20 @@
 </section>
 <!-- HOW -->
 <section class="how" id="how">
-<div class="wrap">
+<div class="wrap how-grid">
+<!-- english voice + burned-in english captions, so the localized pages leave it out -->
+
+<div class="how-copy">
 <h2 class="sec-title" data-i18n="how_h2">D'un ZIP en désordre à une belle archive.</h2>
+
 <ol class="how-steps" id="guide">
-<li><h3 data-i18n="how_s1t">Demandez à Snapchat</h3><p data-i18n="how_s1d">Dans l'appli : Réglages → Mes données → Envoyer la demande. Ils vous envoient un lien de téléchargement. (Nous ne touchons jamais à votre compte.)</p></li>
-<li><h3 data-i18n="how_s2t">Mettez tout dans un dossier</h3><p data-i18n="how_s2d">Snapchat peut envoyer <b>plusieurs fichiers ZIP</b>. Mettez-les tous dans un seul dossier. Pas besoin de les décompresser vous-même.</p></li>
-<li><h3 data-i18n="how_s3t">Pointez et lancez</h3><p data-i18n="how_s3d">Ouvrez SnapRescue et sélectionnez ce dossier. Il décompresse et trouve chaque souvenir avec ses métadonnées, automatiquement.</p></li>
-<li><h3 data-i18n="how_s4t">Glissez où vous voulez</h3><p data-i18n="how_s4d">Obtenez des dossiers nets <code>2019/ 2020/ …</code> prêts pour Google Photos, Apple Photos, Immich ou ailleurs.</p></li>
+<li data-at="5.6" data-end="8.5"><h3 data-i18n="how_s1t">Demandez à Snapchat</h3><p data-i18n="how_s1d">Dans l'appli : Réglages → Mes données → Envoyer la demande. Ils vous envoient un lien de téléchargement. (Nous ne touchons jamais à votre compte.)</p></li>
+<li data-at="8.5" data-end="11.65"><h3 data-i18n="how_s2t">Mettez tout dans un dossier</h3><p data-i18n="how_s2d">Snapchat peut envoyer <b>plusieurs fichiers ZIP</b>. Mettez-les tous dans un seul dossier. Pas besoin de les décompresser vous-même.</p></li>
+<li data-at="11.65" data-end="33.5"><h3 data-i18n="how_s3t">Pointez et lancez</h3><p data-i18n="how_s3d">Ouvrez SnapRescue et sélectionnez ce dossier. Il décompresse et trouve chaque souvenir avec ses métadonnées, automatiquement.</p></li>
+<li data-at="33.5" data-end="39"><h3 data-i18n="how_s4t">Glissez où vous voulez</h3><p data-i18n="how_s4d">Obtenez des dossiers nets <code>2019/ 2020/ …</code> prêts pour Google Photos, Apple Photos, Immich ou ailleurs.</p></li>
 </ol>
 <p class="how-more"><a class="btn btn-ghost btn-wrap" data-i18n="guide_cta" href="guide.html">Voir le guide complet étape par étape, avec les durées →</a></p>
+</div>
 </div>
 </section>
 <!-- COMPARE -->
@@ -377,7 +382,7 @@
 <p class="modal-fine" data-i18n="modal_fine">Rien n'est envoyé · Sans compte · <a href="#faq" id="dl-why">Pourquoi cet avertissement Windows ?</a></p>
 </div>
 </div>
-<script defer="" src="../home.js?v=20261006a"></script>
+<script defer="" src="../home.js?v=20261013a"></script>
 <script src="../main.js?v=20261006b"></script>
 
 </body>

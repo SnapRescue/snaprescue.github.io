@@ -80,4 +80,95 @@
     range.addEventListener("input", set);
     set();
   }
+
+  // ── laptop walkthrough: plays muted while on screen, the steps follow it ─
+  var film = document.getElementById("howFilm");
+  var v = film && film.querySelector("video");
+  if (v) {
+    var grid = film.closest(".how-grid");
+    var steps = [].slice.call(document.querySelectorAll("#guide li[data-at]"));
+    var snd = film.querySelector(".film-sound");
+    var now = document.getElementById("filmNow");
+    var bar = film.querySelector(".film-bar i");
+    var ev = function (name, p) { if (typeof track === "function") track(name, Object.assign({ video: "laptop-walkthrough" }, p || {})); };
+    var mmss = function (t) { t = Math.floor(t || 0); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+    // no autoplay for reduced motion or data saver, they get the play button
+    var still = (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+                (navigator.connection && navigator.connection.saveData);
+    var userPaused = false, heard = false, started = false, raf = 0;
+    v.controls = false; // native controls are only the no-JS fallback
+
+    var paint = function () {
+      var t = v.currentTime, d = v.duration || 52.2, any = false;
+      steps.forEach(function (li) {
+        var a = +li.dataset.at, b = +li.dataset.end, on = t >= a && t < b;
+        li.style.setProperty("--p", t <= a ? 0 : t >= b ? 1 : ((t - a) / (b - a)).toFixed(3));
+        li.classList.toggle("on", on);
+        any = any || on;
+      });
+      // only dim the other steps while one of them is actually on screen
+      grid.classList.toggle("is-playing", any && !v.paused);
+      now.textContent = mmss(t);
+      bar.style.transform = "scaleX(" + Math.min(t / d, 1) + ")";
+    };
+    var loop = function () { paint(); raf = requestAnimationFrame(loop); };
+    var setPlaying = function (on) {
+      film.classList.toggle("playing", on);
+      cancelAnimationFrame(raf);
+      if (on) loop(); else paint();
+    };
+    v.addEventListener("play", function () {
+      setPlaying(true);
+      if (!started) { started = true; ev("walkthrough_play"); }
+    });
+    v.addEventListener("pause", function () { setPlaying(false); });
+    v.addEventListener("seeked", paint);
+    var play = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+
+    film.querySelector(".film-frame").addEventListener("click", function (e) {
+      if (snd.contains(e.target)) return;
+      if (v.paused) { userPaused = false; play(); } else { userPaused = true; v.pause(); }
+    });
+    snd.addEventListener("click", function () {
+      v.muted = !v.muted;
+      snd.setAttribute("aria-pressed", String(!v.muted));
+      snd.querySelector("span").textContent = v.muted ? "Sound on" : "Mute";
+      // first unmute starts it over, the hook is in the first few seconds
+      if (!v.muted && !heard) { heard = true; v.currentTime = 0; ev("walkthrough_sound"); }
+      userPaused = false; play();
+    });
+
+    steps.forEach(function (li, i) {
+      li.setAttribute("role", "button");
+      li.tabIndex = 0;
+      li.title = "Play this step";
+      var at = document.createElement("span");
+      at.className = "step-at";
+      at.setAttribute("aria-hidden", "true");
+      at.innerHTML = '<svg viewBox="0 0 10 10"><path d="M2 1v8l7-4z" fill="currentColor"/></svg>' + mmss(+li.dataset.at);
+      li.appendChild(at);
+      var jump = function () {
+        v.currentTime = +li.dataset.at;
+        userPaused = false; play();
+        ev("walkthrough_step", { step: i + 1 });
+        // on a phone the film sits above the list, bring it back into view
+        var r = film.getBoundingClientRect();
+        if (r.bottom < 80 || r.top > innerHeight - 80) film.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "center" });
+      };
+      li.addEventListener("click", jump);
+      li.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jump(); }
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) { if (!v.paused) v.pause(); }
+          else if (!still && !userPaused) play();
+        });
+      }, { threshold: 0.45 }).observe(film);
+    }
+    paint();
+  }
 })();

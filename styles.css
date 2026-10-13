@@ -686,10 +686,65 @@ body.has-cd-bar nav { top: 40px; }
 .how-steps p { color: var(--ink-faint); font-size: 15.5px; }
 .how-more { margin-top: 44px; }
 
+/* walkthrough video beside the steps. the film is i18n-drop, so on the
+   localized pages :has() doesn't match and the steps stay 4 across */
+.how-grid:has(.how-film) { display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: clamp(48px, 7vw, 112px); align-items: center; }
+.how-grid:has(.how-film) .how-steps { grid-template-columns: 1fr; gap: 0; margin-top: clamp(28px, 3.5vw, 40px); }
+.how-grid:has(.how-film) .how-steps li { display: grid; grid-template-columns: 50px 1fr; padding: 20px 64px 22px 0; transition: opacity .35s; }
+.how-grid:has(.how-film) .how-steps li::before { grid-row: 1 / span 2; margin: 6px 0 0; transition: color .3s, text-shadow .3s; }
+.how-grid:has(.how-film) .how-steps h3 { font-size: 21px; margin-bottom: 4px; }
+.how-grid:has(.how-film) .how-steps li::after { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px; background: var(--sunset); transform: scaleX(var(--p, 0)); transform-origin: left; }
+.how-grid.is-playing .how-steps li:not(.on) { opacity: .5; }
+.how-steps li.on::before { color: var(--stamp); text-shadow: 0 0 8px var(--stamp-glow); }
+.how-steps li[role="button"] { cursor: pointer; }
+.how-grid.is-playing .how-steps li:not(.on):hover { opacity: 1; }
+.how-steps li[role="button"]:hover h3 { color: var(--sunset); }
+.how-steps h3 { transition: color .2s; }
+.step-at { position: absolute; right: 0; top: 25px; display: inline-flex; align-items: center; gap: 6px; font-family: "DSEG7", ui-monospace, monospace; font-size: 12px; letter-spacing: .04em; color: var(--ink-faint); }
+.step-at svg { width: 9px; height: 9px; opacity: 0; transform: translateX(3px); transition: opacity .2s, transform .2s; }
+.how-steps li:hover .step-at svg, .how-steps li:focus-visible .step-at svg, .how-steps li.on .step-at svg { opacity: 1; transform: none; }
+.how-steps li.on .step-at { color: var(--stamp); }
+
+.how-film { margin: 0; position: relative; }
+.home .how { overflow-x: clip; } /* the glow is wider than a phone screen */
+/* soft sunset glow behind the frame */
+.how-film::before { content: ""; position: absolute; inset: 8% -16% 18%; background: radial-gradient(closest-side, color-mix(in srgb, var(--sunset) 60%, transparent), transparent 78%); filter: blur(34px); opacity: .5; pointer-events: none; }
+.film-frame { position: relative; aspect-ratio: 9 / 16; border-radius: 28px; overflow: hidden; background: #f0561c; isolation: isolate; cursor: pointer;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 14%, transparent), 0 2px 6px rgba(0, 0, 0, .16), 0 44px 80px -30px rgba(120, 36, 8, .6); }
+.film-frame::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14); pointer-events: none; }
+.film-frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.film-play, .film-sound { position: absolute; z-index: 2; color: #fff; background: rgba(22, 17, 13, .5); border: 1px solid rgba(255, 255, 255, .22);
+  -webkit-backdrop-filter: blur(12px) saturate(1.3); backdrop-filter: blur(12px) saturate(1.3); cursor: pointer; font: inherit; }
+.film-play { left: 50%; top: 50%; width: 72px; height: 72px; margin: -36px 0 0 -36px; border-radius: 50%; display: grid; place-items: center; transition: opacity .3s, transform .3s; }
+.film-play svg { margin-left: 3px; }
+.film-play:hover { transform: scale(1.06); }
+.how-film.playing .film-play { opacity: 0; transform: scale(.85); pointer-events: none; }
+.film-sound { right: 14px; bottom: 16px; display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px 8px 11px; border-radius: 999px; font-size: 13.5px; font-weight: 600; transition: background .2s; }
+.film-sound:hover { background: rgba(22, 17, 13, .72); }
+.film-sound .i-on, .film-sound[aria-pressed="true"] .i-off { display: none; }
+.film-sound[aria-pressed="true"] .i-on { display: block; }
+.film-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255, 255, 255, .2); z-index: 2; }
+.film-bar i { display: block; height: 100%; background: #fff; transform: scaleX(0); transform-origin: left; }
+.film-meta { position: relative; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 18px; padding: 0 6px; font-family: "Erode", serif; font-style: italic; font-size: 15.5px; color: var(--ink-faint); }
+.film-time { font-family: "DSEG7", ui-monospace, monospace; font-style: normal; font-size: 14px; letter-spacing: .04em; white-space: nowrap; }
+.film-time b { color: var(--stamp); text-shadow: 0 0 8px var(--stamp-glow); }
+/* the glowing stamp orange washes out on the light paper */
+html:not([data-theme="dark"]) .how-steps li.on::before, html:not([data-theme="dark"]) .how-steps li.on .step-at,
+html:not([data-theme="dark"]) .film-time b { color: var(--sunset); text-shadow: none; }
+.film-time .sep { font-family: "Hanken Grotesk", sans-serif; margin: 0 6px; opacity: .6; }
+
 @media (max-width: 900px) {
   .home .problem .split, .fix { grid-template-columns: 1fr; }
   .fix.flip .fix-copy { order: 0; }
   .how-steps { grid-template-columns: 1fr 1fr; }
+  /* phone: title, then the film, then the steps it walks through */
+  .how-grid:has(.how-film) { grid-template-columns: 1fr; gap: 0; }
+  .how-grid:has(.how-film) .how-copy { display: contents; }
+  .how-grid:has(.how-film) .sec-title { order: 1; }
+  .how-grid:has(.how-film) .sec-lede { order: 2; }
+  .how-film { order: 3; width: min(330px, 80vw); margin: 40px auto 8px; }
+  .how-grid:has(.how-film) .how-steps { order: 4; }
+  .how-grid:has(.how-film) .how-more { order: 5; }
   .app-strip { grid-template-columns: 1fr; }
   .devices { padding-right: 0; padding-bottom: 60px; }
   .device-phone { width: 42%; bottom: 0; right: -6px; }

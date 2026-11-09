@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YTVRQTKCQN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTVRQTKCQN');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Why Your Snapchat Memories Show the Wrong Time After Export</title>
+<meta content="Fixed the dates on your Snapchat export and the times are still hours out? Snapchat records every Memory in UTC. Here is why a night out can show up at 10 in the morning, and how to get the real local time back." name="description"/>
+<meta content="Why your Snapchat Memories show the wrong time after export" property="og:title"/><meta content="Fixed the dates on your Snapchat export and the times are still hours out? Snapchat records every Memory in UTC. Here is why a night out can show up at 10 in the morning, and how to get the real local time back." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://snaprescue.app/assets/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://api.fontshare.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=erode@500,600,501,601&amp;display=swap" rel="stylesheet"/>
+<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<link href="../styles.css?v=20261110a" rel="stylesheet"/>
+<link href="https://snaprescue.app/blog/snapchat-export-wrong-time.html" rel="canonical"/>
+</head>
+<body class="has-cd-bar">
+<nav id="nav">
+<div class="wrap nav-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="nav-links">
+<a class="hide-sm" data-i18n="nav_deadline" href="../deadline.html">The 5GB rule</a>
+<a class="hide-sm" data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Pricing</a>
+<div class="lang-pick"><button aria-haspopup="true" class="lang-btn" id="langBtn"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"></path></svg> <span class="lbl" id="langLabel">English</span> <span class="chev">▾</span></button><div class="lang-menu" id="langMenu"><a class="lang-opt on" data-lang="en" href="https://snaprescue.app/blog/snapchat-export-wrong-time.html">English</a><a class="lang-opt" data-lang="fr" href="https://snaprescue.app/fr/blog/index.html">Français</a><a class="lang-opt" data-lang="de" href="https://snaprescue.app/de/blog/index.html">Deutsch</a><a class="lang-opt" data-lang="es" href="https://snaprescue.app/es/blog/index.html">Español</a><a class="lang-opt" data-lang="nl" href="https://snaprescue.app/nl/blog/index.html">Nederlands</a></div></div><a class="btn btn-primary nav-cta" data-i18n="nav_getfree" href="../index.html#download">Get it free</a>
+</div>
+</div>
+</nav>
+<article class="page-head">
+<div class="wrap">
+<div class="article-head reveal">
+<p class="kicker">The problem</p>
+<h1>Why your Snapchat Memories show the wrong time after export</h1>
+<p class="article-meta">Updated November 2026 · about 4 min read</p>
+</div>
+<div class="prose reveal">
+<p>You fixed the dates on your Snapchat export, or a tool did it for you, and the photos are finally on the right day. Then you look closer. Dinner happened at ten in the morning. A sunrise is filed under the night before. Some photos have slipped onto the day after.</p>
+<p>Nothing is broken. The times are correct. They are just not in your time zone.</p>
+<h2>Snapchat records every Memory in UTC</h2>
+<p>The list of Memories inside your export gives each one a date and time in UTC, the reference time zone that computers use. It does not record what the clock said where you were standing.</p>
+<p>If you live in London in winter, UTC and local time are the same and you never notice. Anywhere else, every time is out by your distance from UTC.</p>
+<h2>A real example</h2>
+<p>One Memory in our test library is recorded as <code>2023-01-14 10:00:05 UTC</code> and was taken in Newtown, Sydney. Sydney is 11 hours ahead of UTC in summer, so the real moment was 9:00 PM. Copy the UTC time across as it is and a night out is stamped 10 AM.</p>
+<p>The same gap moves the date. Anything taken in Sydney before 11 AM is still the previous day in UTC, so a breakfast photo lands on yesterday.</p>
+<h2>Why a single fixed offset does not fix it</h2>
+<p>The quick fix is to add your time zone's offset to everything. That goes wrong in two ways:</p>
+<ul>
+<li><strong>Travel.</strong> Photos from a trip get your home offset, not the offset of where you were.</li>
+<li><strong>Daylight saving.</strong> The offset changes during the year, so half your library ends up an hour out.</li>
+</ul>
+<h2>What does fix it</h2>
+<p>The export also records where most Memories were taken. From the location you can work out the time zone, and from the time zone and the date you can work out the exact offset on that day, daylight saving included.</p>
+<p>That is what SnapRescue does. For each Memory it looks up the time zone from the GPS position and writes the real local time into the file. A photo taken at 7 PM on holiday is saved as 7 PM, wherever home is.</p>
+<div class="callout">
+<p><strong>One limit:</strong> a Memory with no location has nothing to look up. For those, SnapRescue uses the time zone of the device you run it on. If you took them at home, that is right. If you took them abroad with location off, they will be out by the difference.</p>
+</div>
+<h2>How to check yours</h2>
+<p>Pick a Memory where you know roughly when it happened, such as a sunset or a birthday dinner, and look at the time your photo app shows. If it is out by a whole number of hours, you are looking at UTC.</p>
+<p>SnapRescue is free for your first 100 files, so you can run it on your export and compare a few before paying anything.</p>
+<div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
+<a class="btn btn-primary btn-lg" href="../index.html#download">Try SnapRescue free</a>
+<a class="btn btn-ghost btn-lg" href="why-snapchat-export-has-no-dates.html">Why the dates are missing →</a>
+</div></div>
+</div>
+</article>
+<footer>
+<div class="wrap">
+<div class="foot-in">
+<a class="logo" href="../index.html"><span class="mark"><svg fill="none" height="15" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span> SnapRescue</a>
+<div class="foot-links">
+<a data-i18n="nav_deadline" href="../deadline.html">The 5GB rule</a>
+<a data-i18n="nav_blog" href="index.html">Blog</a>
+<a data-i18n="nav_pricing" href="../index.html#pricing">Pricing</a>
+<a data-i18n="foot_privacy" href="../privacy.html">Privacy</a>
+<a data-i18n="foot_terms" href="../tos.html">Terms</a>
+</div>
+</div>
+<p class="foot-fine" data-i18n="foot_fine1">SnapRescue is an independent tool and is not affiliated with, endorsed by, or sponsored by Snap Inc. “Snapchat” is a trademark of Snap Inc.</p>
+</div>
+</footer>
+<script src="../main.js?v=20261110a"></script>
+<script class="i18n-drop" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why Your Snapchat Memories Show the Wrong Time After Export",
+  "description": "Fixed the dates on your Snapchat export and the times are still hours out? Snapchat records every Memory in UTC. Here is why a night out can show up at 10 in the morning, and how to get the real local time back.",
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "inLanguage": "en",
+  "image": "https://snaprescue.app/assets/og-image.png",
+  "author": {
+    "@id": "https://snaprescue.app/#org"
+  },
+  "publisher": {
+    "@id": "https://snaprescue.app/#org"
+  },
+  "mainEntityOfPage": "https://snaprescue.app/blog/snapchat-export-wrong-time.html"
+}
+</script>
+</body>
+</html>

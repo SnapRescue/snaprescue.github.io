@@ -89,6 +89,14 @@ def translate(soup, dic):
                 el[attr] = dic[key]
 
 
+def set_canonical(soup, lang):
+    # the page's own hreflang url is its canonical, so the two can't drift apart
+    canon = soup.find("link", rel="canonical")
+    own = soup.find("link", rel="alternate", hreflang=lang)
+    if canon and own and not canon.get("data-i18n-attr"):
+        canon["href"] = own["href"]
+
+
 def main():
     with open(os.path.join(ROOT, "i18n", "strings.json"), encoding="utf-8") as f:
         strings = json.load(f)
@@ -108,6 +116,7 @@ def main():
             translate(soup, dic)
             rewrite_paths(soup)
             set_dropdown(soup, lang)
+            set_canonical(soup, lang)
             out = os.path.join(ROOT, lang, page)
             os.makedirs(os.path.dirname(out), exist_ok=True)
             with open(out, "w", encoding="utf-8") as f:

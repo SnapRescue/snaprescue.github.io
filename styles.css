@@ -214,7 +214,7 @@ html:not([data-theme="dark"]) .theme-btn .icon-sun { display: none; }
 section { padding: 92px 0; }
 .sec-head { max-width: 40rem; margin-bottom: 54px; }
 .kicker { font-family: "Erode", Georgia, serif; font-style: italic; font-weight: 500; font-size: 20px; color: var(--sunset-deep); margin-bottom: 14px; }
-.sec-head h2 { font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; }
+.sec-head h1, .sec-head h2 { font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; }
 .sec-head p { font-size: 19px; color: var(--ink-soft); }
 
 /* Problem split */
@@ -354,7 +354,7 @@ footer { padding: 56px 0 40px; border-top: 1px solid var(--line); margin-top: 40
   .stamp { font-size: 12px; padding: 7px 12px; top: -10px; }
 
   /* Sections that get cramped */
-  .sec-head h2 { font-size: clamp(28px, 8vw, 38px); }
+  .sec-head h1, .sec-head h2 { font-size: clamp(28px, 8vw, 38px); }
   .file-demo { padding: 22px; }
   .cta-band { margin: 0 16px; padding: 48px 22px; border-radius: 24px; }
   .ticker span { font-size: 14px; }

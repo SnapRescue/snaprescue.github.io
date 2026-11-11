@@ -113,6 +113,10 @@ def main():
                 soup.html["lang"] = lang
             for el in soup.select(".i18n-drop"):
                 el.decompose()
+            # data-langs="de fr": block only exists in those languages (and English)
+            for el in soup.select("[data-langs]"):
+                if lang not in el["data-langs"].split():
+                    el.decompose()
             translate(soup, dic)
             rewrite_paths(soup)
             set_dropdown(soup, lang)

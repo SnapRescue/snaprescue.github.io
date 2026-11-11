@@ -50,7 +50,7 @@
 <div class="article-head reveal">
 <p class="kicker" data-i18n="ba3_1">How-to</p>
 <h1 data-i18n="ba3_2">How to export all your Snapchat Memories</h1>
-<p class="article-meta">Updated November 2026 · about 4 min read</p>
+<p class="article-meta">Updated November 2026 · about 6 min read</p>
 </div>
 <div class="prose reveal">
 <p data-i18n="ba3_3">Getting a full copy of your Memories out of Snapchat is free. The process is a little hidden and the files arrive in an awkward shape, so here is the whole thing, start to finish.</p>
@@ -68,6 +68,30 @@
 <h2 data-i18n="ba3_13">Step 5: Restore the dates and locations</h2>
 <p data-i18n="ba3_14">If you import the export as-is, every photo will show today's date with no location, because Snapchat strips that metadata out. (Here is <a href="why-snapchat-export-has-no-dates.html">why that happens</a>.) To fix it, open SnapRescue, click <strong>Choose folder</strong>, and select the folder holding your ZIPs. It unpacks everything, reads the hidden <code>memories_history</code> file, and writes the real capture date, GPS and captions back into each photo and video, then sorts them into dated folders.</p>
 <p data-i18n="ba3_15">From there you can drag the rescued folders straight into <a href="import-snapchat-into-google-apple-photos.html">Google Photos or Apple Photos</a>, or <a href="import-snapchat-into-immich.html">Immich</a> and other self-hosted libraries.</p>
+<div class="i18n-drop">
+<h2>What is inside the export</h2>
+<p>Open one of the ZIPs and you will find a few things mixed together:</p>
+<ul>
+<li><strong>Your photos and videos</strong>, with long random file names and no dates.</li>
+<li><strong>Overlay files.</strong> Captions, stickers and drawings are saved as separate images next to the photo or video they belong to.</li>
+<li><strong>memories_history</strong>, the list that holds the real date, time and location of every Memory.</li>
+<li><strong>Account data</strong> such as chat history and login records, if you asked for more than Memories.</li>
+</ul>
+<p>Nothing in there is damaged. It is just not in a shape a photo app can use, which is what Step 5 fixes.</p>
+<h2>Before you start: check your disk space</h2>
+<p>A long-time Snapchat user can easily have an export of 20GB or more. You need room for the ZIPs, room for the unpacked files and room for the rescued copies, so aim for about three times the size of the download free on your drive. An external drive works fine. Once you have checked the rescued copies, you can delete the ZIPs.</p>
+<h2>Common problems</h2>
+<ul>
+<li><strong>The export has no photos in it.</strong> The Memories option was off when you submitted. Request again with it on. The wording changes between app versions, so look for the switch that mentions Memories or saved media.</li>
+<li><strong>The download link stopped working.</strong> The link in Snapchat's email does not last forever. If it has expired, submit a new request. It costs nothing.</li>
+<li><strong>Only some of the ZIPs downloaded.</strong> Check the numbering. If you have parts 1, 2 and 4, part 3 is missing and so are the Memories inside it. Download it again before you run anything.</li>
+<li><strong>My Eyes Only is missing.</strong> Those snaps are locked behind your passcode. Move the ones you want to keep out of My Eyes Only in the app, then request the export.</li>
+<li><strong>The email never arrived.</strong> Check spam, then check the same My Data page in the app. A finished export is listed there too.</li>
+</ul>
+<h2>Does exporting remove anything from Snapchat?</h2>
+<p>No. The export is a copy. Your Memories stay in the app exactly as they were, and you can request another export whenever you like. Many people run one now and another later for the snaps they save in between.</p>
+<p>On an Android phone and would like to skip the computer? <a href="fix-snapchat-memories-on-android.html">Here is the Android route</a>.</p>
+</div>
 <div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
 <a class="btn btn-primary btn-lg" data-i18n="ba3_16" href="../index.html#download">Download SnapRescue free</a>
 <a class="btn btn-ghost btn-lg" data-i18n="ba3_17" href="../deadline.html">What happens in January 2027? →</a>
@@ -98,7 +122,7 @@
   "headline": "How to Export All Your Snapchat Memories (Step by Step, 2026)",
   "description": "A step-by-step guide to requesting and downloading all your Snapchat Memories, including the one setting people miss and what the ZIP files contain.",
   "datePublished": "2026-06-21",
-  "dateModified": "2026-11-10",
+  "dateModified": "2026-11-11",
   "inLanguage": "en",
   "image": "https://snaprescue.app/assets/og-image.png",
   "author": {

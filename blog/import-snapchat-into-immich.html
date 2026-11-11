@@ -50,7 +50,7 @@
 <div class="article-head reveal">
 <p class="kicker" data-i18n="ba5_1">Self-hosted</p>
 <h1 data-i18n="ba5_2">Import Snapchat Memories into Immich</h1>
-<p class="article-meta">Updated June 2026 · about 4 min read</p>
+<p class="article-meta">Updated November 2026 · about 6 min read</p>
 </div>
 <div class="prose reveal">
 <p data-i18n="ba5_3">If you run your own photo library, you already know the drill: the timeline is only as good as the metadata inside each file. Snapchat's export has none, so dropping it into Immich straight from the ZIP gives you a wall of photos all dated import day with no location. Here is how to do it right.</p>
@@ -66,6 +66,22 @@
 <p data-i18n="ba5_11">One thing to remember: an XMP sidecar is only ever read next to its photo or video. Keep each <code>.xmp</code> in the same folder as the file it belongs to, and do not upload sidecars on their own.</p>
 <h2 data-i18n="ba5_12">Works the same for Photoprism, Jellyfin and others</h2>
 <p data-i18n="ba5_13">Anything that reads standard embedded EXIF and QuickTime metadata will pick these files up correctly, so the same rescued folders drop cleanly into Photoprism, Jellyfin, digiKam, or a plain dated folder structure on a NAS. The metadata travels inside the files, so it survives moves and re-imports.</p>
+<div class="i18n-drop">
+<h2>Check the result after the first import</h2>
+<p>Import one year before you import everything. Then look at three places in Immich:</p>
+<ul>
+<li><strong>The timeline.</strong> The photos should be spread across the year, not stacked on import day.</li>
+<li><strong>The map.</strong> Memories that had a location should appear as pins.</li>
+<li><strong>The info panel of a single photo.</strong> It should show the capture date, the time and the place.</li>
+</ul>
+<p>If the timeline is right but the times look hours out, read <a href="snapchat-export-wrong-time.html">why exported Memories show the wrong time</a>. SnapRescue writes local time worked out from each Memory's location, so this should not happen with rescued files.</p>
+<h2>If you already uploaded the raw export</h2>
+<p>Immich skips a file it already has by comparing checksums. That does not help here. A rescued file has metadata written into it, so it is no longer identical to the raw one and Immich keeps both. Delete the raw copies first. They are easy to find because they all share the same import day.</p>
+<h2>Storage templates and file names</h2>
+<p>If you use Immich's storage template to file assets into year and month folders, it uses the capture date. Rescued files carry the real one, so the template sorts them correctly with no extra work. Raw export files would all be filed under the month you imported them.</p>
+<h2>Memories with no location</h2>
+<p>Some Memories were saved with location turned off, and Snapchat has no coordinates for them. They still get their real date, so they sit in the right spot on the timeline. They just will not show on the map.</p>
+</div>
 <div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
 <a class="btn btn-primary btn-lg" data-i18n="ba5_14" href="../index.html#download">Download SnapRescue</a>
 <a class="btn btn-ghost btn-lg" data-i18n="ba5_15" href="../index.html#features">See all features →</a>
@@ -96,7 +112,7 @@
   "headline": "How to Import Snapchat Memories into Immich (Self-Hosted, with Dates and GPS)",
   "description": "For self-hosters: how to bring Snapchat Memories into Immich with the real capture dates, GPS and captions embedded, plus optional XMP sidecars for external libraries.",
   "datePublished": "2026-06-21",
-  "dateModified": "2026-06-21",
+  "dateModified": "2026-11-11",
   "inLanguage": "en",
   "image": "https://snaprescue.app/assets/og-image.png",
   "author": {

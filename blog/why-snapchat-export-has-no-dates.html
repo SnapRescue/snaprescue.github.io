@@ -50,7 +50,7 @@
 <div class="article-head reveal">
 <p class="kicker" data-i18n="ba2_1">The problem</p>
 <h1 data-i18n="ba2_2">Why your Snapchat export has no dates or location</h1>
-<p class="article-meta">Updated June 2026 · about 4 min read</p>
+<p class="article-meta">Updated November 2026 · about 6 min read</p>
 </div>
 <div class="prose reveal">
 <p data-i18n="ba2_3">You did everything right. You requested your data from Snapchat, you downloaded the ZIP, and you opened your photos. And every single one says it was taken <strong>today</strong>, with no location at all. Here is what is going on, and why it is fixable.</p>
@@ -71,6 +71,18 @@
 <h2 data-i18n="ba2_14">How to fix it</h2>
 <p data-i18n="ba2_15">Fixing this by hand would mean opening that metadata file, finding the matching entry for every single photo, and writing the date and GPS back in one by one. For a few photos that is tedious. For a few thousand it is hundreds of hours.</p>
 <p data-i18n="ba2_16">SnapRescue does it automatically. Point it at your export and it reads <code>memories_history</code>, matches every file to its entry, writes the real capture date and GPS into each photo and video, converts the time to the correct local time using the location, merges captions and stickers back on, and sorts everything into dated folders. It runs on your own computer, so your photos never leave your machine, and it is free for your first 100 files.</p>
+<div class="i18n-drop">
+<h2>Where does "today" come from?</h2>
+<p>When a photo has no capture date inside it, your photo app looks for the next best thing, which is the date on the file itself. That date is set when the file is created on your computer, so for an export it is the moment you unzipped it. Every Memory was "created" in the same few minutes, and that is the date you see.</p>
+<h2>Why changing the file date does not fix it</h2>
+<p>A common first idea is to rename the files or change their modified date. It looks right in a folder on your computer, and then falls apart as soon as the photos go anywhere. Uploading, copying to a phone or syncing to a cloud drive creates a new file with a new date. Only a date written inside the photo travels with it, which is why the fix has to go into the EXIF.</p>
+<h2>Videos have the same problem</h2>
+<p>Videos do not use EXIF. They store their date and location in the video container's own metadata, and Snapchat's export leaves that out as well. A tool that only handles photos will leave every video sitting on today's date. SnapRescue writes the date and location into both.</p>
+<h2>What if a Memory never had a location?</h2>
+<p>Location is only recorded when it was switched on at the time you saved the snap. For Memories without it, there are no coordinates to restore. The date still comes back, so the photo lands on the right day. It will not appear on the map, and its time is set using the time zone of the computer you run the tool on.</p>
+<h2>Is the picture quality affected?</h2>
+<p>No. Writing the date and location changes the information stored around the image, not the image. The one exception is when a caption or sticker is merged back on: that creates a new copy with the overlay drawn onto it, the way the snap looked when you saved it. <a href="snapchat-export-captions-missing.html">More on captions here</a>.</p>
+</div>
 <div class="hero-cta reveal" style="justify-content:center;margin-top:36px">
 <a class="btn btn-primary btn-lg" data-i18n="ba2_17" href="../index.html#download">Try SnapRescue free</a>
 <a class="btn btn-ghost btn-lg" data-i18n="ba2_18" href="how-to-export-snapchat-memories.html">How to export first →</a>
@@ -101,7 +113,7 @@
   "headline": "Why Your Snapchat Export Has No Dates or Location (and How to Fix It)",
   "description": "Downloaded your Snapchat Memories and every photo says it was taken today? Here is why Snapchat exports lose their dates and GPS, what the memories_history file contains, and how to restore the real metadata.",
   "datePublished": "2026-06-21",
-  "dateModified": "2026-06-21",
+  "dateModified": "2026-11-11",
   "inLanguage": "en",
   "image": "https://snaprescue.app/assets/og-image.png",
   "author": {

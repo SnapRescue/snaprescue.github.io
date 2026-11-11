@@ -424,7 +424,16 @@
   "cmp2_m500": "500 premiers souvenirs",
   "cmp2_none": "Aucun",
   "cmp2_webapp": "Site web, appli Windows et Mac",
-  "cmp2_browser": "Navigateur sur ordinateur"
+  "cmp2_browser": "Navigateur sur ordinateur",
+  "bi_n1_tag": "Android",
+  "bi_n1_h": "Réparer votre export Snapchat sur Android, sans ordinateur",
+  "bi_n1_p": "Rétablissez les dates, les lieux et les légendes sur le téléphone et retrouvez vos souvenirs dans votre galerie, dans le bon ordre.",
+  "bi_n2_tag": "Le problème",
+  "bi_n2_h": "Où sont passés vos légendes et autocollants",
+  "bi_n2_p": "Ils sont toujours dans votre export, dans des fichiers séparés. Comment les retrouver et les remettre sur la photo ou la vidéo.",
+  "bi_n3_tag": "Le problème",
+  "bi_n3_h": "Pourquoi vos souvenirs affichent la mauvaise heure",
+  "bi_n3_p": "Snapchat enregistre chaque souvenir en UTC, donc une soirée peut apparaître à 10 h du matin. Comment retrouver la vraie heure locale."
  },
  "de": {
   "meta_title": "SnapRescue: Holen Sie Ihre Snapchat-Erinnerungen heraus, mit den richtigen Daten",
@@ -1287,7 +1296,16 @@
   "cmp2_m500": "Primeros 500 recuerdos",
   "cmp2_none": "Ninguna",
   "cmp2_webapp": "Web, app para Windows y Mac",
-  "cmp2_browser": "Navegador en un ordenador"
+  "cmp2_browser": "Navegador en un ordenador",
+  "bi_n1_tag": "Android",
+  "bi_n1_h": "Arregla tu exportación de Snapchat en Android, sin ordenador",
+  "bi_n1_p": "Recupera fechas, lugares y textos en el propio móvil y ten tus recuerdos en la galería en el orden correcto.",
+  "bi_n2_tag": "El problema",
+  "bi_n2_h": "Dónde fueron a parar tus textos y pegatinas",
+  "bi_n2_p": "Siguen en tu exportación, guardados como archivos aparte. Cómo encontrarlos y volver a ponerlos sobre la foto o el vídeo.",
+  "bi_n3_tag": "El problema",
+  "bi_n3_h": "Por qué tus recuerdos muestran la hora equivocada",
+  "bi_n3_p": "Snapchat guarda cada recuerdo en UTC, así que una noche de fiesta puede aparecer a las 10 de la mañana. Cómo recuperar la hora local real."
  },
  "nl": {
   "meta_title": "SnapRescue: haal je Snapchat-herinneringen eruit, met de juiste datums",
@@ -1714,6 +1732,15 @@
   "cmp2_m500": "Eerste 500 Memories",
   "cmp2_none": "Geen",
   "cmp2_webapp": "Website, app voor Windows en Mac",
-  "cmp2_browser": "Browser op een computer"
+  "cmp2_browser": "Browser op een computer",
+  "bi_n1_tag": "Android",
+  "bi_n1_h": "Je Snapchat-export herstellen op Android, zonder computer",
+  "bi_n1_p": "Zet datums, plaatsen en bijschriften terug op de telefoon zelf en krijg je herinneringen in de juiste volgorde in je galerij.",
+  "bi_n2_tag": "Het probleem",
+  "bi_n2_h": "Waar je bijschriften en stickers zijn gebleven",
+  "bi_n2_p": "Ze zitten nog in je export, opgeslagen als aparte bestanden. Zo vind je ze en zet je ze terug op de foto of video.",
+  "bi_n3_tag": "Het probleem",
+  "bi_n3_h": "Waarom je herinneringen de verkeerde tijd tonen",
+  "bi_n3_p": "Snapchat slaat elke herinnering op in UTC, dus een avond uit kan om 10 uur 's ochtends opduiken. Zo krijg je de echte lokale tijd terug."
  }
 }

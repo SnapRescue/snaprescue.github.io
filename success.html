@@ -83,6 +83,7 @@
       const data = await res.json();
       keyEl.textContent = data.key;
       copyBtn.style.display = "inline-flex";
+      trackPurchase();
     } catch (e) {
       // The licence can take a moment to register right after payment; retry a few times.
       if (attempt < 5) {
@@ -92,6 +93,18 @@
         keyEl.textContent = "Taking longer than usual. Contact support@snaprescue.app with your receipt and we'll sort it.";
       }
     }
+  }
+  // GA4 purchase, once per checkout. The id is a hash because the raw session id
+  // fetches the key. Value is the list price; promo codes and tax are not known here.
+  async function trackPurchase() {
+    try {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(sessionId));
+      const tid = Array.from(new Uint8Array(buf)).slice(0, 8).map(b => b.toString(16).padStart(2, "0")).join("");
+      if (localStorage.getItem("sr_p_" + tid)) return;
+      gtag("event", "purchase", { transaction_id: tid, value: 9.99, currency: "USD",
+        items: [{ item_id: "snaprescue-full", item_name: "SnapRescue full version", price: 9.99, quantity: 1 }] });
+      localStorage.setItem("sr_p_" + tid, "1");
+    } catch (e) {}
   }
   copyBtn?.addEventListener("click", () => {
     navigator.clipboard.writeText(keyEl.textContent.trim());

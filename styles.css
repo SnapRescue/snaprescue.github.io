@@ -772,3 +772,9 @@ html:not([data-theme="dark"]) .film-time b { color: var(--sunset); text-shadow: 
 .home .trust-item { display: inline-flex; align-items: center; gap: 9px; font-size: 14.5px; font-weight: 600; color: var(--ink-soft); }
 .home .trust-item .ti { color: var(--sunset); display: inline-flex; }
 @media (prefers-reduced-motion: reduce) { .home .urgency .dot { animation: none; } }
+
+/* PayPal button under the card button (only rendered when the server has PayPal on) */
+.pp-wrap { margin-top: 12px; }
+.pp-or { font-size: 13px; color: var(--ink-faint); margin-bottom: 10px; }
+.pp-btn { max-width: 320px; margin: 0 auto; min-height: 44px; }
+.pp-msg { font-size: 13.5px; color: var(--sunset); margin-top: 10px; }

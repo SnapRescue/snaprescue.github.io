@@ -72,13 +72,18 @@
   const LICENSE_API = "https://snaprescue-license.tail28b3e2.ts.net"; // keep in sync with main.js
   const params = new URLSearchParams(location.search);
   const sessionId = params.get("session_id");
+  const orderId = params.get("order_id"); // PayPal
+  const payId = sessionId || orderId;
+  const keyUrl = sessionId
+    ? `${LICENSE_API}/key?session_id=${encodeURIComponent(sessionId)}`
+    : `${LICENSE_API}/paypal/key?order_id=${encodeURIComponent(orderId || "")}`;
   const keyEl = document.getElementById("key");
   const copyBtn = document.getElementById("copy");
 
   async function fetchKey(attempt = 0) {
-    if (!sessionId) { keyEl.textContent = "Missing session. Contact support@snaprescue.app with your receipt."; return; }
+    if (!payId) { keyEl.textContent = "Missing session. Contact support@snaprescue.app with your receipt."; return; }
     try {
-      const res = await fetch(`${LICENSE_API}/key?session_id=${encodeURIComponent(sessionId)}`);
+      const res = await fetch(keyUrl);
       if (!res.ok) throw new Error("not ready");
       const data = await res.json();
       keyEl.textContent = data.key;
@@ -94,11 +99,11 @@
       }
     }
   }
-  // GA4 purchase, once per checkout. The id is a hash because the raw session id
-  // fetches the key. Value is the list price; promo codes and tax are not known here.
+  // GA4 purchase, once per checkout. The id is a hash because the raw session or
+  // order id fetches the key. Value is the list price; promo codes and tax are not known here.
   async function trackPurchase() {
     try {
-      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(sessionId));
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(payId));
       const tid = Array.from(new Uint8Array(buf)).slice(0, 8).map(b => b.toString(16).padStart(2, "0")).join("");
       if (localStorage.getItem("sr_p_" + tid)) return;
       gtag("event", "purchase", { transaction_id: tid, value: 9.99, currency: "USD",

@@ -196,3 +196,66 @@ if (buyBtn) {
     }
   });
 }
+
+// ── PayPal, the second way to pay ────────────────────────────
+// Nothing shows unless the licence server says PayPal is set up. Their script
+// only loads once the price card is on screen. The server sets the price and
+// takes the payment; the browser just passes the order id along.
+if (buyBtn) {
+  const api = CONFIG.LICENSE_API;
+  const post = (path, body) => fetch(api + path, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body || {}),
+  });
+  const showPayPal = (cfg) => {
+    const wrap = document.createElement("div");
+    wrap.className = "pp-wrap";
+    const or = { fr: "ou", de: "oder", es: "o", nl: "of" }[document.documentElement.lang] || "or";
+    wrap.innerHTML = '<div class="pp-or">' + or + '</div><div class="pp-btn"></div><div class="pp-msg" role="alert" hidden></div>';
+    buyBtn.insertAdjacentElement("afterend", wrap);
+    const msg = wrap.querySelector(".pp-msg");
+    const fail = () => {
+      msg.textContent = "PayPal didn't go through and you have not been charged. Try again, use the card button above, or email support@snaprescue.app.";
+      msg.hidden = false;
+    };
+    const s = document.createElement("script");
+    s.src = "https://www.paypal.com/sdk/js?client-id=" + encodeURIComponent(cfg.client_id) +
+      "&currency=" + encodeURIComponent(cfg.currency || "USD") +
+      "&intent=capture&components=buttons&disable-funding=card,credit,paylater";
+    s.onerror = () => wrap.remove();
+    s.onload = () => {
+      if (!window.paypal) { wrap.remove(); return; }
+      window.paypal.Buttons({
+        style: { layout: "horizontal", tagline: false, height: 44, shape: "pill" },
+        createOrder: async () => {
+          msg.hidden = true;
+          track("begin_checkout", { currency: "USD", value: 9.99, page: location.pathname, method: "paypal" });
+          const res = await post("/paypal/order");
+          if (!res.ok) throw new Error("order");
+          return (await res.json()).id;
+        },
+        onApprove: async (data) => {
+          const res = await post("/paypal/capture", { order_id: data.orderID });
+          if (!res.ok) throw new Error("capture");
+          location.href = "/success.html?order_id=" + encodeURIComponent(data.orderID);
+        },
+        onError: fail,
+      }).render(wrap.querySelector(".pp-btn")).catch(() => wrap.remove());
+    };
+    document.head.appendChild(s);
+  };
+  const whenSeen = (fn) => {
+    if (!("IntersectionObserver" in window)) return fn();
+    const io = new IntersectionObserver((hits) => {
+      if (hits.some((h) => h.isIntersecting)) { io.disconnect(); fn(); }
+    }, { rootMargin: "300px" });
+    io.observe(buyBtn);
+  };
+  whenSeen(() => {
+    fetch(api + "/paypal/config")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((cfg) => { if (cfg && cfg.enabled && cfg.client_id) showPayPal(cfg); })
+      .catch(() => {});
+  });
+}

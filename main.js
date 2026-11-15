@@ -216,7 +216,7 @@ if (buyBtn) {
     buyBtn.insertAdjacentElement("afterend", wrap);
     const msg = wrap.querySelector(".pp-msg");
     const fail = () => {
-      msg.textContent = "PayPal didn't go through and you have not been charged. Try again, use the card button above, or email support@snaprescue.app.";
+      msg.textContent = "Something went wrong with PayPal. If PayPal shows a payment to SnapRescue, email support@snaprescue.app with the receipt and we'll send your key. Otherwise try again or use the card button above.";
       msg.hidden = false;
     };
     const s = document.createElement("script");

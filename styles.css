@@ -775,6 +775,8 @@ html:not([data-theme="dark"]) .film-time b { color: var(--sunset); text-shadow: 
 
 /* PayPal button under the card button (only rendered when the server has PayPal on) */
 .pp-wrap { margin-top: 12px; }
-.pp-or { font-size: 13px; color: var(--ink-faint); margin-bottom: 10px; }
-.pp-btn { max-width: 320px; margin: 0 auto; min-height: 44px; }
+.pp-or { font-size: 13px; color: var(--ink-faint); margin-bottom: 10px; text-align: center; }
+/* color-scheme: without it the dark theme gives PayPal's frame white corners */
+.pp-btn { min-height: 44px; color-scheme: light; }
+.pp-btn iframe { color-scheme: light; }
 .pp-msg { font-size: 13.5px; color: var(--sunset); margin-top: 10px; }

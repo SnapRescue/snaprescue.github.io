@@ -64,6 +64,11 @@
 
     <p class="muted">If Windows shows a blue warning the first time you open the app, click <b>More info → Run anyway</b>. It's safe, just new.</p>
     <p class="muted">Keep this key safe. Works on up to 3 devices. Need help? <a href="mailto:support@snaprescue.app" style="color:var(--sunset)">support@snaprescue.app</a></p>
+    <div class="steps-mini" style="margin-top:22px">
+      <strong style="font-family:'Erode',Georgia,serif">Got a friend with the same mess?</strong>
+      <p style="margin-top:8px">Send them the code <b id="friend-code">MEMORIES20</b>. It takes 20% off at card checkout, where it says "Add promotion code". Valid until 12 March 2027.</p>
+      <button class="btn btn-ghost copy-btn" id="copy-friend">Copy code</button>
+    </div>
     <p style="margin-top:18px"><a href="index.html" class="btn btn-primary">Back to SnapRescue</a></p>
   </div>
 </div>
@@ -110,6 +115,12 @@
     navigator.clipboard.writeText(keyEl.textContent.trim());
     copyBtn.textContent = "Copied ✓";
     setTimeout(() => (copyBtn.textContent = "Copy key"), 1800);
+  });
+  document.getElementById("copy-friend")?.addEventListener("click", (e) => {
+    navigator.clipboard.writeText("MEMORIES20");
+    e.target.textContent = "Copied ✓";
+    try { gtag("event", "share", { method: "friend_code" }); } catch (err) {}
+    setTimeout(() => (e.target.textContent = "Copy code"), 1800);
   });
   fetchKey();
 </script>
